@@ -1,46 +1,28 @@
 React  = require 'react/addons'
-Router = require('react-router')
-{ Route, RouteHandler, Link } = Router
+Router = require 'react-router'
+styles  = require '../styles'
 
-styles =
-  container:
-    width           : '860px'
-    margin          : '0 auto'
-  header:
-    width           : '270px'
-    float           : 'left'
-    position        : 'fixed'
-  content:
-    width           : '500px'
-    float           : 'right'
-    paddingBottom  : '50px'
-  footer:
-    width           : '270px'
-    float           : 'left'
-    position        : 'fixed'
-    bottom          : '50px'
-  link:
-    color           : '#39c'
-    fontWeight      : '400'
-    textDecoration  : 'none'
+{ Route, RouteHandler, Link } = Router
 
 module.exports = React.createClass
   # mixins: [ Router.State ]
   render: ->
     <div style={styles.container}>
       <header style={styles.header}>
-        <h1>React Reflux Coffee Boilerplate</h1>
-        <p>
-          <a href="https://github.com/xuqingkuang" style={styles.link}>View My GitHub Profile</a>
-        </p>
-        <p>
-          <a href="https://github.com/xuqingkuang/react-reflux-coffee-boilerplate" style={styles.link}>View Project Repo</a>
-        </p>
+        <h1>Kuang's Page</h1>
+        <ul>
+          <li>Links</li>
+          <ul style={styles.secondLinks}>
+            <li><a href="https://github.com/xuqingkuang" style={styles.link}>Github</a></li>
+            <li><a href="https://cn.linkedin.com/in/xuqingkuang" style={styles.link}>Linkedin</a></li>
+            <li><a href="http://www.zhihu.com/people/xuqingkuang" style={styles.link}>Zhihu</a></li>
+          </ul>
+        </ul>
       </header>
       <section style={styles.content}>
         <RouteHandler />
       </section>
       <footer style={styles.footer}>
-        <p><small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a> and refined by <a href="http://kuang.it">XQ Kuang</a></small></p>
+        <small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist" style={styles.textLink}>orderedlist</a> and refined by <a href="mailto:xuqingkuang@qq.com" style={styles.textLink}>XQ Kuang</a></small>
       </footer>
     </div>
