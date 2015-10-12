@@ -1,8 +1,6 @@
-React  = require 'react/addons'
-Router = require 'react-router'
-styles  = require '../styles'
-
-{ Route, RouteHandler, Link } = Router
+React           = require 'react'
+ReactRouter     = require 'react-router'
+styles          = require '../styles'
 
 module.exports = React.createClass
   # mixins: [ Router.State ]
@@ -20,7 +18,7 @@ module.exports = React.createClass
         </ul>
       </header>
       <section style={styles.content}>
-        <RouteHandler />
+        {this.props.children}
       </section>
       <footer style={styles.footer}>
         <small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist" style={styles.textLink}>orderedlist</a> and refined by <a href="mailto:xuqingkuang@qq.com" style={styles.textLink}>XQ Kuang</a></small>

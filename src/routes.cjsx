@@ -1,15 +1,16 @@
-React     = require 'react'
-Router    = require 'react-router'
-Layout    = require './components/layout'
-NotFound  = require './pages/not-found'
-AboutMe   = require './pages/aboutme'
+React           = require 'react'
+ReactRouter     = require 'react-router'
+Layout          = require './components/layout'
+NotFound        = require './pages/not-found'
+AboutMe         = require './pages/about-me'
 
-{Route, DefaultRoute, NotFoundRoute}  = Router
+{Router, Route, IndexRoute}  = ReactRouter
 
 module.exports = (
-  <Route handler={Layout}>
-    <Route name="aboutme" handler={AboutMe} path="/" addHandlerKey={true} />
-    <DefaultRoute handler={AboutMe} />
-    <NotFoundRoute handler={NotFound} />
-  </Route>
+  <Router>
+    <Route path="/" component={Layout}>
+      <IndexRoute component={AboutMe} />
+    </Route>
+    <Route path="*" component={NotFound} />
+  </Router>
 )

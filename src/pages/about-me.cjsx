@@ -2,10 +2,10 @@ React     = require 'react'
 Section   = require '../components/section'
 styles    = require '../styles'
 
-module.exports = class Home extends React.Component
+module.exports = React.createClass
   render: ->
     return (
-      <div className="aboutme">
+      <div>
         <Section title="About Me">
           <p>
             I have a passion for web development and architecture, from 
@@ -47,7 +47,7 @@ module.exports = class Home extends React.Component
             <i>No. 000112271</i>
           </section>
           <section>
-            <p><a href="https://www.redhat.com/rhtapps/verify/?certId=80501033114" style={styles.textLink}>Red Hat Certified Engineer</a> 2010/04 - 2013/04</p>
+            <p><a href="https://www.redhat.com/rhtapps/verify/?certId=805010331148847" style={styles.textLink}>Red Hat Certified Engineer</a> 2010/04 - 2013/04</p>
             <i>No. 805010331148847</i>
           </section>
         </Section>
