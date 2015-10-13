@@ -7,19 +7,34 @@ config          = require '../config'
 module.exports = Reflux.createStore
   init: ->
     @listenTo(BlogActions.fetchBlogs, @fetchBlogs)
+    @listenTo(BlogActions.getBlog, @getBlog)
 
-  getInitialState: ->
-    categories: []
-    blogs: [
+    @collection = new BlogCollection()
+    @blogs = [
       slug: ''
       category: 'loading'
     ]
 
-  fetchBlogs: ->
-    collection = new BlogCollection()
-    collection.fetch
+  getInitialState: ->
+    categories: []
+    blogs: @blogs
+
+  fetchBlogs: (callback) ->
+    unless callback?
+      callback = => @trigger {blogs: @blogs}
+    return callback() if @collection.isFetched
+    @collection.fetch
       success: (collection) =>
-        blogs = collection.models.map (m) ->
+        @collection.isFetched = yes
+        @blogs = collection.models.map (m) ->
           m.attributes.createdAt = moment(m.createdAt).format(config.dateTimeFormat)
           m.attributes
-        @trigger {blogs: blogs}
+        callback()
+
+  getBlog: (slug) ->
+    slug = encodeURIComponent(slug)
+    filterBlog = =>
+      filteredBlogs = @blogs.filter (blog) -> blog.slug is slug
+      @trigger {blogs: filteredBlogs}
+    return filterBlog() if @collection.isFetched
+    @fetchBlogs(filterBlog)
