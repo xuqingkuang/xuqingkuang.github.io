@@ -2,9 +2,7 @@ React = require('react')
 
 module.exports = React.createClass
   render: ->
-    return (
-      <section>
-        <h2>{@props.title}</h2>
-        <p>{@props.children}</p>
-      </section>
-    )
+    <section>
+      <h2>{this.props.title}</h2>
+      <div>{this.props.children}</div>
+    </section>
