@@ -14,8 +14,6 @@ module.exports =
     float           : 'left'
     position        : 'fixed'
     bottom          : '20px'
-  secondLinks:
-    paddingLeft     : '20px'
   link:
     color           : '#39c'
     fontWeight      : '400'
