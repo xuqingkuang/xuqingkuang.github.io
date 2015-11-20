@@ -1,0 +1,16 @@
+{
+  "author": "Wantering Clone",
+  "name": "wantering",
+  "description": "Wantering - a clothes store",
+  "version": "0.0.1",
+  "homepage": "https://www.wantering.com/",
+  "scripts": {
+    "js": "coffee -o ./js/ ./src/app.coffee",
+    "css": "stylus -o ./css/style.css ./src/style.styl",
+    "build": "npm run-script js; npm run-script css"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "stylus": "^0.52.4"
+  }
+}

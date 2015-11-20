@@ -1,0 +1,133 @@
+/*
+ * Common
+ */
+body {
+  color: #333;
+  background: #fff;
+}
+a {
+  outline: 0;
+  color: #000;
+}
+a:hover {
+  text-decoration: none;
+  color: #e8878b !important;
+}
+button,
+.btn,
+select,
+input {
+  border-radius: 0 !important;
+}
+header {
+  height: 50px;
+}
+header .navbar-brand {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-indent: -99999px;
+  background-image: url("../img/logo.png");
+}
+header .navbar {
+  border: 0;
+}
+header .navbar-nav:first-child {
+  margin-left: 40%;
+}
+header .navbar-nav:first-child .active a {
+  font-weight: bold;
+  color: #000;
+  background-color: #f6f6f6;
+}
+header .navbar-right {
+  margin-right: 0px;
+}
+header .navbar-right .btn {
+  padding: 8px 16px;
+  margin: 6px;
+  color: #000;
+}
+footer {
+  color: #999;
+  background-color: #f6f6f6;
+}
+footer a {
+  color: #999;
+  display: block;
+}
+footer #footer-search {
+  padding: 80px;
+}
+footer #site-map {
+  color: #333;
+  background-color: #fff;
+  height: 200px;
+}
+footer #site-map div {
+  padding: 30px;
+}
+footer #site-map a {
+  color: #333;
+}
+footer #contact-us a {
+  font-size: 2em;
+}
+@media (max-width: 767px) {
+  header .navbar-nav:first-child {
+    margin: 7.5px -15px;
+  }
+}
+/*
+ * Home
+ */
+#home .container form input[name="search"] {
+  width: 400px;
+}
+#home .container-fluid .row:first-child {
+  position: relative;
+}
+#home .container-fluid .row:first-child a {
+  width: auto !important;
+  position: absolute;
+  right: 16px;
+  top: 24px;
+}
+#home #banner {
+  height: 600px;
+  padding: 0px;
+  position: relative;
+}
+#home #banner #banner-search {
+  position: absolute;
+  left: 25%;
+  top: 320px;
+  width: 50%;
+  color: #fff;
+}
+#home #banner .banner {
+  height: 600px;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+#home #categories .row {
+  margin: 0px;
+}
+#home #categories .row > div {
+  padding: 5px;
+  height: 200px;
+}
+#home #categories .row > div a {
+  color: #fff;
+}
+#home #categories .row a {
+  background-position: 40% 35%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}

@@ -1,0 +1,117 @@
+/*
+ * Common
+ */
+
+body
+  color: #333333
+  background: #fff
+
+a
+  outline: 0
+  color: black
+a:hover
+  text-decoration: none
+  color: #e8878b !important
+
+button,.btn,select,input
+  border-radius: 0 !important
+
+header
+  height: 50px
+  .navbar-brand
+    display: block
+    width: 50px
+    height: 50px
+    text-indent: -99999px
+    background-image: url('../img/logo.png')
+  .navbar
+    border: 0
+  .navbar-nav:first-child
+    margin-left: 40%
+    .active
+      a
+        font-weight: bold
+        color: black
+        background-color: #f6f6f6
+  // BUG FIX
+  .navbar-right
+    margin-right: 0px
+    .btn
+      padding: 8px 16px
+      margin: 6px
+      color: black
+
+footer
+  color: #999
+  background-color: #f6f6f6
+  a
+    color: #999
+    display: block
+  #footer-search
+    padding: 80px
+  #site-map
+    color: #333
+    background-color: white
+    height: 200px
+    div
+      padding: 30px
+    a
+      color: #333
+  #contact-us
+    a
+      font-size: 2em
+
+@media (max-width:767px)
+  header
+    .navbar-nav:first-child
+      margin: 7.5px -15px
+
+/*
+ * Home
+ */
+
+#home
+  .container
+    form
+      input[name="search"]
+        width: 400px
+  .container-fluid
+    .row:first-child
+      position: relative
+      a
+        width: auto !important
+        position: absolute
+        right: 16px
+        top: 24px
+  #banner
+    height: 600px
+    padding: 0px
+    position: relative
+    #banner-search
+      position: absolute
+      left: 25%
+      top: 320px
+      width: 50%
+      color: white
+    .banner
+      height: 600px
+      background-position: center
+      position: absolute
+      top: 0px
+      width: 100%
+  #categories
+    .row
+      margin: 0px
+      > div
+        padding: 5px
+        height: 200px
+        a
+          color: white
+      a
+        background-position: 40% 35%
+        background-size: cover
+        background-repeat: no-repeat
+        display: block
+        height: 100%
+        width: 100%
+        padding: 10px
