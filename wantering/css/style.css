@@ -177,4 +177,7 @@ footer #contact-us a {
   #home #banner #banner-search {
     top: 20%;
   }
+  #home #banner #banner-search form {
+    padding: 20px;
+  }
 }
