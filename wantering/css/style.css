@@ -52,26 +52,28 @@ footer {
   color: #999;
   background-color: #f6f6f6;
 }
+footer #footer-search {
+  padding: 80px;
+}
 footer a {
   color: #999;
   display: block;
 }
-footer #footer-search {
-  padding: 80px;
-}
 footer #site-map {
   color: #333;
   background-color: #fff;
-  height: 200px;
-}
-footer #site-map div {
-  padding: 30px;
 }
 footer #site-map a {
   color: #333;
 }
 footer #contact-us a {
   font-size: 2em;
+}
+@media (min-width: 768px) {
+  footer #footer-search {
+    width: 70%;
+    margin-left: 15%;
+  }
 }
 @media (max-width: 767px) {
   header .navbar-nav:first-child {
@@ -82,7 +84,12 @@ footer #contact-us a {
  * Home
  */
 #home .container form input[name="search"] {
-  width: 400px;
+  width: 75%;
+}
+#home .container form button[type="submit"] {
+  color: #fff;
+  background-color: #e8878b;
+  border: none;
 }
 #home .container-fluid .row:first-child {
   position: relative;
@@ -101,13 +108,19 @@ footer #contact-us a {
 #home #banner #banner-search {
   position: absolute;
   left: 25%;
-  top: 320px;
+  top: 55%;
   width: 50%;
   color: #fff;
+}
+#home #banner #banner-search form {
+  padding: 20px 0px;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.4);
 }
 #home #banner .banner {
   height: 600px;
   background-position: center;
+  background-size: cover;
   position: absolute;
   top: 0px;
   width: 100%;
@@ -130,4 +143,38 @@ footer #contact-us a {
   height: 100%;
   width: 100%;
   padding: 10px;
+}
+@media (min-width: 768px) {
+  footer #site-map div {
+    padding: 30px 30px 60px 30px;
+  }
+  #home .container form input[name="search"] {
+    font-size: 18px;
+    height: 44px;
+  }
+  #home .container form button[type="submit"] {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+  }
+}
+@media (max-width: 767px) {
+  #home .container form input[name="search"] {
+    width: 100%;
+  }
+  #home .container form button[type="submit"] {
+    margin-top: 12px;
+  }
+  #home #banner {
+    height: 400px;
+  }
+  #home #banner h1 {
+    font-size: 32px;
+  }
+  #home #banner .banner {
+    height: 400px;
+  }
+  #home #banner #banner-search {
+    top: 20%;
+  }
 }
