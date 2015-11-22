@@ -213,6 +213,8 @@ footer #contact-us a {
   }
   #home #banner #banner-search {
     top: 20%;
+    width: 90%;
+    left: 5%;
   }
   #home #banner #banner-search form {
     padding: 20px;
