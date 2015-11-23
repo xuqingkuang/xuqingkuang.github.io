@@ -1,5 +1,6 @@
 highlightColor = #e8878b
 highlightHoverColor = #e47277
+highlighBackgroundColor = #f6f6f6
 bannerFullHeight = 600px
 bannerSmallHeight = 400px
 hoverShadow = 0 1px 6px rgba(22,22,22,.15)
@@ -38,7 +39,7 @@ header
       a
         font-weight: bold
         color: black
-        background-color: #f6f6f6
+        background-color: highlighBackgroundColor
   // BUG FIX
   .navbar-right
     margin-right: 0px
@@ -49,7 +50,9 @@ header
 
 footer
   color: #999
-  background-color: #f6f6f6
+  background-color: highlighBackgroundColor
+  margin-top: 10px
+  padding-bottom: 20px
   #footer-search
     padding: 50px 0px
   a
@@ -70,6 +73,12 @@ footer
     #footer-search
       width: 70%
       margin-left: 15%
+    #site-map
+      div
+        height: 200px
+        border-right: 2px solid highlighBackgroundColor
+      div:last-child
+        border-right: none
 
 @media (max-width: 767px)
   header
@@ -136,7 +145,7 @@ footer
         height: 200px
         &:hover
           box-shadow: hoverShadow
-          // background-color: #f6f6f6
+          background-color: highlighBackgroundColor
         a
           color: white
           background-position: 40% 35%
@@ -163,11 +172,53 @@ footer
           box-shadow: 1px 1px 2px 0 #e9e9eb
           &:hover
             box-shadow: hoverShadow
+            background-color: highlighBackgroundColor
           a
             display: block
             width: 100%
             height: 100%
             text-indent: -99999px
+  #collections
+    .col-sm-12
+      height: 300px
+      margin-bottom: 5px
+      padding: 0px
+    .block
+      padding: 0px
+      height: 300px
+      background-size: cover
+      position: relative
+      > div
+        height: 150px
+      .type
+        color: white
+        position: absolute
+        top: 10px
+        left: 10px
+      .text
+        padding: 0px 10px
+      &:hover
+        box-shadow: hoverShadow
+        background-color: highlighBackgroundColor
+        .read
+          border: 1px solid highlightColor
+        .type
+          color: highlightColor
+    .block.featured
+      color: white
+      padding: 10px
+      .text
+        position: absolute
+        bottom: 5px
+      .read
+        padding: 4px 10px
+        margin-left: 15px
+        position: absolute
+        bottom: 20px
+        height: 32px
+        &:after
+          content: '\232A'
+          margin-left: 5px
 
 @media (min-width: 768px)
   footer
@@ -204,3 +255,6 @@ footer
         left: 5%
         form
           padding: 20px
+    #collections
+      .others
+        padding: 0px

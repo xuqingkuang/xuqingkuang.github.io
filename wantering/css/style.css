@@ -51,6 +51,8 @@ header .navbar-right .btn {
 footer {
   color: #999;
   background-color: #f6f6f6;
+  margin-top: 10px;
+  padding-bottom: 20px;
 }
 footer #footer-search {
   padding: 50px 0px;
@@ -74,6 +76,13 @@ footer #contact-us a {
   footer #footer-search {
     width: 70%;
     margin-left: 15%;
+  }
+  footer #site-map div {
+    height: 200px;
+    border-right: 2px solid #f6f6f6;
+  }
+  footer #site-map div:last-child {
+    border-right: none;
   }
 }
 @media (max-width: 767px) {
@@ -147,6 +156,7 @@ footer #contact-us a {
 }
 #home #categories .row > div:hover {
   box-shadow: 0 1px 6px rgba(22,22,22,0.15);
+  background-color: #f6f6f6;
 }
 #home #categories .row > div a {
   color: #fff;
@@ -175,12 +185,65 @@ footer #contact-us a {
 }
 #home #brands .row:last-child ul li:hover {
   box-shadow: 0 1px 6px rgba(22,22,22,0.15);
+  background-color: #f6f6f6;
 }
 #home #brands .row:last-child ul li a {
   display: block;
   width: 100%;
   height: 100%;
   text-indent: -99999px;
+}
+#home #collections .col-sm-12 {
+  height: 300px;
+  margin-bottom: 5px;
+  padding: 0px;
+}
+#home #collections .block {
+  padding: 0px;
+  height: 300px;
+  background-size: cover;
+  position: relative;
+}
+#home #collections .block > div {
+  height: 150px;
+}
+#home #collections .block .type {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#home #collections .block .text {
+  padding: 0px 10px;
+}
+#home #collections .block:hover {
+  box-shadow: 0 1px 6px rgba(22,22,22,0.15);
+  background-color: #f6f6f6;
+}
+#home #collections .block:hover .read {
+  border: 1px solid #e8878b;
+}
+#home #collections .block:hover .type {
+  color: #e8878b;
+}
+#home #collections .block.featured {
+  color: #fff;
+  padding: 10px;
+}
+#home #collections .block.featured .text {
+  position: absolute;
+  bottom: 5px;
+}
+#home #collections .block.featured .read {
+  padding: 4px 10px;
+  margin-left: 15px;
+  position: absolute;
+  bottom: 20px;
+  height: 32px;
+}
+#home #collections .block.featured .read:after {
+  content: '\232A';
+  margin-left: 5px;
 }
 @media (min-width: 768px) {
   footer #site-map div {
@@ -218,5 +281,8 @@ footer #contact-us a {
   }
   #home #banner #banner-search form {
     padding: 20px;
+  }
+  #home #collections .others {
+    padding: 0px;
   }
 }
