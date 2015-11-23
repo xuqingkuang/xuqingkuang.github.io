@@ -111,8 +111,12 @@ footer #contact-us a {
 #home .container-fluid .row:first-child a {
   width: auto !important;
   position: absolute;
-  right: 16px;
+  right: 24px;
   top: 24px;
+}
+#home .container-fluid .row:first-child a:after {
+  content: '\232A';
+  margin-left: 5px;
 }
 #home #banner {
   height: 600px;
@@ -147,18 +151,18 @@ footer #contact-us a {
   top: 0px;
   width: 100%;
 }
-#home #categories .row {
+#home #categories .category-row {
   margin: 4px 0px;
 }
-#home #categories .row > div {
+#home #categories .category-row > div {
   padding: 5px;
   height: 200px;
 }
-#home #categories .row > div:hover {
+#home #categories .category-row > div:hover {
   box-shadow: 0 1px 6px rgba(22,22,22,0.15);
   background-color: #f6f6f6;
 }
-#home #categories .row > div a {
+#home #categories .category-row > div a {
   color: #fff;
   background-position: 40% 35%;
   background-size: cover;
@@ -168,6 +172,7 @@ footer #contact-us a {
   width: 100%;
   padding: 150px 10px 10px 10px;
   font-size: 1.4em;
+  text-shadow: 0 0 15px rgba(22,22,22,0.7), 0 -1px 1px rgba(22,22,22,0.4);
 }
 #home #brands .row:last-child ul {
   padding: 15px;
@@ -194,24 +199,26 @@ footer #contact-us a {
   text-indent: -99999px;
 }
 #home #collections .col-sm-12 {
-  height: 300px;
-  margin-bottom: 5px;
+  margin: 5px;
   padding: 0px;
 }
 #home #collections .block {
   padding: 0px;
   height: 300px;
   background-size: cover;
+  background-position: center;
   position: relative;
 }
 #home #collections .block > div {
   height: 150px;
+  background-position: center;
 }
 #home #collections .block .type {
   color: #fff;
   position: absolute;
   top: 10px;
   left: 10px;
+  text-shadow: 0 0 3px rgba(22,22,22,0.4);
 }
 #home #collections .block .text {
   padding: 0px 10px;
@@ -229,6 +236,7 @@ footer #contact-us a {
 #home #collections .block.featured {
   color: #fff;
   padding: 10px;
+  text-shadow: 0 0 3px rgba(22,22,22,0.4);
 }
 #home #collections .block.featured .text {
   position: absolute;

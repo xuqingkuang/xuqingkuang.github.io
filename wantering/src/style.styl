@@ -4,6 +4,8 @@ highlighBackgroundColor = #f6f6f6
 bannerFullHeight = 600px
 bannerSmallHeight = 400px
 hoverShadow = 0 1px 6px rgba(22,22,22,.15)
+textShadow = 0 0 15px rgba(22,22,22,.7),0 -1px 1px rgba(22,22,22,.4)
+textOutglow = 0 0 3px rgba(22,22,22,.4)
 
 /*
  * Common
@@ -107,8 +109,11 @@ footer
       a
         width: auto !important
         position: absolute
-        right: 16px
+        right: 24px
         top: 24px
+        &:after
+          content: '\232A'
+          margin-left: 5px
   #banner
     height: bannerFullHeight
     padding: 0px
@@ -129,7 +134,7 @@ footer
       width: 100%
       position: absolute
       bottom: 25%
-      text-shadow: 0 0 15px rgba(22,22,22,.7),0 -1px 1px rgba(22,22,22,.4)
+      text-shadow: textShadow
     .banner
       height: bannerFullHeight
       background-position: center
@@ -138,7 +143,7 @@ footer
       top: 0px
       width: 100%
   #categories
-    .row
+    .category-row
       margin: 4px 0px
       > div
         padding: 5px
@@ -156,6 +161,7 @@ footer
           width: 100%
           padding: 150px 10px 10px 10px
           font-size: 1.4em
+          text-shadow: textShadow
   #brands
     .row:last-child
       ul
@@ -180,21 +186,23 @@ footer
             text-indent: -99999px
   #collections
     .col-sm-12
-      height: 300px
-      margin-bottom: 5px
+      margin: 5px
       padding: 0px
     .block
       padding: 0px
       height: 300px
       background-size: cover
+      background-position: center
       position: relative
       > div
         height: 150px
+        background-position: center
       .type
         color: white
         position: absolute
         top: 10px
         left: 10px
+        text-shadow: textOutglow
       .text
         padding: 0px 10px
       &:hover
@@ -207,6 +215,7 @@ footer
     .block.featured
       color: white
       padding: 10px
+      text-shadow: textOutglow
       .text
         position: absolute
         bottom: 5px
