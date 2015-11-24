@@ -3,6 +3,7 @@ highlightHoverColor = #e47277
 highlighBackgroundColor = #f6f6f6
 bannerFullHeight = 600px
 bannerSmallHeight = 400px
+bannerExtraHeight = 800px
 hoverShadow = 0 1px 6px rgba(22,22,22,.15)
 textShadow = 0 0 15px rgba(22,22,22,.7),0 -1px 1px rgba(22,22,22,.4)
 textOutglow = 0 0 3px rgba(22,22,22,.4)
@@ -243,6 +244,13 @@ footer
         button[type="submit"]
           font-size: 18px
           line-height: 1.3333333
+
+@media (min-width: 1170px)
+  #home
+    #banner
+      height: bannerExtraHeight
+      .banner
+        height: bannerExtraHeight
 
 @media (max-width: 767px)
   #home

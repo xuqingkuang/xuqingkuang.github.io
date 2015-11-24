@@ -266,6 +266,14 @@ footer #contact-us a {
     line-height: 1.3333333;
   }
 }
+@media (min-width: 1170px) {
+  #home #banner {
+    height: 800px;
+  }
+  #home #banner .banner {
+    height: 800px;
+  }
+}
 @media (max-width: 767px) {
   #home .container form input[name="search"] {
     width: 100%;
