@@ -137,7 +137,7 @@ footer
       bottom: 25%
       text-shadow: textShadow
     .banner
-      height: bannerFullHeight
+      height: 100%
       background-position: center
       background-size: cover
       position: absolute
@@ -167,7 +167,8 @@ footer
     .row:last-child
       ul
         padding: 15px
-        overflow: hidden
+        overflow-y: hidden
+        overflow-x: auto
         white-space: nowrap
         li
           display: inline-block
@@ -247,10 +248,11 @@ footer
 
 @media (min-width: 1170px)
   #home
+    #banner-search
+      input[name="search"]
+        width: 90%
     #banner
       height: bannerExtraHeight
-      .banner
-        height: bannerExtraHeight
 
 @media (max-width: 767px)
   #home

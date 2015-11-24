@@ -144,7 +144,7 @@ footer #contact-us a {
   text-shadow: 0 0 15px rgba(22,22,22,0.7), 0 -1px 1px rgba(22,22,22,0.4);
 }
 #home #banner .banner {
-  height: 600px;
+  height: 100%;
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -176,7 +176,8 @@ footer #contact-us a {
 }
 #home #brands .row:last-child ul {
   padding: 15px;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: auto;
   white-space: nowrap;
 }
 #home #brands .row:last-child ul li {
@@ -267,10 +268,10 @@ footer #contact-us a {
   }
 }
 @media (min-width: 1170px) {
-  #home #banner {
-    height: 800px;
+  #home #banner-search input[name="search"] {
+    width: 90%;
   }
-  #home #banner .banner {
+  #home #banner {
     height: 800px;
   }
 }
