@@ -20,7 +20,8 @@
   <header id="header" class="view  viewHome hasFooter">
     <div class="barModule">
       <div class="col col-1"><a href="#!/" class="ir logo" title="自淘啦主页" data-bypass >自淘啦</a></div>
-      <div class="col col-2 mainCol"><a href="/" class="ir logo largeLogo" title="Wantering Home" data-bypass >自淘啦</a>
+      <div class="col col-2 mainCol">
+        <a href="/" class="ir logo largeLogo" title="Wantering Home" data-bypass >自淘啦</a>
         <nav id="mainNav">
           <ul class="nav mainNav">
             <li class="navItem mainNavItem userNavItem signUpNavItem rightNavItem">
@@ -30,7 +31,7 @@
               <a href="#!/login/" class="navAction mainNavAction loginNavAction noMenu">登录</a>
             </li>
             <li class="navItem mainNavItem womensNavItem hasNav ">
-              <a href="#!/womens-clothing/" class="navAction hasNavAction mainNavAction womensNavAction">女人</a>
+              <a href="./list.html" class="navAction hasNavAction mainNavAction womensNavAction">女人</a>
             </li>
             <li class="navItem mainNavItem mensNavItem hasNav ">
               <a href="#!/mens-clothing/" class="navAction hasNavAction mainNavAction mensNavAction">男人</a>
@@ -42,19 +43,13 @@
         </nav>
         <div class="searchBox">
           <form action="/" name="topSearchForm" class="searchForm">
-            <input type="Search" placeholder="What are you looking for?" value="" class="searchField" name="q" autocorrect="off" autocapitalize="off" autocomplete="off" />
+            <input type="search" placeholder="What are you looking for?" value="" class="searchField" name="q" autocorrect="off" autocapitalize="off" autocomplete="off" />
             <a href="#" class="button primaryButton ir iconButton">搜索</a>
             <div class="autoCompleteWrap"></div>
           </form>
         </div>
       </div>
     </div>
-
-
-    <ul id="navHelpers" class="navHelpers hide">
-      <li class="navHelperItem"><a href="#" id="backToPage" class="navHelperAction" title="Back to Page" data-noscroll>Back</a></li>
-      <li class="navHelperItem"><a href="#" id="backToTop" class="navHelperAction invisible" title="Top" data-noscroll>Top</a></li>
-    </ul>
   </header>
 
 
@@ -591,17 +586,18 @@
       </ul>
       <div class="micro footerMicro">&copy; 2015 自淘啦. All rights reserved.</div>
     </footer>
-    <script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
-    <script>
-    /* Animate banner */
-    var e, t, n, i, a;
-    setTimeout(function() {
-      e = $(".unitsMasthead"), t = e.length, t > 1 && !window.homeMastheadTimer && (window.homeMastheadTimer = setInterval(function() {
-        e = $(".unitsMasthead"), n = e.not(".backStage"), i = e.index(n), n.addClass("offStageLeft"), a = t - 1 > i ? i + 1 : 0, setTimeout(function() {
-          n.removeClass("offStageLeft").addClass("backStage")
-        }, 1e3), e.eq(a).removeClass("backStage")
-      }, 8e3))
-    }, 100)
-    </script>
-  </body>
+  </div>
+  <script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
+  <script>
+  /* Animate banner */
+  var e, t, n, i, a;
+  setTimeout(function() {
+    e = $(".unitsMasthead"), t = e.length, t > 1 && !window.homeMastheadTimer && (window.homeMastheadTimer = setInterval(function() {
+      e = $(".unitsMasthead"), n = e.not(".backStage"), i = e.index(n), n.addClass("offStageLeft"), a = t - 1 > i ? i + 1 : 0, setTimeout(function() {
+        n.removeClass("offStageLeft").addClass("backStage")
+      }, 1e3), e.eq(a).removeClass("backStage")
+    }, 8e3))
+  }, 100)
+  </script>
+</body>
 </html>
