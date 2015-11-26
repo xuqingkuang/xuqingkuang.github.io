@@ -87,13 +87,13 @@
     <ul id="filters" class="filterWrap">
       <li class="filterNav toggleFilterNav">
         <div class="navItem filterNavItem statusFilterItem" title="Show items...">
-          <a href="#" class="navAction radioNavAction allNavAction" title="View all items.">
+          <a href="#" class="navAction radioNavAction" title="View all items." data-status="all">
             <span class="label">全部</span>
           </a>
-          <a href="#" class="navAction radioNavAction newNavAction" title="View new items.">
+          <a href="#" class="navAction radioNavAction" title="View new items." data-status="new">
             <span class="label">新款</span>
           </a>
-          <a href="#" class="navAction radioNavAction saleNavAction" title="View only items on sale.">
+          <a href="#" class="navAction radioNavAction" title="View only items on sale." data-status="sale">
             <span class="label">折扣</span>
           </a>
           <span class="radioSlider">&nbsp;</span>
@@ -1694,7 +1694,20 @@
   </div>
   <script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
   <script type="text/javascript">
-  var OpenMenu, CloseMenu;
+  // Data
+  var searchFilters = {
+    keyword: "",
+    filters: "",
+    gender: "womens",
+    price: "any",
+    color: "any",
+    sale: "any",
+    newFilter: "any",
+    sortOrder: "default"
+  };
+
+  // Global functions
+  var OpenMenu, CloseMenu, setFilterClass, setFilterText, changeFilterAndNavigate;
   OpenMenu = function(e, t, n) {
     if (e.hasClass("selected")) {
       e.removeClass("selected");
@@ -1708,11 +1721,49 @@
   CloseMenu = function(e) {
     e.removeClass("selected")
   };
-  $('.filterNav,.sortMenuOpener').click(function(e) {
+  setFilterClass = function(e, t, n) {
+    if (n) {
+      var i = "any new sale womens mens anyColor";
+      n.removeClass(i), ("color" != e || "any" === t) && n.addClass(t)
+    }
+  };
+  setFilterText = function(e, t) {
+    t.find(".label").text(e)
+  };
+  changeFilterAndNavigate = function(e, t, n, i) {
+    var a = $('#filters').find(".filterNav");
+    if (setFilterClass(e, t, i), "toggle" != e && i && (setFilterText(n, i), "any" != t && OpenMenu(i, a, !1))) {
+    }
+  };
+
+  // Events binding
+  $('.hasSubMenu,.sortMenuOpener').click(function(e) {
     var t = $(e.target).closest(".navItem"),
       n = $(this.el).find(".filterNav");
     return OpenMenu(t, n, !1), !1
-  })
+  });
+  $('.statusFilterItem a').click(function(e) {
+    var n, i, t;
+    t = $(e.currentTarget).data('status')
+    switch (t) {
+      case "sale":
+        searchFilters.sale = "on sale";
+        searchFilters.newFilter = "any"
+        n = "sale";
+        break;
+      case "new":
+        searchFilters.sale = "any";
+        searchFilters.newFilter = "in the last week";
+        n = "new";
+        break;
+      default:
+        searchFilters.sale = "any";
+        searchFilters.newFilter = "any";
+        n = "any"
+    }
+    i = $(".statusFilterItem");
+    changeFilterAndNavigate("toggle", n, "", i);
+  });
   </script>
 </body>
 </html>
