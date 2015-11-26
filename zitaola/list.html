@@ -1693,5 +1693,26 @@
     </footer>
   </div>
   <script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
+  <script type="text/javascript">
+  var OpenMenu, CloseMenu;
+  OpenMenu = function(e, t, n) {
+    if (e.hasClass("selected")) {
+      e.removeClass("selected");
+    } else {
+      var i = t.find(".navItem");
+      CloseMenu(i), e.addClass("selected"), n && $(document).one("click", function() {
+        i.removeClass("selected")
+      })
+    }
+  };
+  CloseMenu = function(e) {
+    e.removeClass("selected")
+  };
+  $('.filterNav,.sortMenuOpener').click(function(e) {
+    var t = $(e.target).closest(".navItem"),
+      n = $(this.el).find(".filterNav");
+    return OpenMenu(t, n, !1), !1
+  })
+  </script>
 </body>
 </html>
