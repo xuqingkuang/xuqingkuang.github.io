@@ -14,6 +14,11 @@
   <![endif]-->
   <link rel="stylesheet" href="./css/style.css" />
   <script type="text/javascript" src="http://cdn.staticfile.org/modernizr/2.8.2/modernizr.min.js"></script>
+  <style type="text/css" media="screen">
+  @media only screen and (max-width: 1220px) {
+    #mainNav .hasNav { display: none !important; }
+  }
+  </style>
 </head>
 <body>
   <div id="fb-root"></div>
@@ -31,7 +36,7 @@
               <a href="#!/login/" class="navAction mainNavAction loginNavAction noMenu">登录</a>
             </li>
             <li class="navItem mainNavItem womensNavItem hasNav selected">
-              <a href="#!/womens-clothing/" class="navAction hasNavAction mainNavAction womensNavAction">女人</a>
+              <a href="#!/womens-clothing/" class="navAction hasNavAction mainNavAction womensNavAction">Levis 女人</a>
               <ul class="nav subNav">
                 <li class="navItem subNavItem leftNavItem">
                   <a href="#!/womens-clothing/tag-inspiration:Fall/" class="navAction subNavAction hasMenuAction">手袋</a>
@@ -63,10 +68,16 @@
               </ul>
             </li>
             <li class="navItem mainNavItem mensNavItem hasNav ">
-              <a href="#!/mens-clothing/" class="navAction hasNavAction mainNavAction mensNavAction">男人</a>
+              <a href="#!/mens-clothing/" class="navAction hasNavAction mainNavAction mensNavAction">Levis 男人</a>
             </li>
             <li class="navItem mainNavItem editorialNavItem hasNav">
-              <a href="#!/advice/" class="navAction hasNavAction mainNavAction editorialNavAction">折扣</a>
+              <a href="#!/advice/" class="navAction hasNavAction mainNavAction editorialNavAction">Levis 折扣</a>
+            </li>
+            <li class="navItem mainNavItem editorialNavItem hasNav">
+              <a href="#!/advice/" class="navAction hasNavAction mainNavAction editorialNavAction">所有品牌男士</a>
+            </li>
+            <li class="navItem mainNavItem editorialNavItem hasNav">
+              <a href="#!/advice/" class="navAction hasNavAction mainNavAction editorialNavAction">所有品牌女士</a>
             </li>
           </ul>
         </nav>
@@ -99,93 +110,70 @@
           <span class="radioSlider">&nbsp;</span>
         </div>
       </li>
-      <li class="filterNav">
-        <div class="navItem filterNavItem genderFilterItem any" title="Choose a Gender">
-          <a href="#" class="navAction hasSubMenu">
-          <span class="label">Gender</span>
-          <span class="arrow">&#9662;</span>
-          </a>
-          <a href="#" class="navClearAction genderClearAction" title="Clear Gender">&times;</a>
-          <ul class="subFilterNav">
-            <li class="subFilterNavItem"><a href="#" class="subFilterNavAction womensNavAction">Womens</a></li>
-            <li class="subFilterNavItem"><a href="#" class="subFilterNavAction mensNavAction">Mens</a></li>
-          </ul>
-        </div>
-      </li>
       <li class="filterNav priceFilterNav">
         <div class="navItem filterNavItem priceFilterItem any" title="Choose a Price Level">
           <div class="priceLabel">
             <span data-min class="priceValue minPrice">$0</span>
             <span data-max class="priceValue maxPrice">$2.5k+</span>
           </div>
-          <div id="pricerange">
-            <div class="noUi-base">
-              <div class="noUi-origin noUi-connect noUi-dragable" style="left: 0%;">
-                <div class="noUi-handle noUi-handle-lower"></div>
-              </div>
-              <div class="noUi-origin noUi-background" style="left: 100%;">
-                <div class="noUi-handle noUi-handle-upper"></div>
-              </div>
-            </div>
-          </div>
+          <div id="pricerange"></div>
         </div>
       </li>
-      <li class="filterNav">
-        <div class="navItem filterNavItem colorFilterItem any" data-color="any" title="Choose a Color">
-          <a href="#" class="navAction hasSubMenu">
-            <span class="label">Color</span>
-            <span class="arrow">&#9662;</span><span class="swatch"></span>
-          </a>
-          <a href="#" class="navClearAction colorClearAction" title="Clear Color">&times;</a>
-          <ul class="subFilterNav subFilterNavSwatches">
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction OrangeColorAction" style="background: #e75734" title="Orange">Orange</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction CoralColorAction" style="background: #ff7f50" title="Coral">Coral</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction SalmonColorAction" style="background: #ff8c69" title="Salmon">Salmon</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction RustColorAction" style="background: #b7410e" title="Rust">Rust</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction IndigoColorAction" style="background: #4b0082" title="Indigo">Indigo</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction PurpleColorAction" style="background: #800080" title="Purple">Purple</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction FuchsiaColorAction" style="background: #e245de" title="Fuchsia">Fuchsia</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Radiant OrchidColorAction" style="background: #b163a3" title="Radiant Orchid">Radiant Orchid</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction SangriaColorAction" style="background: #9d3158" title="Sangria">Sangria</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Aurora RedColorAction" style="background: #b93a3e" title="Aurora Red">Aurora Red</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction RedColorAction" style="background: #bc231b" title="Red">Red</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Strawberry IceColorAction" style="background: #e3868f" title="Strawberry Ice">Strawberry Ice</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction PinkColorAction" style="background: #ffc0cb" title="Pink">Pink</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction MauveColorAction" style="background: #c49fba" title="Mauve">Mauve</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction BurgundyColorAction" style="background: #580615" title="Burgundy">Burgundy</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction NavyColorAction" style="background: #2d2b36" title="Navy">Navy</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction BlueColorAction" style="background: #2c4269" title="Blue">Blue</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Classic BlueColorAction" style="background: #1d4e89" title="Classic Blue">Classic Blue</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Mykonos BlueColorAction" style="background: #006395" title="Mykonos Blue">Mykonos Blue</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Royal BlueColorAction" style="background: #4169e1" title="Royal Blue">Royal Blue</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Sky BlueColorAction" style="background: #87ceeb" title="Sky Blue">Sky Blue</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction TealColorAction" style="background: #008080" title="Teal">Teal</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction TurquoiseColorAction" style="background: #30d5c8" title="Turquoise">Turquoise</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Seafoam GreenColorAction" style="background: #93d5c5" title="Seafoam Green">Seafoam Green</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction CypressColorAction" style="background: #525b41" title="Cypress">Cypress</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction GreenColorAction" style="background: #2a8f4d" title="Green">Green</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Emerald GreenColorAction" style="background: #02a78e" title="Emerald Green">Emerald Green</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction MintColorAction" style="background: #3eb489" title="Mint">Mint</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction MustardColorAction" style="background: #f2cd46" title="Mustard">Mustard</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction YellowColorAction" style="background: #e9d400" title="Yellow">Yellow</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction Misted YellowColorAction" style="background: #dbb960" title="Misted Yellow">Misted Yellow</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction SandColorAction" style="background: #c2b280" title="Sand">Sand</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction CamelColorAction" style="background: #c19a6b" title="Camel">Camel</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction TanColorAction" style="background: #d2b48c" title="Tan">Tan</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction KhakiColorAction" style="background: #c3b091" title="Khaki">Khaki</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction CreamColorAction" style="background: #f6d7a9" title="Cream">Cream</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction CarafeColorAction" style="background: #513c20" title="Carafe">Carafe</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction BrownColorAction" style="background: #47362e" title="Brown">Brown</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction CognacColorAction" style="background: #886159" title="Cognac">Cognac</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction AluminumColorAction" style="background: #9c9687" title="Aluminum">Aluminum</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction GreyColorAction" style="background: #808080" title="Grey">Grey</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction SilverColorAction" style="background: #c0c0c0" title="Silver">Silver</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction WhiteColorAction" style="background: #ffffff" title="White">White</a></li>
-            <li class="subFilterNavItem colorMenuItem"><a href="#" class="ir colorMenuAction BlackColorAction" style="background: #000000" title="Black">Black</a></li>
-          </ul>
-        </div>
+      <li data-facets class="facetsWrapper">
+        <ul data-type="cat" class="filterNav facet cat">
+          <li class="navItem filterNavItem facetItem any">
+            <a href="#" data-label="Category" class="navAction hasSubMenu">
+              <span class="label">分类</span>
+              <span class="arrow">▾</span>
+            </a>
+            <a href="#" data-clearfacet="cat" class="navClearAction categoryClearButton" title="Clear Facet">
+              ×
+            </a>
+            <ul class="facets">
+              <li class="facet facetcat">
+                <a href="#!/womens-clothing/cat-Accessories/" class="facetAction facetTypecat showFacet truncated" title="Accessories (1662)">
+                  配件
+                </a>
+              </li>
+              <li class="facet facetcat">
+                <a href="#!/womens-clothing/cat-Shoes/" class="facetAction facetTypecat showFacet truncated" title="Shoes (1231)">
+                  鞋子
+                </a>
+              </li>
+              <li class="facet facetcat">
+                <a href="#!/womens-clothing/cat-Tops/" class="facetAction facetTypecat showFacet truncated" title="Tops (1136)">
+                  外套
+                </a>
+              </li>
+              <li class="facet facetcat">
+                <a href="#!/womens-clothing/cat-Dresses/" class="facetAction facetTypecat showFacet truncated" title="Dresses (693)">
+                  上衣
+                </a>
+              </li>
+              <li class="facet facetcat">
+                <a href="#!/womens-clothing/cat-Bottoms/" class="facetAction facetTypecat showFacet truncated" title="Bottoms (632)">
+                  新货
+                </a>
+              </li>
+              <li class="facet facetcat">
+                <a href="#!/womens-clothing/cat-Bags/" class="facetAction facetTypecat showFacet truncated" title="Bags (594)">
+                  连衣裙
+                </a>
+              </li>
+              <li class="facet facetcat">
+                <a href="#!/womens-clothing/cat-Jewelry/" class="facetAction facetTypecat showFacet truncated" title="Jewelry (573)">
+                  手袋
+                </a>
+              </li>
+              <li class="facet facetcat">
+                <a href="#!/womens-clothing/cat-Sandals/" class="facetAction facetTypecat showFacet truncated" title="Sandals (466)">
+                  折扣商品
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </li>
-      <li data-facets class="facetsWrapper"></li>
     </ul>
     <ul id="navHelpers" class="navHelpers hide">
       <li class="navHelperItem"><a href="#" id="backToPage" class="navHelperAction" title="Back to Page" data-noscroll>Back</a></li>
@@ -197,23 +185,18 @@
       <section id="searchResults" class="pageBody resultsWrap viewSearchResults hasFilters">
         <div class="listResultsHeaderWrapper">
           <div class="listHeader ">
-            <span class="featureType">
-            1.7M Results for
-            </span>
-            <h1 class="listTitle" itemprop="name">
-              Clothing for Women
-            </h1>
+            <span class="welcome">你好，自淘啦为你检索到Levis美国官网36,273件商品</span>
             <ul class="nav sortNav">
               <li class="navItem sortNavItem">
                 <a href="#" class="sortNavAction sortMenuOpener">
-                <span class="label">Popularity</span>
+                <span class="label">人气</span>
                 <span class="arrow">&#9662;</span>
                 </a>
                 <ul class="menu menuRight">
-                  <li class="menuItem"><a href="#!/womens-clothing/" class="menuAction sortMenuAction">Popularity</a></li>
-                  <li class="menuItem"><a href="#!/womens-clothing/?sort=price-asc" class="menuAction sortMenuAction">Lowest Price</a></li>
-                  <li class="menuItem"><a href="#!/womens-clothing/?sort=price-desc" class="menuAction sortMenuAction">Highest Price</a></li>
-                  <li class="menuItem"><a href="#!/womens-clothing/?sort=new" class="menuAction sortMenuAction">Newest</a></li>
+                  <li class="menuItem"><a href="#!/womens-clothing/" class="menuAction sortMenuAction">人气</a></li>
+                  <li class="menuItem"><a href="#!/womens-clothing/?sort=price-asc" class="menuAction sortMenuAction">价格从低到高</a></li>
+                  <li class="menuItem"><a href="#!/womens-clothing/?sort=price-desc" class="menuAction sortMenuAction">价格从高到低</a></li>
+                  <li class="menuItem"><a href="#!/womens-clothing/?sort=new" class="menuAction sortMenuAction">新上</a></li>
                 </ul>
               </li>
             </ul>
@@ -1693,6 +1676,7 @@
     </footer>
   </div>
   <script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="http://cdn.staticfile.org/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
   <script type="text/javascript">
   // Data
   var searchFilters = {
@@ -1735,6 +1719,22 @@
     if (setFilterClass(e, t, i), "toggle" != e && i && (setFilterText(n, i), "any" != t && OpenMenu(i, a, !1))) {
     }
   };
+
+  // Widgets initialize
+  $('#pricerange').noUiSlider({
+    start: [0, 5e3],
+    connect: !0,
+    direction: "ltr",
+    orientation: "horizontal",
+    behaviour: "tap-drag",
+    range: {
+      min: [0, 25],
+      "30%": [100, 50],
+      "50%": [500, 100],
+      "70%": [1e3, 500],
+      max: [2500]
+    }
+  });
 
   // Events binding
   $('.hasSubMenu,.sortMenuOpener').click(function(e) {
