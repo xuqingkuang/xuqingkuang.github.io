@@ -6180,7 +6180,7 @@ input.searchField:focus:-ms-input-placeholder {
   z-index: 60;
   left: 0;
   top: 85px;
-  width: 19%;
+  width: 150px;
   padding: 0 5px 0 10px
 }
 @media only screen and (min-width: 668px) {
@@ -6193,32 +6193,6 @@ input.searchField:focus:-ms-input-placeholder {
   .hasOverlay>#filters,
   .viewProductLanding #filters {
     display: none
-  }
-}
-@media only screen and (min-width: 881px) {
-  #filters {
-    width: 14.8%
-  }
-}
-@media only screen and (min-width: 1133px) {
-  #filters {
-    width: 12.4%
-  }
-}
-@media only screen and (min-width: 1280px) {
-  #filters {
-    width: 11.6%
-  }
-}
-@media only screen and (min-width: 1366px) {
-  #filters {
-    width: 11%
-  }
-}
-@media only screen and (min-width: 1530px) {
-  #filters {
-    width: 10.2%;
-    max-width: 210px
   }
 }
 .filterNav {
@@ -6324,20 +6298,9 @@ input.searchField:focus:-ms-input-placeholder {
   z-index: 10;
   position: relative;
   display: inline-block;
-  padding: 1em 0em .9em .2em;
-  width: 31%;
-  text-align: center
-}
-@media only screen and (max-width: 1170px) {
-  .filterNav .radioNavAction {
-    width: 30%;
-  }
-}
-@media only screen and (max-width: 760px) {
-  .filterNav .radioNavAction {
-    font-size: 0.4rem;
-    padding: 1em 0;
-  }
+  padding: 1em 0em .9em .3em;
+  text-align: center;
+  width: 30%;
 }
 .filterNav .radioNavAction:after {
   position: absolute;
@@ -6385,7 +6348,7 @@ input.searchField:focus:-ms-input-placeholder {
   top: 0;
   left: 0;
   display: inline-block;
-  width: 33.33%;
+  width: 33%;
   height: 100%;
   box-shadow: 0 0 4px rgba(22, 22, 22, .2);
   background-color: #fff
@@ -12763,6 +12726,7 @@ input.taggerShortKey {
   font-size: 1.2rem;
   font-weight: bold;
   bottom: 20px;
+  left: 10px;
 }
 @media only screen and (max-width: 881px) {
   #main .listHeader .welcome {
