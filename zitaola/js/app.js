@@ -194,6 +194,20 @@
         });
         overlayBinddings();
         authBinddings();
+      },
+      detail: function() {
+        $('.secondaryBuyWrap .color').click(function(e) {
+          var $el = $(e.currentTarget)
+          $('.secondaryBuyWrap .color').removeClass('selected');
+          $el.addClass('selected');
+          $('.secondaryBuyWrap input[name="color"]').val($el.data('value'));
+        });
+        
+        $('.thumbnailAction').click(function(e) {
+          $('#primaryTemplateImg').attr(
+            'src', $(e.currentTarget).data('lrg-image')
+          )
+        });
       }
     }
   }

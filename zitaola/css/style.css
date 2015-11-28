@@ -338,7 +338,7 @@ html {
 body {
   position: relative;
   width: 100%;
-  font: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
+  font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
   letter-spacing: .5px;
   font-weight: 300;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -1672,7 +1672,35 @@ button.inlineButton {
 }
 .secondaryBuyWrap {
   margin: 10px 0 20px;
-  text-align: center
+}
+.secondaryBuyWrap p {
+  line-height: 36px;
+}
+.secondaryBuyWrap .color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+.secondaryBuyWrap .color:hover, .secondaryBuyWrap .color.selected {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+.secondaryBuyWrap button.size {
+  font-size: 16px;
+  padding: 0px 10px;
+  color: black;
+  background-color: white;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+.secondaryBuyWrap button:focus {
+  outline: none;
+}
+.secondaryBuyWrap input[name="count"] {
+  width: 100px;
+  padding: 2px 0px 2px 6px;
 }
 .button.secondaryBuyButton {
   min-width: 22%;
@@ -2522,7 +2550,6 @@ button.inlineButton {
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   opacity: 1;
-  position: fixed;
   top: 44px;
   left: 0;
   z-index: 500;
@@ -2705,7 +2732,7 @@ button.inlineButton {
 @media only screen and (min-width: 480px) {
   .titleWrap {
     width: 73%;
-    margin-bottom: 2.1em
+    margin-bottom: 0em
   }
 }
 @media only screen and (min-width: 668px) {
@@ -2735,12 +2762,12 @@ button.inlineButton {
 }
 .priceWrap {
   margin-top: -6px;
-  width: 33%;
+  width: 100%;
   text-align: right
 }
 @media only screen and (min-width: 480px) {
   .priceWrap {
-    width: 26%;
+    width: 100%;
     margin-left: 1%
   }
 }
@@ -2913,6 +2940,9 @@ button.inlineButton {
 #productMetaInfo {
   position: relative;
   margin: 15px 0
+}
+#productMetaInfo .notice {
+  margin-left: -25%;
 }
 @media only screen and (min-width: 1133px) {
   .viewProductDetail #productMetaInfo {
@@ -3630,7 +3660,7 @@ button.inlineButton {
 }
 .subContent {
   position: relative;
-  padding: 6.6% 3.2% 100px;
+  padding: 3.2% 3.2% 100px;
   min-height: 100%;
   border-top: 1px solid #fff;
   background: rgba(246, 246, 246, .6)
@@ -3881,9 +3911,6 @@ button.inlineButton {
   .price {
     font-size: 1.9rem
   }
-  .detailProduct>.thumbnailWrap {
-    margin: 3em 0 5em
-  }
   .productDetailWrap .productActions {
     width: auto
   }
@@ -3970,9 +3997,6 @@ button.inlineButton {
   .viewProductLanding .h3Product {
     display: block;
     margin-bottom: .3em
-  }
-  .subContent {
-    padding-top: 4.6em
   }
   .similarFooterAction {
     left: 35%;
@@ -5458,7 +5482,7 @@ button.inlineButton {
   text-align: center
 }
 .viewProductDetail .scoreBlock {
-  width: 45%;
+  width: 80%;
   padding: 10px;
   background: #e9e9eb
 }
@@ -6062,7 +6086,15 @@ input.searchField:focus:-ms-input-placeholder {
   left: 10%;
   -webkit-transform: translate3d(0, 0, 0)
 }
-.viewProductDetail.hasOverlay:not(.viewProductLanding) #backToPage {
+#translate {
+  opacity: 0;
+  top: -105%;
+  left: 10%;
+  -webkit-transform: translate3d(0, 0, 0)
+}
+.viewProductDetail.hasOverlay:not(.viewProductLanding) #backToPage,
+.viewProductDetail.hasOverlay:not(.viewProductLanding) #translate {
+  z-index: 999;
   top: 12em;
   -moz-animation-name: back-bounce;
   -moz-animation-duration: 500ms;
@@ -6081,13 +6113,17 @@ input.searchField:focus:-ms-input-placeholder {
   background-position: 50% -768px
 }
 @media only screen and (max-width: 768px) {
-  #backToPage {
+  #backToPage, #translate {
     display: none
   }
 }
 @media only screen and (min-width: 1133px) {
   .viewProductDetail.hasOverlay:not(.viewProductLanding) #backToPage {
     top: 13em;
+    left: 6%
+  }
+  .viewProductDetail.hasOverlay:not(.viewProductLanding) #translate {
+    top: 16em;
     left: 6%
   }
 }
@@ -6779,15 +6815,16 @@ input.searchField:focus:-ms-input-placeholder {
 }
 @media only screen and (min-width: 480px) {
   .filterNav>.colorFilterItem {
-    display: block
+    display: block;
   }
 }
 .subFilterNavSwatches {
-  padding-top: 1px
+  padding-top: 1px;
+  font-size: 0px;
 }
 .subFilterNav .colorMenuItem {
   display: inline-block;
-  width: 22%;
+  width: 25%;
   line-height: 30px;
   border: 1px solid rgba(255, 255, 255, .5);
   border-width: 0 1px
@@ -12744,4 +12781,28 @@ input.taggerShortKey {
   #main .listHeader .welcome {
     display: none;
   }
+}
+.notice {
+  color: #aaa;
+  background-color: rgba(246, 246, 246, .6);
+  padding: 20px 3.2%;
+  margin: 30px 0px 10px;
+}
+.notice .title {
+  text-align: center;
+}
+.notice li {
+  list-style-type: decimal;
+  margin-left: 1.6rem;
+}
+.notice .questionsLink a {
+  display: block;
+  color: #666;
+  font-size: .9rem;
+}
+.pink {
+  color: #e8878b;
+}
+.text-right {
+  text-align: right;
 }
