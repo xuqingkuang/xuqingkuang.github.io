@@ -338,7 +338,7 @@ html {
 body {
   position: relative;
   width: 100%;
-  font: 62.5% futura-pt, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
   letter-spacing: .5px;
   font-weight: 300;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -1271,6 +1271,11 @@ textarea {
 .popupViewNarrow input:not([type=checkbox]):not([type=radio]),
 .popupViewNarrow textarea {
   width: 100%
+}
+.popupViewNarrow .selectedSetItem,
+.popupViewNarrow .inputPopup.inline input:not([type=checkbox]):not([type=radio]),
+.popupViewNarrow .inputPopup.inline textarea {
+  width: 40%
 }
 .menuForm .selectedSetItem,
 .menuForm input:not([type=checkbox]):not([type=radio]),
@@ -3402,9 +3407,9 @@ button.inlineButton {
   display: block;
   top: -10px;
   right: -10px;
-  height: 31px;
+  height: 28px;
   line-height: 27px;
-  width: 31px;
+  width: 28px;
   text-indent: 1px;
   font-size: 1.7rem;
   font-weight: 400;
@@ -6319,7 +6324,7 @@ input.searchField:focus:-ms-input-placeholder {
   z-index: 10;
   position: relative;
   display: inline-block;
-  padding: 1em 0em .6em .5em;
+  padding: 1em 0em .9em .2em;
   width: 31%;
   text-align: center
 }
@@ -7340,6 +7345,7 @@ input.searchField:focus:-ms-input-placeholder {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+  display: none;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, .8)), to(rgba(22, 22, 22, .6)));
   background-image: -webkit-linear-gradient(top, rgba(22, 22, 22, .8), rgba(22, 22, 22, .6));
   background-image: -moz-linear-gradient(top, rgba(22, 22, 22, .8), rgba(22, 22, 22, .6));
@@ -10235,7 +10241,7 @@ input.inlineInput {
 }
 @media only screen and (min-width: 668px) {
   .footerGroup {
-    width: 16.66%;
+    width: 16%;
     padding: 2% 2.6% 4%;
     min-height: 17.8rem;
     border-right: 1px solid #e9e9eb;
@@ -12736,10 +12742,10 @@ input.taggerShortKey {
     bottom: 275px
   }
 }
-#header .searchBox h1 {
+#header .searchBox .promotion {
   line-height: 50px;
   margin-left: 20px;
-  color: red;
+  color: #e8878b;
 }
 #main .listHeader .welcome {
   position: absolute;

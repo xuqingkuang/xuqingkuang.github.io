@@ -25,10 +25,10 @@
         <nav id="mainNav">
           <ul class="nav mainNav">
             <li class="navItem mainNavItem userNavItem signUpNavItem rightNavItem">
-              <a href="#!/signup/" class="navAction mainNavAction signUpNavAction whiteButton noMenu">注册</a>
+              <a href="#!/signup/" class="navAction mainNavAction signUpNavAction whiteButton noMenu" data-target="#signup">注册</a>
             </li>
             <li class="navItem mainNavItem userNavItem loginNavItem rightNavItem">
-              <a href="#!/login/" class="navAction mainNavAction loginNavAction noMenu">登录</a>
+              <a href="#!/login/" class="navAction mainNavAction loginNavAction noMenu" data-target="#login">登录</a>
             </li>
             <li class="navItem mainNavItem womensNavItem hasNav ">
               <a href="./list.html" class="navAction hasNavAction mainNavAction womensNavAction">女人</a>
@@ -587,6 +587,126 @@
       <div class="micro footerMicro">&copy; 2015 自淘啦. All rights reserved.</div>
     </footer>
   </div>
+  <div id="login" class="overlay">
+    <div id="popupAlert" class="popupView popupViewNarrow">
+      <div class="popupWrap popupWrapNarrow">
+        <h3 class="h3Popup">登录</h3>
+        <p class="pPopup">使用第三方帐号登录</p>
+        <p class="pPopup pButton">
+          <a href="/login/qq/?next=%2F" class="button buttonWithIcon">
+            用 QQ 帐号登录
+          </a>
+        </p>
+        <hr class="rule">
+        <form method="POST" action="/login/">
+          <div class="inputPopup">
+            <label for="uNameField">手机号/邮箱</label>
+            <input type="text" name="username" id="uNameField" autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="请输入注册手机号/邮箱">
+            <div class="_message"></div>
+          </div>
+          <div class="inputPopup">
+            <label for="passwordField">密码</label>
+            <input type="password" name="password" id="passwordField" autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="密码">
+            <div class="_message">&nbsp;</div>
+          </div>
+          <div class="inputPopup">
+            <label>
+              <input type="checkbox" name="remember" />
+              两周内免登录
+            </label>
+          </div>
+          <div class="buttonRow buttonRowPopup">
+            <button type="submit" class="button">登录</button>
+            <a data-popup="forgotPassword" href="#!/member/forgot/password/" class="linkButton forgetPasswordNavAction" data-target="#forgetPassword">忘记密码?</a>
+          </div>
+        </form>
+        <hr class="rule">
+        <p class="pPopup">
+          没有帐号？
+          <a data-popup="SignUp" href="#!/signup/" class="signUpAction textLink signUpNavAction" data-target="#signup">免费注册</a>
+        </p>
+        <a href="#" class="closeAction closeX">×</a>
+      </div>
+    </div>
+  </div>
+  <div id="signup" class="overlay">
+    <div id="popupAlert" class="popupView popupViewNarrow">
+      <div class="popupWrap popupWrapNarrow">
+        <h3 class="h3Popup">注册</h3>
+        <form action="/signup" class="formPopup" data-container="signup" autocomplete="off">
+          <div class="inputPopup">
+            <label for="uNameField">手机号</label>
+            <input data-validate="" class="_field" type="text" name="uName" id="uNameField" autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="请输入手机号码">
+            <div class="_message errorMessageUsername">&nbsp;</div>
+          </div>
+          <div class="inputPopup inline">
+            <label for="uNameField">验证码</label>
+            <div class="btnGroup">
+              <input data-validate="" class="_field" type="text" name="uName" id="uNameField" autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="验证码">
+            </div>
+            <div class="_message errorMessageUsername">&nbsp;</div>
+          </div>
+          <div class="inputPopup inline">
+            <label for="emailField">激活码</label>
+            <div class="btnGroup">
+              <input data-validate="" class="_field" type="text" name="email" id="emailField" autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="激活码" style="float: left;">
+              <button class="button" style="font-size: 0.8em; padding: 7px; margin-left: 10px;">获取激活码</button>
+            </div>
+            <div class="_message errorMessageEmail">&nbsp;</div>
+          </div>
+          <div class="inputPopup">
+            <label for="passwordField">邮箱</label>
+            <input data-validate="" class="_field" type="password" name="password" id="passwordField" autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="请输入邮箱，用于找回账户密码">
+            <div class="_message errorMessagePassword">&nbsp;</div>
+          </div>
+          <div class="inputPopup">
+            <label for="passwordField">密码</label>
+            <input data-validate="" class="_field" type="password" name="password" id="passwordField" autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="请输入6～30位数字、字母或符号">
+            <div class="_message errorMessagePassword">&nbsp;</div>
+          </div>
+          <p class="pPopup">
+            我接受自淘啦的
+            <a href="/terms/" target="_blank">服务条款</a> and
+            <a href="/privacy/" target="_blank">隐私政策</a>
+          </p>
+          <div class="buttonRow buttonRowPopup">
+            <button id="submitSignup" type="submit" class="button" disabled="">
+              注册
+            </button>
+          </div>
+        </form>
+        <hr class="rule">
+        <p class="pPopup">
+          已经有账号了?
+          <a data-popup="login" href="#!/login/" class="loginAction textLink loginNavAction" data-target="#login">点击登录</a>
+        </p>
+        <a href="#" class="closeAction closeX">×</a>
+      </div>
+    </div>
+  </div>
+  <div id="forgetPassword" class="overlay">
+    <div id="popupAlert" class="popupView popupViewNarrow">
+      <div class="popupWrap popupWrapNarrow">
+        <h3 class="h3Popup">忘记密码</h3>
+        <p class="pPopup">
+          别着急，密码可以通过邮箱进行重置。
+        </p>
+        <form action ="/forgetpassword" class="formPopup" data-container="forgotpassword">
+          <div class="inputPopup">
+            <label for="emailField">邮箱</label>
+            <input data-validate="" class="_field" type="text" name="email" id="emailField" autocorrect="off" autocapitalize="off" autocomplete="off">
+            <div class="_message">&nbsp;</div>
+          </div>
+          <div class="buttonRow buttonRowPopup">
+            <button id="sendForgottenPassword" type="submit" class="button" disabled="">
+              发送重置链接
+            </button>
+          </div>
+        </form>
+        <a href="#" class="closeAction closeX">×</a>
+      </div>
+    </div>
+  </div>
   <script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
   <script>
   /* Animate banner */
@@ -597,7 +717,24 @@
         n.removeClass("offStageLeft").addClass("backStage")
       }, 1e3), e.eq(a).removeClass("backStage")
     }, 8e3))
-  }, 100)
+  }, 100);
+  
+  $('.signUpNavAction,.loginNavAction,.forgetPasswordNavAction').click(function(e) {
+    target = $(e.currentTarget).data('target');
+    if (target != undefined) {
+      $('.overlay').hide()
+      $(target).fadeIn();
+    }
+  });
+  $('.closeAction').click(function(e) {
+    $(e.currentTarget).parents('.overlay').fadeOut();
+  });
+  $('.overlay').click(function(e) {
+    $(e.currentTarget).fadeOut();
+  });
+  $('.popupView').click(function(e) {
+    e.stopPropagation();
+  });
   </script>
 </body>
 </html>

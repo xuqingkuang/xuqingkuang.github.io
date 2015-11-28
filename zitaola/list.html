@@ -82,7 +82,7 @@
           </ul>
         </nav>
         <div class="searchBox">
-          <h1>Levis 全场额外30%折扣</h1>
+          <span class="promotion">Levis 全场额外30%折扣</span>
           <!-- 搜索框 -->
           <!--
           <form action="/" name="topSearchForm" class="searchForm">
@@ -1679,6 +1679,7 @@
   <script type="text/javascript" src="http://cdn.staticfile.org/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
   <script type="text/javascript">
   // Data
+  var MAX_PRICE = 2500;
   var searchFilters = {
     keyword: "",
     filters: "",
@@ -1691,7 +1692,8 @@
   };
 
   // Global functions
-  var OpenMenu, CloseMenu, setFilterClass, setFilterText, changeFilterAndNavigate;
+  var OpenMenu, CloseMenu, setFilterClass, setFilterText,
+      changeFilterAndNavigate, PrettifyNumber, displayPriceRange;
   OpenMenu = function(e, t, n) {
     if (e.hasClass("selected")) {
       e.removeClass("selected");
@@ -1719,6 +1721,26 @@
     if (setFilterClass(e, t, i), "toggle" != e && i && (setFilterText(n, i), "any" != t && OpenMenu(i, a, !1))) {
     }
   };
+  prettifyNumber = function(e) {
+    if (!e) return "";
+    for (var t = [{
+        divider: 1e6,
+        suffix: "M"
+      }, {
+        divider: 1e3,
+        suffix: "k"
+      }], n = 0, i = t.length; i > n; n++) e >= t[n].divider && (e = Math.round(e / t[n].divider * 10) / 10 + t[n].suffix);
+    return e.toString()
+  };
+  displayPriceRange = function() {
+    var e = this.priceslider.val()[0],
+      t = this.priceslider.val()[1],
+      n = $("[data-min]"),
+      i = $("[data-max]"),
+      a = prettifyNumber(e),
+      r = prettifyNumber(t);
+    t >= MAX_PRICE && (r += "+"), i.text("$" + r), n.text("$" + a)
+  };
 
   // Widgets initialize
   $('#pricerange').noUiSlider({
@@ -1734,6 +1756,8 @@
       "70%": [1e3, 500],
       max: [2500]
     }
+  }).on({
+    slide: displayPriceRange,
   });
 
   // Events binding
