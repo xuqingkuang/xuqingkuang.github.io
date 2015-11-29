@@ -2935,6 +2935,12 @@ button.inlineButton {
   padding: 0px;
   margin-left: -10%;
 }
+@media only screen and (max-width: 1132px) {
+  #productMetaInfo .notice {
+    margin: 20px 0px;
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 1133px) {
   .viewProductDetail #productMetaInfo {
     position: absolute;
@@ -5461,10 +5467,6 @@ button.inlineButton {
   .scores {
     margin-top: 15px
   }
-  .viewProductDetail .scores {
-    text-align: left;
-    width: 90%
-  }
 }
 .scoreBlock {
   display: inline-block;
@@ -5473,18 +5475,18 @@ button.inlineButton {
   text-align: center
 }
 .viewProductDetail .scoreBlock {
-  width: 80%;
+  width: 100%;
   padding: 10px;
   background: #e9e9eb
 }
 @media only screen and (min-width: 480px) {
   .scoreBlock {
-    width: 30%
+    width: 100%
   }
 }
 @media only screen and (min-width: 1530px) {
   .scoreBlock {
-    width: 35%
+    width: 100%
   }
 }
 .scoreCount {
@@ -5760,8 +5762,8 @@ button.inlineButton {
 }
 @media only screen and (min-width: 881px) {
   .footerIntro .searchBox {
-    left: 25%;
-    width: 50%
+    left: 15%;
+    width: 70%
   }
 }
 .searchForm {
@@ -5932,6 +5934,11 @@ input.searchField:focus:-ms-input-placeholder {
     padding: 0 .8rem;
     font-size: 1.3rem
   }
+}
+.footerIntro .button {
+  height: 37px;
+  padding: .2em 1em;
+  font-size: 1.3rem
 }
 @media only screen and (min-width: 668px) {
   .footerIntro .button {
