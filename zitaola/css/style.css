@@ -2674,12 +2674,7 @@ button.inlineButton {
 .linkListItem {
   display: inline-block;
   margin: 0 9px 4px 0;
-  font-size: .9rem
-}
-@media only screen and (min-width: 668px) {
-  .linkListItem {
-    font-size: 1rem
-  }
+  font-size: 1rem
 }
 .linkListAction {
   position: relative;
@@ -2699,15 +2694,10 @@ button.inlineButton {
   color: #666
 }
 .productCategoryAction:after {
-  right: -10px;
+  right: -17px;
   bottom: 1px;
   content: ' \232A';
   font-size: .8rem
-}
-@media only screen and (min-width: 668px) {
-  .productCategoryAction:after {
-    right: -17px
-  }
 }
 .linkListItem:last-child .linkListAction:after {
   display: none
@@ -2942,7 +2932,8 @@ button.inlineButton {
   margin: 15px 0
 }
 #productMetaInfo .notice {
-  margin-left: -25%;
+  padding: 0px;
+  margin-left: -10%;
 }
 @media only screen and (min-width: 1133px) {
   .viewProductDetail #productMetaInfo {
@@ -6082,20 +6073,19 @@ input.searchField:focus:-ms-input-placeholder {
 }
 #backToPage {
   opacity: 0;
-  top: -100%;
+  top: 12rem;
   left: 10%;
   -webkit-transform: translate3d(0, 0, 0)
 }
 #translate {
   opacity: 0;
-  top: -105%;
+  top: 16rem;
   left: 10%;
   -webkit-transform: translate3d(0, 0, 0)
 }
 .viewProductDetail.hasOverlay:not(.viewProductLanding) #backToPage,
 .viewProductDetail.hasOverlay:not(.viewProductLanding) #translate {
   z-index: 999;
-  top: 12em;
   -moz-animation-name: back-bounce;
   -moz-animation-duration: 500ms;
   -moz-animation-delay: 600ms;
@@ -6112,7 +6102,7 @@ input.searchField:focus:-ms-input-placeholder {
 #backToPage:after {
   background-position: 50% -768px
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 880px) {
   #backToPage, #translate {
     display: none
   }
@@ -8560,14 +8550,12 @@ input.searchField:focus:-ms-input-placeholder {
   position: relative;
   display: inline-block;
   margin-right: 1px;
-  height: 40px;
-  width: 40px
+  width: 100%;
 }
 .memberListItemAction {
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
   -moz-box-shadow: 0 1px 3px rgba(22, 22, 22, .1);
   -webkit-box-shadow: 0 1px 3px rgba(22, 22, 22, .1);
   box-shadow: 0 1px 3px rgba(22, 22, 22, .1);
@@ -12764,22 +12752,25 @@ input.taggerShortKey {
   font-weight: bold;
   bottom: 20px;
   left: 10px;
+  word-break: break-all;
 }
 @media only screen and (max-width: 881px) {
   #main .listHeader .welcome {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    width: 60%;
   }
 }
 
 @media only screen and (max-width: 500px) {
   #main .listHeader .welcome {
-    font-size: 0.8rem;
+    width: 60%;
   }
 }
 
 @media only screen and (max-width: 460px) {
   #main .listHeader .welcome {
-    display: none;
+    width: 50%;
+    font-size: 0.9rem;
   }
 }
 .notice {
@@ -12795,9 +12786,17 @@ input.taggerShortKey {
   list-style-type: decimal;
   margin-left: 1.6rem;
 }
+.notice .questionsLink {
+  padding: 30px 20px 5px 20px;
+}
 .notice .questionsLink a {
   display: block;
   color: #666;
+  font-size: .9rem;
+}
+.notice .questionsLink a:hover {
+  display: block;
+  color: #e8878b;
   font-size: .9rem;
 }
 .pink {
