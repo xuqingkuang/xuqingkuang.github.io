@@ -12809,7 +12809,12 @@ input.taggerShortKey {
   color: #aaa;
   background-color: rgba(246, 246, 246, .6);
   padding: 20px 8%;
-  margin: 30px 0px 10px;
+  margin: 40px 0px 10px;
+}
+@media only screen and (min-width: 880px) {
+  .notice {
+    margin: 100px 0px 10px;
+  }
 }
 .notice .title {
   text-align: center;
