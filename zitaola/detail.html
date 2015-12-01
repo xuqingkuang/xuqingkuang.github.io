@@ -12,19 +12,99 @@
   <link rel="shortcut icon" href="#!/imgs/favicon.ico">
   <![endif]-->
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Workaround for header -->
+  <style type="text/css" media="screen">
+  @media only screen and (max-width: 1150px) {
+    .nav .hasNav {display: none !important;}
+  }
+  </style>
+  <!-- Workaround -->
   <script type="text/javascript" src="http://cdn.staticfile.org/modernizr/2.8.2/modernizr.min.js"></script>
 </head>
-  <body>
-    <header id="header" class="view viewProductDetail hasOverlay">
-      <ul id="navHelpers" class="navHelpers">
-        <li class="navHelperItem">
-          <a href="javascript:history.go(-1);" id="backToPage" class="navHelperAction" title="Back to Page" data-noscroll="" style="z-index: 999">返回前一页</a>
-        </li>
-        <li class="navHelperItem">
-          <a href="#!/translate" id="translate" class="navHelperAction" title="一键翻译" data-noscroll="" style="z-index: 999">一键翻译</a>
-        </li>
-      </ul>
-    </header>
+<body>
+  <header id="header" class="view viewProductDetail hasOverlay">
+    <div class="barModule">
+      <div class="col col-1"><a href="./index.html" class="ir logo" title="自淘啦主页" data-bypass >自淘啦</a></div>
+      <div class="col col-2 mainCol">
+        <a href="#!/" class="ir logo largeLogo" title="Wantering Home" data-bypass >自淘啦</a>
+        <nav id="mainNav">
+          <ul class="nav mainNav">
+            <li class="navItem mainNavItem userNavItem signUpNavItem rightNavItem">
+              <a href="#!/signup/" class="navAction mainNavAction signUpNavAction whiteButton noMenu" data-target="#signup">注册</a>
+            </li>
+            <li class="navItem mainNavItem userNavItem loginNavItem rightNavItem">
+              <a href="#!/login/" class="navAction mainNavAction loginNavAction noMenu" data-target="#login">登录</a>
+            </li>
+            <li class="navItem mainNavItem womensNavItem hasNav selected">
+              <a href="#!/womens-clothing/" class="navAction hasNavAction mainNavAction womensNavAction">Levis 女人</a>
+              <ul class="nav subNav">
+                <li class="navItem subNavItem leftNavItem">
+                  <a href="#!/womens-clothing/tag-inspiration:Fall/" class="navAction subNavAction hasMenuAction">手袋</a>
+                </li>
+                <li class="navItem subNavItem leftNavItem">
+                  <a href="#!/womens-clothing/cat-Bags/" class="navAction subNavAction hasMenuAction">鞋</a>
+                </li>
+                <li class="navItem subNavItem leftNavItem">
+                  <a href="#!/womens-clothing/cat-Shoes/" class="navAction subNavAction hasMenuAction">连衣裙</a>
+                </li>
+                <li class="navItem subNavItem leftNavItem">
+                  <a href="#!/womens-clothing/cat-Dresses/" class="navAction subNavAction hasMenuAction">上衣</a>
+                </li>
+                <li class="navItem subNavItem leftNavItem">
+                  <a href="#!/womens-clothing/cat-Tops/" class="navAction subNavAction hasMenuAction">下装</a>
+                </li>
+                <li class="navItem subNavItem leftNavItem">
+                  <a href="#!/womens-clothing/cat-Bottoms/" class="navAction subNavAction hasMenuAction">外套</a>
+                </li>
+                <li class="navItem subNavItem leftNavItem">
+                  <a href="#!/womens-clothing/cat-Outerwear/" class="navAction subNavAction hasMenuAction">配件</a>
+                </li>
+                <li class="navItem subNavItem leftNavItem">
+                  <a href="#!/womens-clothing/cat-Accessories/" class="navAction subNavAction hasMenuAction">新货</a>
+                </li>
+                <li class="navItem subNavItem leftNavItem">
+                  <a href="#!/trending/womens/" class="navAction subNavAction noMenu">折扣商品</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navItem mainNavItem mensNavItem hasNav ">
+              <a href="#!/mens-clothing/" class="navAction hasNavAction mainNavAction mensNavAction">Levis 男人</a>
+            </li>
+            <li class="navItem mainNavItem editorialNavItem hasNav">
+              <a href="#!/advice/" class="navAction hasNavAction mainNavAction editorialNavAction">Levis 折扣</a>
+            </li>
+            <li class="navItem mainNavItem editorialNavItem hasNav">
+              <a href="#!/advice/" class="navAction hasNavAction mainNavAction editorialNavAction">所有品牌男士</a>
+            </li>
+            <li class="navItem mainNavItem editorialNavItem hasNav">
+              <a href="#!/advice/" class="navAction hasNavAction mainNavAction editorialNavAction">所有品牌女士</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="searchBox">
+          <span class="promotion">Levis 全场额外30%折扣</span>
+          <!-- 搜索框 -->
+          <!--
+          <form action="/" name="topSearchForm" class="searchForm">
+            <input type="search" placeholder="What are you looking for?" value="" class="searchField" name="q" autocorrect="off" autocapitalize="off" autocomplete="off" />
+            <a href="#" class="button primaryButton ir iconButton">搜索</a>
+            <div class="autoCompleteWrap"></div>
+          </form>
+          -->
+          <!-- /搜索框 -->
+        </div>
+      </div>
+    </div>
+    <ul id="navHelpers" class="navHelpers">
+      <li class="navHelperItem">
+        <a href="javascript:history.go(-1);" id="backToPage" class="navHelperAction" title="Back to Page" data-noscroll="" style="z-index: 999">返回前一页</a>
+      </li>
+      <li class="navHelperItem">
+        <a href="#!/translate" id="translate" class="navHelperAction" title="一键翻译" data-noscroll="" style="z-index: 999">一键翻译</a>
+      </li>
+    </ul>
+  </header>
+  <div id="bodyWrap">
     <section id="productDetail" class="pageBody viewProductDetail hasOverlay">
       <div class="productDetailWrap inPlaceSwitch">
         <div class="product detailProduct" itemscope="" itemtype="http://schema.org/Product">
@@ -80,7 +160,6 @@
           <div class="thumbnailWrap  hasGallery">
             <div class="mainImgWrap">
               <img src="https://cdn.wantering.com/products/images/c/7/7/c77d4dc4-0c3d-11e5-b65f-04013fb085011.jpg" alt="Nasty Gal Chroma Striped Envelope Bag" id="primaryTemplateImg" class="mainImg" itemprop="image" style="max-width:960px;">
-              
               <ul class="productActions">
                 <li class="productAction buttonActionItem gifActionItem">
                   <a href="#" class="action buttonAction gifButtonAction" title="Animated GIF">
@@ -330,23 +409,23 @@
           </div>
         </div>
       </div>
-      <div class="notice">
-        <h3 class="title">
-          <del>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</del>
-          消费者告知书
-          <del>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</del>
-        </h3>
-        <p>尊敬的客户：</p>
-        在您选购境外商品前，麻烦您仔细阅读此文，同意本文所告知内容后在进行下单购买：<br />
-        <ol>
-          <li>您在本（公司）网站上购买的境外产品位产地直销商品，仅限个人自用不得进行再销售，商品本身可能无中文标签，您可以查看网站的翻译或者在线练习我们的客服。</li>
-          <li>您购买的境外商品使用的品质、健康、标识等项目使用标准符合原产国使用标准，但是可能与我国标准有所不同，所以在使用过程中由此产生可能产生的危害或损失以及其他风险，将由您个人承担。</li>
-        </ol>
-      </div>
-      <div id="similarList" class="subContent">
-        <h2 class="h2Nested">
-          为您推荐
-        </h2>
+    </section>
+    <section class="notice">
+      <h3 class="title">
+        消费者告知书
+      </h3>
+      <p>尊敬的客户：</p>
+      在您选购境外商品前，麻烦您仔细阅读此文，同意本文所告知内容后在进行下单购买：<br />
+      <ol>
+        <li>您在本（公司）网站上购买的境外产品位产地直销商品，仅限个人自用不得进行再销售，商品本身可能无中文标签，您可以查看网站的翻译或者在线练习我们的客服。</li>
+        <li>您购买的境外商品使用的品质、健康、标识等项目使用标准符合原产国使用标准，但是可能与我国标准有所不同，所以在使用过程中由此产生可能产生的危害或损失以及其他风险，将由您个人承担。</li>
+      </ol>
+    </section>
+    <section id="similarList" class="subContent">
+      <h2 class="h2Nested">
+        为您推荐
+      </h2>
+      <div class="productsWrapper">
         <ul class="products productSimilarProducts nestedProducts">
           <li class="product listProduct " id="pid-aG8Qt">
             <a href="#!/nasty-gal-chroma-striped-tote-bag/aG8Qt/" class="ir productLink" data-noscroll="" data-action="detail" data-id="aG8Qt">
@@ -515,163 +594,403 @@
               </li>
             </ul>
           </li>
+          <li class="product listProduct " id="pid-agoCn">
+            <a href="/nasty-gal-briar-zip-satchel/agoCn/" class="ir productLink" data-noscroll="" data-action="detail" data-id="agoCn">
+              Briar Zip Satchel
+            </a>
+            <span class="thumbnail bottomPos" style="background-image: url(https://cdn.wantering.com/products/images/8/3/c/83cf9774-684e-11e3-bd4e-062e13789e082.jpg);">
+            </span>
+            <ul class="productDetails">
+              <li class="productDetail productBrand">Nasty Gal</li>
+              <li class="productDetail productTitle">
+                Briar Zip Satchel
+              </li>
+              <li class="productDetail productStore">from Nasty Gal</li>
+              <li class="productDetail productPrice ">
+                <span class="regPrice">
+                  $65
+                </span>
+              </li>
+            </ul>
+            <ul class="productActions" data-action="socialData" data-id="agoCn">
+              <li class="productAction">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fbriar-zip-satchel&amp;sref=%2Fnasty-gal-briar-zip-satchel%2FagoCn%2F" data-action="buy" data-id="agoCn" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                  BUY
+                </a>
+              </li>
+              <li class="productAction">
+                <a href="#" data-action="love" data-id="agoCn" class="ir icon action wantAction ">
+                  Love it!
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="product listProduct " id="pid-aCtHt">
+            <a href="/nasty-gal-x-nila-anthony-take-out-vegan-leather-bag/aCtHt/" class="ir productLink" data-noscroll="" data-action="detail" data-id="aCtHt">
+              Nasty Gal x Nila Anthony Take Out Vegan Leather Bag
+            </a>
+            <span class="thumbnail bottomPos" style="background-image: url(https://cdn.wantering.com/products/images/a/2/3/a23141f4-d9ea-11e4-8b73-04013fa4ff012.jpg);">
+            </span>
+            <ul class="productDetails">
+              <li class="productDetail productBrand">Nasty Gal</li>
+              <li class="productDetail productTitle">
+                Nasty Gal x Nila Anthony Take Out Vegan Leather Bag
+              </li>
+              <li class="productDetail productStore">from Nasty Gal</li>
+              <li class="productDetail productPrice ">
+                <span class="regPrice">
+                  $48
+                </span>
+              </li>
+            </ul>
+            <ul class="productActions" data-action="socialData" data-id="aCtHt">
+              <li class="productAction socialDataItem ">
+                <a href="#" data-action="socialData" data-id="aCtHt" class="socialDataAction" title="Wantering Network | Facebook | Pinterest | Twitter | Tumblr | Influencers/Bloggers">View social data</a>
+                <span class="data socialData socialWantering" title="Wantering Network">
+                  <span class="socialFill socialFillWantering" style="height: 8%">Wantering Network</span>
+                </span>
+                <span class="data socialData socialFacebook" title="Facebook">
+                  <span class="socialFill socialFillFacebook" style="height: -2%">Facebook</span>
+                </span>
+                <span class="data socialData socialPinterest" title="Pinterest">
+                  <span class="socialFill socialFillPinterest" style="height: 71%">Pinterest</span>
+                </span>
+                <span class="data socialData socialTwitter" title="Twitter">
+                  <span class="socialFill socialFillTwitter" style="height: 2%">Twitter</span>
+                </span>
+                <span class="data socialData socialTumblr" title="Tumblr">
+                  <span class="socialFill socialFillTumblr" style="height: 3%">Tumblr</span>
+                </span>
+                <span class="data socialData socialInfluencers" title="Influencers">
+                </span>
+              </li>
+              <li class="productAction">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fnasty-gal-x-nila-anthony-take-out-vegan-leather-bag&amp;sref=%2Fnasty-gal-x-nila-anthony-take-out-vegan-leather-bag%2FaCtHt%2F" data-action="buy" data-id="aCtHt" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                  BUY
+                </a>
+              </li>
+              <li class="productAction">
+                <a href="#" data-action="love" data-id="aCtHt" class="ir icon action wantAction ">
+                  Love it!
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="product listProduct " id="pid-aI4DR">
+            <a href="/nasty-gal-moto-mama-denim-bag/aI4DR/" class="ir productLink" data-noscroll="" data-action="detail" data-id="aI4DR">
+              Moto Mama Denim Bag
+            </a>
+            <span class="thumbnail topPos" style="background-image: url(https://cdn.wantering.com/products/images/7/a/1/7a1c1b72-1f12-11e5-8312-04014a099d012.jpg);">
+            </span>
+            <span class="sticker stickerSale ">
+              <span class="stickerLabel">30%</span>
+              <span class="stickerMicro">off</span>
+            </span>
+            <ul class="productDetails">
+              <li class="productDetail productBrand">Nasty Gal</li>
+              <li class="productDetail productTitle">
+                Moto Mama Denim Bag
+              </li>
+              <li class="productDetail productStore">from Nasty Gal</li>
+              <li class="productDetail productPrice onSale">
+                <span class="regPrice">
+                  $48
+                </span>
+                <span class="salePrice">
+                  $34
+                </span>
+              </li>
+            </ul>
+            <ul class="productActions" data-action="socialData" data-id="aI4DR">
+              <li class="productAction socialDataItem hasFeatureArticle">
+                <a href="#" data-action="socialData" data-id="aI4DR" data-featureindex="0" class="socialDataAction" title="Wantering Network | Facebook | Pinterest | Twitter | Tumblr | Influencers/Bloggers">View social data</a>
+                <span class="data socialData socialWantering" title="Wantering Network">
+                </span>
+                <span class="data socialData socialFacebook" title="Facebook">
+                </span>
+                <span class="data socialData socialPinterest" title="Pinterest">
+                  <span class="socialFill socialFillPinterest" style="height: 14%">Pinterest</span>
+                </span>
+                <span class="data socialData socialTwitter" title="Twitter">
+                </span>
+                <span class="data socialData socialTumblr" title="Tumblr">
+                  <span class="socialFill socialFillTumblr" style="height: 13%">Tumblr</span>
+                </span>
+                <span class="data socialData socialInfluencers" title="Influencers">
+                  <span class="socialFill socialFillInfluencers" style="height: 10%">Influencers</span>
+                </span>
+                <div class="featureArticlePreview" style="background-image: url(https://s3.amazonaws.com/wantering/media/c0jgtki-s.jpg);">15 Fantastic Statement Bags Under $100</div>
+              </li>
+              <li class="productAction">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fmoto-mama-denim-bag&amp;sref=%2Fnasty-gal-moto-mama-denim-bag%2FaI4DR%2F" data-action="buy" data-id="aI4DR" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                  BUY
+                </a>
+              </li>
+              <li class="productAction">
+                <a href="#" data-action="love" data-id="aI4DR" class="ir icon action wantAction ">
+                  Love it!
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="product listProduct " id="pid-aCSvu">
+            <a href="/nasty-gal-roxy-vegan-leather-tassel-key-chain/aCSvu/" class="ir productLink" data-noscroll="" data-action="detail" data-id="aCSvu">
+              Roxy Vegan Leather Tassel Key Chain
+            </a>
+            <span class="thumbnail" style="background-image: url(https://cdn.wantering.com/products/images/1/9/2/1928b3f4-e0fe-11e4-8a05-04013fb1d7012.jpg);">
+            </span>
+            <span class="sticker stickerSale ">
+              <span class="stickerLabel">60%</span>
+              <span class="stickerMicro">off</span>
+            </span>
+            <ul class="productDetails">
+              <li class="productDetail productBrand">Nasty Gal</li>
+              <li class="productDetail productTitle">
+                Roxy Vegan Leather Tassel Key Chain
+              </li>
+              <li class="productDetail productStore">from Nasty Gal</li>
+              <li class="productDetail productPrice onSale">
+                <span class="regPrice">
+                  $18
+                </span>
+                <span class="salePrice">
+                  $7
+                </span>
+              </li>
+            </ul>
+            <ul class="productActions" data-action="socialData" data-id="aCSvu">
+              <li class="productAction socialDataItem ">
+                <a href="#" data-action="socialData" data-id="aCSvu" class="socialDataAction" title="Wantering Network | Facebook | Pinterest | Twitter | Tumblr | Influencers/Bloggers">View social data</a>
+                <span class="data socialData socialWantering" title="Wantering Network">
+                </span>
+                <span class="data socialData socialFacebook" title="Facebook">
+                </span>
+                <span class="data socialData socialPinterest" title="Pinterest">
+                  <span class="socialFill socialFillPinterest" style="height: 4%">Pinterest</span>
+                </span>
+                <span class="data socialData socialTwitter" title="Twitter">
+                </span>
+                <span class="data socialData socialTumblr" title="Tumblr">
+                </span>
+                <span class="data socialData socialInfluencers" title="Influencers">
+                </span>
+              </li>
+              <li class="productAction">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Froxy-vegan-leather-tassel-key-chain&amp;sref=%2Fnasty-gal-roxy-vegan-leather-tassel-key-chain%2FaCSvu%2F" data-action="buy" data-id="aCSvu" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                  BUY
+                </a>
+              </li>
+              <li class="productAction">
+                <a href="#" data-action="love" data-id="aCSvu" class="ir icon action wantAction ">
+                  Love it!
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="product listProduct " id="pid-arYSo">
+            <a href="/nasty-gal-vintage-chanel-sport-suede-bag/arYSo/" class="ir productLink" data-noscroll="" data-action="detail" data-id="arYSo">
+              Vintage Chanel Sport Suede Bag
+            </a>
+            <span class="thumbnail bottomPos" style="background-image: url(https://cdn.wantering.com/products/images/f/f/8/ff846d7c-6997-11e4-bfa2-062e13789e082.jpg);">
+            </span>
+            <ul class="productDetails">
+              <li class="productDetail productBrand">Nasty Gal</li>
+              <li class="productDetail productTitle">
+                Vintage Chanel Sport Suede Bag
+              </li>
+              <li class="productDetail productStore">from Nasty Gal</li>
+              <li class="productDetail productPrice ">
+                <span class="regPrice">
+                  $1295
+                </span>
+              </li>
+            </ul>
+            <ul class="productActions" data-action="socialData" data-id="arYSo">
+              <li class="productAction socialDataItem ">
+                <a href="#" data-action="socialData" data-id="arYSo" class="socialDataAction" title="Wantering Network | Facebook | Pinterest | Twitter | Tumblr | Influencers/Bloggers">View social data</a>
+                <span class="data socialData socialWantering" title="Wantering Network">
+                </span>
+                <span class="data socialData socialFacebook" title="Facebook">
+                </span>
+                <span class="data socialData socialPinterest" title="Pinterest">
+                </span>
+                <span class="data socialData socialTwitter" title="Twitter">
+                </span>
+                <span class="data socialData socialTumblr" title="Tumblr">
+                  <span class="socialFill socialFillTumblr" style="height: 1%">Tumblr</span>
+                </span>
+                <span class="data socialData socialInfluencers" title="Influencers">
+                </span>
+              </li>
+              <li class="productAction">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fvintage-chanel-sport-suede-bag&amp;sref=%2Fnasty-gal-vintage-chanel-sport-suede-bag%2FarYSo%2F" data-action="buy" data-id="arYSo" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                  BUY
+                </a>
+              </li>
+              <li class="productAction">
+                <a href="#" data-action="love" data-id="arYSo" class="ir icon action wantAction ">
+                  Love it!
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
+      <a href="/clothing-similar/nasty-gal-chroma-striped-envelope-bag/aG8QT/" class="button similarFooterAction transparentButton" title="Similar to Chroma Striped Envelope Bag">
+          More similar items
+      </a>
     </section>
-    <div id="bodyWrap">
-    
-      <footer id="footer" class="contentBlock footerContentBlock ">
-        <div class="footerIntro">
-          <div class="searchBox">
-            <form action="/" name="footerSearchForm" class="searchForm">
-              <input type="search" value="" class="searchField footerSearchField" name="q" autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="What are you looking for?" />
-              <a href="#" class="button primaryButton">搜索</a>
-              <div class="autoCompleteWrap"></div>
-            </form>
-          </div>
+    <footer id="footer" class="contentBlock footerContentBlock ">
+      <div class="footerIntro">
+        <div class="searchBox">
+          <form action="/" name="footerSearchForm" class="searchForm">
+            <input type="search" value="" class="searchField footerSearchField" name="q" autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="What are you looking for?" />
+            <a href="#" class="button primaryButton">搜索</a>
+            <div class="autoCompleteWrap"></div>
+          </form>
         </div>
-        <ul class="footerNav">
-          <li class="footerGroup">
-            <span class="footerGroupTitle">新手指南</span>
-            <ul class="footerGroupNav">
-              <li class="footerNavItem ">
-                <a href="#!/clothing/cat-Shoes/" class="footerNavAction">
-                  购物指南
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="#!/clothing/cat-Dresses/" class="footerNavAction">
-                  支付方式
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="#!/clothing/cat-Tops/" class="footerNavAction">
-                  运费明细
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="footerGroup">
-            <span class="footerGroupTitle">海淘指南</span>
-            <ul class="footerGroupNav">
-              <li class="footerNavItem ">
-                <a href="#!/clothing/brand-bebe/" class="footerNavAction">
-                  尺码换算
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="#!/clothing/brand-nasty+gal/" class="footerNavAction">
-                  关税查询
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="footerGroup">
-            <span class="footerGroupTitle">购物保障</span>
-            <ul class="footerGroupNav">
-              <li class="footerNavItem ">
-                <a href="#!/clothing/store-yoox/" class="footerNavAction">
-                  正品保障
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="#!/clothing/store-asos/"  
-                class="footerNavAction">
-                7天退货
+      </div>
+      <ul class="footerNav">
+        <li class="footerGroup">
+          <span class="footerGroupTitle">新手指南</span>
+          <ul class="footerGroupNav">
+            <li class="footerNavItem ">
+              <a href="#!/clothing/cat-Shoes/" class="footerNavAction">
+                购物指南
               </a>
             </li>
             <li class="footerNavItem ">
-              <a href="#!/clothing/store-bebe/" class="footerNavAction">
-                极速发货
+              <a href="#!/clothing/cat-Dresses/" class="footerNavAction">
+                支付方式
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="#!/clothing/cat-Tops/" class="footerNavAction">
+                运费明细
               </a>
             </li>
           </ul>
-          <li class="footerGroup">
-            <span class="footerGroupTitle">海淘助手</span>
-            <ul class="footerGroupNav">
-              <li class="footerNavItem ">
-                <a href="#!/browse/style/" class="footerNavAction">
-                  包裹查询
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="#!/browse/celebrity/" class="footerNavAction">
-                  服务协议
-                </a>
-              </li>
-            </ul>
+        </li>
+        <li class="footerGroup">
+          <span class="footerGroupTitle">海淘指南</span>
+          <ul class="footerGroupNav">
+            <li class="footerNavItem ">
+              <a href="#!/clothing/brand-bebe/" class="footerNavAction">
+                尺码换算
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="#!/clothing/brand-nasty+gal/" class="footerNavAction">
+                关税查询
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="footerGroup">
+          <span class="footerGroupTitle">购物保障</span>
+          <ul class="footerGroupNav">
+            <li class="footerNavItem ">
+              <a href="#!/clothing/store-yoox/" class="footerNavAction">
+                正品保障
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="#!/clothing/store-asos/" class="footerNavAction">
+              7天退货
+            </a>
           </li>
-          <li class="footerGroup">
-            <span class="footerGroupTitle">关于我们</span>
-            <ul class="footerGroupNav">
-              <li class="footerNavItem ">
-                <a href="#!/about/"  data-bypass class="footerNavAction">
-                  自淘啦简介
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="http://blog.wantering.com/" target="_blank" class="footerNavAction">
-                  联系我们
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="footerGroup footerGroupCompany">
-            <span class="footerGroupTitle">常见问题</span>
-            <ul class="footerGroupNav">
-              <li class="footerNavItem ">
-                <a href="#!/about/"  data-bypass class="footerNavAction">
-                  消费者告知书
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="http://blog.wantering.com/" target="_blank" class="footerNavAction">
-                  常见Q&A问答
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="footerGroup footerGroupJoin">
-            <span class="footerGroupTitle">加入我们</span>
-            <ul class="footerGroupNav">
-              <li class="footerNavItem ">
-                <a href="https://www.facebook.com/wantering" target="_blank" class="ir icon footerNavActionFacebook footerNavAction ">
-                  Facebook
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="https://twitter.com/wantering" target="_blank" class="ir icon footerNavActionTwitter footerNavAction ">
-                  Twitter
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="http://www.pinterest.com/wantering/" target="_blank" class="ir icon footerNavActionPinterest footerNavAction ">
-                  Pinterest
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="http://tumblr.wantering.com/" target="_blank" class="ir icon footerNavActionTumblr footerNavAction ">
-                  Tumblr
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="http://instagram.com/wantering" target="_blank" class="ir icon footerNavActionInstagram footerNavAction ">
-                  Instagram
-                </a>
-              </li>
-              <li class="footerNavItem ">
-                <a href="https://plus.google.com/+Wantering/" target="_blank" class="ir icon footerNavActionGoogle+ footerNavAction ">
-                  Google+
-                </a>
-              </li>
-            </ul>
+          <li class="footerNavItem ">
+            <a href="#!/clothing/store-bebe/" class="footerNavAction">
+              极速发货
+            </a>
           </li>
         </ul>
-        <div class="micro footerMicro">&copy; 2015 自淘啦. All rights reserved.</div>
-      </footer>
-    </div>
-    <script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
-    <script type="text/javascript" src="./js/app.js"></script>
-    <script type="text/javascript">zitaola.init.detail();</script>
-  </body>
+        <li class="footerGroup">
+          <span class="footerGroupTitle">海淘助手</span>
+          <ul class="footerGroupNav">
+            <li class="footerNavItem ">
+              <a href="#!/browse/style/" class="footerNavAction">
+                包裹查询
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="#!/browse/celebrity/" class="footerNavAction">
+                服务协议
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="footerGroup">
+          <span class="footerGroupTitle">关于我们</span>
+          <ul class="footerGroupNav">
+            <li class="footerNavItem ">
+              <a href="#!/about/"  data-bypass class="footerNavAction">
+                自淘啦简介
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="http://blog.wantering.com/" target="_blank" class="footerNavAction">
+                联系我们
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="footerGroup footerGroupCompany">
+          <span class="footerGroupTitle">常见问题</span>
+          <ul class="footerGroupNav">
+            <li class="footerNavItem ">
+              <a href="#!/about/"  data-bypass class="footerNavAction">
+                消费者告知书
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="http://blog.wantering.com/" target="_blank" class="footerNavAction">
+                常见Q&A问答
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="footerGroup footerGroupJoin">
+          <span class="footerGroupTitle">加入我们</span>
+          <ul class="footerGroupNav">
+            <li class="footerNavItem ">
+              <a href="https://www.facebook.com/wantering" target="_blank" class="ir icon footerNavActionFacebook footerNavAction ">
+                Facebook
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="https://twitter.com/wantering" target="_blank" class="ir icon footerNavActionTwitter footerNavAction ">
+                Twitter
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="http://www.pinterest.com/wantering/" target="_blank" class="ir icon footerNavActionPinterest footerNavAction ">
+                Pinterest
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="http://tumblr.wantering.com/" target="_blank" class="ir icon footerNavActionTumblr footerNavAction ">
+                Tumblr
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="http://instagram.com/wantering" target="_blank" class="ir icon footerNavActionInstagram footerNavAction ">
+                Instagram
+              </a>
+            </li>
+            <li class="footerNavItem ">
+              <a href="https://plus.google.com/+Wantering/" target="_blank" class="ir icon footerNavActionGoogle+ footerNavAction ">
+                Google+
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="micro footerMicro">&copy; 2015 自淘啦. All rights reserved.</div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="./js/app.js"></script>
+  <script type="text/javascript">zitaola.init.detail();</script>
+</body>
 </html>
