@@ -4429,10 +4429,17 @@ button.inlineButton {
   font-size: 16px;
 }
 
-.subNav.thirdNav {
+.thirdNav {
   margin-top: 40px;
 }
-.subNav.thirdNav .subNavAction {
+.thirdNav ul {
+  display: none;
+}
+
+.thirdNav ul.selected {
+  display: block;
+}
+.thirdNav .subNavAction {
   font-size: 14px;
 }
 .selected>.subNav {
