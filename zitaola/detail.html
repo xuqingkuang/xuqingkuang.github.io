@@ -22,18 +22,17 @@
   <script type="text/javascript" src="http://cdn.staticfile.org/modernizr/2.8.2/modernizr.min.js"></script>
 </head>
 <body id="detailBody">
-  <header id="header" class="view viewProductDetail hasOverlay">
+  <header id="header" class="view viewProductDetail hasOverlay loggedIn">
     <div class="barModule">
       <div class="col col-1"><a href="./index.html" class="ir logo" title="自淘啦主页" data-bypass >自淘啦</a></div>
       <div class="col col-2 mainCol">
         <a href="#!/" class="ir logo largeLogo" title="Wantering Home" data-bypass >自淘啦</a>
         <nav id="mainNav">
           <ul class="nav mainNav">
-            <li class="navItem mainNavItem userNavItem signUpNavItem rightNavItem">
-              <a href="#!/signup/" class="navAction mainNavAction signUpNavAction whiteButton noMenu" data-target="#signup">注册</a>
-            </li>
-            <li class="navItem mainNavItem userNavItem loginNavItem rightNavItem">
-              <a href="#!/login/" class="navAction mainNavAction loginNavAction noMenu" data-target="#login">登录</a>
+            <li class="navItem mainNavItem userNavItem lovesNavItem rightNavItem">
+              <a href="./loves.html" class="navAction mainNavAction lovesNavAction noMenu">
+                我的收藏
+              </a>
             </li>
             <li class="navItem mainNavItem womensNavItem hasNav selected">
               <a href="#!/womens-clothing/" class="navAction hasNavAction mainNavAction womensNavAction">Levis 女人</a>
@@ -96,7 +95,7 @@
                 </li>
               </ul>
             </li>
-            <li class="navItem mainNavItem mensNavItem hasNav ">
+            <li class="navItem mainNavItem mensNavItem hasNav">
               <a href="#!/mens-clothing/" class="navAction hasNavAction mainNavAction mensNavAction">Levis 男人</a>
             </li>
             <li class="navItem mainNavItem editorialNavItem hasNav">
@@ -122,6 +121,35 @@
           -->
           <!-- /搜索框 -->
         </div>
+      </div>
+      <div class="col col-3">
+        <ul id="utilNav" class="nav utilNav">
+          <li class="navItem utilNavItem">
+            <a href="#!/login/" class="navAction utilNavAction avatarAction ir" style="background-image: url(https://pbs.twimg.com/profile_images/2882869631/cceac671248d9af2f50f851eede03d50_normal.png), url(./imgs/placeholder.png);">
+              我的帐号
+            </a>
+            <ul class="menu menuRight">
+              <li class="menuItem userStatus">
+                <span class="micro">以</span>
+                不知火舞
+                <span class="micro">帐号登录</span>
+              </li>
+              <li class="menuItem lovedItem">
+                <a href="./loves.html" class="menuAction hasIcon">我的收藏</a>
+              </li>
+              <li class="menuItem inviteItem">
+                <a href="/invite/" class="menuAction">邀请朋友</a>
+              </li>
+              <li class="menuItem settingsItem">
+                <a href="/member/xuqingkuang/password/change/" class="menuAction changePasswordAction" data-noscroll="">
+                  修改密码
+                </a>
+              </li>
+              <li class="menuItem settingsItem"><a href="/settings/" class="menuAction settingsAction">设置</a></li>
+              <li class="menuItem"><a href="/" class="menuAction logoutAction">注销</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
     <ul id="navHelpers" class="navHelpers">
@@ -228,7 +256,7 @@
                   </ul>
                 </li>
                 <li class="productAction wantActionItem">
-                  <a href="#" data-id="aG8QT" data-action="love" class="ir icon action wantAction " title="Love">
+                  <a href="#" data-id="aG8QT" data-action="love" class="ir icon action wantAction" title="Love">
                     Love it!
                   </a>
                 </li>
@@ -456,13 +484,13 @@
       </h2>
       <div class="productsWrapper">
         <ul class="products productSimilarProducts nestedProducts">
-          <li class="product listProduct " id="pid-aG8Qt">
+          <li class="product listProduct" id="pid-aG8Qt">
             <a href="#!/nasty-gal-chroma-striped-tote-bag/aG8Qt/" class="ir productLink" data-noscroll="" data-action="detail" data-id="aG8Qt">
               Chroma Striped Tote Bag
             </a>
             <span class="thumbnail topPos" style="background-image: url(https://cdn.wantering.com/products/images/c/7/2/c725d21a-0c3d-11e5-b1b7-04013fb1d7012.jpg);">
             </span>
-            <span class="sticker stickerSale ">
+            <span class="sticker stickerSale">
               <span class="stickerLabel">
                 50%
               </span>
@@ -491,24 +519,24 @@
             </ul>
             <ul class="productActions" data-action="socialData" data-id="aG8Qt">
               <li class="productAction">
-                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fchroma-striped-tote-bag&amp;xcust=521937424DOT1447928958&amp;sref=https%3A%2F%2Fwww.wantering.com%2Fnasty-gal-chroma-striped-envelope-bag%2FaG8QT%2F" data-action="buy" data-id="aG8Qt" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fchroma-striped-tote-bag&amp;xcust=521937424DOT1447928958&amp;sref=https%3A%2F%2Fwww.wantering.com%2Fnasty-gal-chroma-striped-envelope-bag%2FaG8QT%2F" data-action="buy" data-id="aG8Qt" class="button transparentButton listShopButton" rel="nofollow" target="_blank" data-noscroll="">
                   BUY
                 </a>
               </li>
               <li class="productAction">
-                <a href="#" data-action="love" data-id="aG8Qt" class="ir icon action wantAction ">
+                <a href="#" data-action="love" data-id="aG8Qt" class="ir icon action wantAction">
                   Love it!
                 </a>
               </li>
             </ul>
           </li>
-          <li class="product listProduct " id="pid-aG8QB">
+          <li class="product listProduct" id="pid-aG8QB">
             <a href="#!/nasty-gal-chroma-striped-crossbody-bag/aG8QB/" class="ir productLink" data-noscroll="" data-action="detail" data-id="aG8QB">
               Chroma Striped Crossbody Bag
             </a>
             <span class="thumbnail bottomPos" style="background-image: url(https://cdn.wantering.com/products/images/c/7/1/c71cdbf6-0c3d-11e5-b65f-04013fb085012.jpg);">
             </span>
-            <span class="sticker stickerSale ">
+            <span class="sticker stickerSale">
               <span class="stickerLabel">
                 50%
               </span>
@@ -536,7 +564,7 @@
               </li>
             </ul>
             <ul class="productActions" data-action="socialData" data-id="aG8QB">
-              <li class="productAction socialDataItem ">
+              <li class="productAction socialDataItem">
                 <a href="#" data-action="socialData" data-id="aG8QB" class="socialDataAction" title="Wantering Network | Facebook | Pinterest | Twitter | Tumblr | Influencers/Bloggers">
                   View social data
                 </a>
@@ -554,18 +582,18 @@
                 </span>
               </li>
               <li class="productAction">
-                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fchroma-striped-crossbody-bag-&amp;xcust=521937424DOT1447928958&amp;sref=https%3A%2F%2Fwww.wantering.com%2Fnasty-gal-chroma-striped-envelope-bag%2FaG8QT%2F" data-action="buy" data-id="aG8QB" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fchroma-striped-crossbody-bag-&amp;xcust=521937424DOT1447928958&amp;sref=https%3A%2F%2Fwww.wantering.com%2Fnasty-gal-chroma-striped-envelope-bag%2FaG8QT%2F" data-action="buy" data-id="aG8QB" class="button transparentButton listShopButton" rel="nofollow" target="_blank" data-noscroll="">
                   BUY
                 </a>
               </li>
               <li class="productAction">
-                <a href="#" data-action="love" data-id="aG8QB" class="ir icon action wantAction ">
+                <a href="#" data-action="love" data-id="aG8QB" class="ir icon action wantAction">
                   Love it!
                 </a>
               </li>
             </ul>
           </li>
-          <li class="product listProduct " id="pid-agopu">
+          <li class="product listProduct" id="pid-agopu">
             <a href="#!/nasty-gal-midnight-garden-bag/agopu/" class="ir productLink" data-noscroll="" data-action="detail" data-id="agopu">
               Nasty Gal Midnight Garden Bag
             </a>
@@ -581,14 +609,14 @@
               <li class="productDetail productStore">
                 from Nasty Gal
               </li>
-              <li class="productDetail productPrice ">
+              <li class="productDetail productPrice">
                 <span class="regPrice">
                   $50
                 </span>
               </li>
             </ul>
             <ul class="productActions" data-action="socialData" data-id="agopu">
-              <li class="productAction socialDataItem ">
+              <li class="productAction socialDataItem">
                 <a href="#" data-action="socialData" data-id="agopu" class="socialDataAction" title="Wantering Network | Facebook | Pinterest | Twitter | Tumblr | Influencers/Bloggers">
                   View social data
                 </a>
@@ -612,18 +640,18 @@
                 </span>
               </li>
               <li class="productAction">
-                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fnasty-gal-midnight-garden-bag&amp;xcust=521937424DOT1447928958&amp;sref=https%3A%2F%2Fwww.wantering.com%2Fnasty-gal-chroma-striped-envelope-bag%2FaG8QT%2F" data-action="buy" data-id="agopu" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fnasty-gal-midnight-garden-bag&amp;xcust=521937424DOT1447928958&amp;sref=https%3A%2F%2Fwww.wantering.com%2Fnasty-gal-chroma-striped-envelope-bag%2FaG8QT%2F" data-action="buy" data-id="agopu" class="button transparentButton listShopButton" rel="nofollow" target="_blank" data-noscroll="">
                   BUY
                 </a>
               </li>
               <li class="productAction">
-                <a href="#" data-action="love" data-id="agopu" class="ir icon action wantAction ">
+                <a href="#" data-action="love" data-id="agopu" class="ir icon action wantAction">
                   Love it!
                 </a>
               </li>
             </ul>
           </li>
-          <li class="product listProduct " id="pid-agoCn">
+          <li class="product listProduct" id="pid-agoCn">
             <a href="/nasty-gal-briar-zip-satchel/agoCn/" class="ir productLink" data-noscroll="" data-action="detail" data-id="agoCn">
               Briar Zip Satchel
             </a>
@@ -635,7 +663,7 @@
                 Briar Zip Satchel
               </li>
               <li class="productDetail productStore">from Nasty Gal</li>
-              <li class="productDetail productPrice ">
+              <li class="productDetail productPrice">
                 <span class="regPrice">
                   $65
                 </span>
@@ -643,18 +671,18 @@
             </ul>
             <ul class="productActions" data-action="socialData" data-id="agoCn">
               <li class="productAction">
-                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fbriar-zip-satchel&amp;sref=%2Fnasty-gal-briar-zip-satchel%2FagoCn%2F" data-action="buy" data-id="agoCn" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fbriar-zip-satchel&amp;sref=%2Fnasty-gal-briar-zip-satchel%2FagoCn%2F" data-action="buy" data-id="agoCn" class="button transparentButton listShopButton" rel="nofollow" target="_blank" data-noscroll="">
                   BUY
                 </a>
               </li>
               <li class="productAction">
-                <a href="#" data-action="love" data-id="agoCn" class="ir icon action wantAction ">
+                <a href="#" data-action="love" data-id="agoCn" class="ir icon action wantAction">
                   Love it!
                 </a>
               </li>
             </ul>
           </li>
-          <li class="product listProduct " id="pid-aCtHt">
+          <li class="product listProduct" id="pid-aCtHt">
             <a href="/nasty-gal-x-nila-anthony-take-out-vegan-leather-bag/aCtHt/" class="ir productLink" data-noscroll="" data-action="detail" data-id="aCtHt">
               Nasty Gal x Nila Anthony Take Out Vegan Leather Bag
             </a>
@@ -666,14 +694,14 @@
                 Nasty Gal x Nila Anthony Take Out Vegan Leather Bag
               </li>
               <li class="productDetail productStore">from Nasty Gal</li>
-              <li class="productDetail productPrice ">
+              <li class="productDetail productPrice">
                 <span class="regPrice">
                   $48
                 </span>
               </li>
             </ul>
             <ul class="productActions" data-action="socialData" data-id="aCtHt">
-              <li class="productAction socialDataItem ">
+              <li class="productAction socialDataItem">
                 <a href="#" data-action="socialData" data-id="aCtHt" class="socialDataAction" title="Wantering Network | Facebook | Pinterest | Twitter | Tumblr | Influencers/Bloggers">View social data</a>
                 <span class="data socialData socialWantering" title="Wantering Network">
                   <span class="socialFill socialFillWantering" style="height: 8%">Wantering Network</span>
@@ -694,24 +722,24 @@
                 </span>
               </li>
               <li class="productAction">
-                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fnasty-gal-x-nila-anthony-take-out-vegan-leather-bag&amp;sref=%2Fnasty-gal-x-nila-anthony-take-out-vegan-leather-bag%2FaCtHt%2F" data-action="buy" data-id="aCtHt" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fnasty-gal-x-nila-anthony-take-out-vegan-leather-bag&amp;sref=%2Fnasty-gal-x-nila-anthony-take-out-vegan-leather-bag%2FaCtHt%2F" data-action="buy" data-id="aCtHt" class="button transparentButton listShopButton" rel="nofollow" target="_blank" data-noscroll="">
                   BUY
                 </a>
               </li>
               <li class="productAction">
-                <a href="#" data-action="love" data-id="aCtHt" class="ir icon action wantAction ">
+                <a href="#" data-action="love" data-id="aCtHt" class="ir icon action wantAction">
                   Love it!
                 </a>
               </li>
             </ul>
           </li>
-          <li class="product listProduct " id="pid-aI4DR">
+          <li class="product listProduct" id="pid-aI4DR">
             <a href="/nasty-gal-moto-mama-denim-bag/aI4DR/" class="ir productLink" data-noscroll="" data-action="detail" data-id="aI4DR">
               Moto Mama Denim Bag
             </a>
             <span class="thumbnail topPos" style="background-image: url(https://cdn.wantering.com/products/images/7/a/1/7a1c1b72-1f12-11e5-8312-04014a099d012.jpg);">
             </span>
-            <span class="sticker stickerSale ">
+            <span class="sticker stickerSale">
               <span class="stickerLabel">30%</span>
               <span class="stickerMicro">off</span>
             </span>
@@ -751,24 +779,24 @@
                 <div class="featureArticlePreview" style="background-image: url(https://s3.amazonaws.com/wantering/media/c0jgtki-s.jpg);">15 Fantastic Statement Bags Under $100</div>
               </li>
               <li class="productAction">
-                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fmoto-mama-denim-bag&amp;sref=%2Fnasty-gal-moto-mama-denim-bag%2FaI4DR%2F" data-action="buy" data-id="aI4DR" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fmoto-mama-denim-bag&amp;sref=%2Fnasty-gal-moto-mama-denim-bag%2FaI4DR%2F" data-action="buy" data-id="aI4DR" class="button transparentButton listShopButton" rel="nofollow" target="_blank" data-noscroll="">
                   BUY
                 </a>
               </li>
               <li class="productAction">
-                <a href="#" data-action="love" data-id="aI4DR" class="ir icon action wantAction ">
+                <a href="#" data-action="love" data-id="aI4DR" class="ir icon action wantAction">
                   Love it!
                 </a>
               </li>
             </ul>
           </li>
-          <li class="product listProduct " id="pid-aCSvu">
+          <li class="product listProduct" id="pid-aCSvu">
             <a href="/nasty-gal-roxy-vegan-leather-tassel-key-chain/aCSvu/" class="ir productLink" data-noscroll="" data-action="detail" data-id="aCSvu">
               Roxy Vegan Leather Tassel Key Chain
             </a>
             <span class="thumbnail" style="background-image: url(https://cdn.wantering.com/products/images/1/9/2/1928b3f4-e0fe-11e4-8a05-04013fb1d7012.jpg);">
             </span>
-            <span class="sticker stickerSale ">
+            <span class="sticker stickerSale">
               <span class="stickerLabel">60%</span>
               <span class="stickerMicro">off</span>
             </span>
@@ -788,7 +816,7 @@
               </li>
             </ul>
             <ul class="productActions" data-action="socialData" data-id="aCSvu">
-              <li class="productAction socialDataItem ">
+              <li class="productAction socialDataItem">
                 <a href="#" data-action="socialData" data-id="aCSvu" class="socialDataAction" title="Wantering Network | Facebook | Pinterest | Twitter | Tumblr | Influencers/Bloggers">View social data</a>
                 <span class="data socialData socialWantering" title="Wantering Network">
                 </span>
@@ -805,18 +833,18 @@
                 </span>
               </li>
               <li class="productAction">
-                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Froxy-vegan-leather-tassel-key-chain&amp;sref=%2Fnasty-gal-roxy-vegan-leather-tassel-key-chain%2FaCSvu%2F" data-action="buy" data-id="aCSvu" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Froxy-vegan-leather-tassel-key-chain&amp;sref=%2Fnasty-gal-roxy-vegan-leather-tassel-key-chain%2FaCSvu%2F" data-action="buy" data-id="aCSvu" class="button transparentButton listShopButton" rel="nofollow" target="_blank" data-noscroll="">
                   BUY
                 </a>
               </li>
               <li class="productAction">
-                <a href="#" data-action="love" data-id="aCSvu" class="ir icon action wantAction ">
+                <a href="#" data-action="love" data-id="aCSvu" class="ir icon action wantAction">
                   Love it!
                 </a>
               </li>
             </ul>
           </li>
-          <li class="product listProduct " id="pid-arYSo">
+          <li class="product listProduct" id="pid-arYSo">
             <a href="/nasty-gal-vintage-chanel-sport-suede-bag/arYSo/" class="ir productLink" data-noscroll="" data-action="detail" data-id="arYSo">
               Vintage Chanel Sport Suede Bag
             </a>
@@ -828,14 +856,14 @@
                 Vintage Chanel Sport Suede Bag
               </li>
               <li class="productDetail productStore">from Nasty Gal</li>
-              <li class="productDetail productPrice ">
+              <li class="productDetail productPrice">
                 <span class="regPrice">
                   $1295
                 </span>
               </li>
             </ul>
             <ul class="productActions" data-action="socialData" data-id="arYSo">
-              <li class="productAction socialDataItem ">
+              <li class="productAction socialDataItem">
                 <a href="#" data-action="socialData" data-id="arYSo" class="socialDataAction" title="Wantering Network | Facebook | Pinterest | Twitter | Tumblr | Influencers/Bloggers">View social data</a>
                 <span class="data socialData socialWantering" title="Wantering Network">
                 </span>
@@ -852,12 +880,12 @@
                 </span>
               </li>
               <li class="productAction">
-                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fvintage-chanel-sport-suede-bag&amp;sref=%2Fnasty-gal-vintage-chanel-sport-suede-bag%2FarYSo%2F" data-action="buy" data-id="arYSo" class="button transparentButton listShopButton " rel="nofollow" target="_blank" data-noscroll="">
+                <a href="http://buy.wantering.com/?id=20569X892016&amp;xs=1&amp;url=http%3A%2F%2Fwww.nastygal.com%2Fclothes%2Fvintage-chanel-sport-suede-bag&amp;sref=%2Fnasty-gal-vintage-chanel-sport-suede-bag%2FarYSo%2F" data-action="buy" data-id="arYSo" class="button transparentButton listShopButton" rel="nofollow" target="_blank" data-noscroll="">
                   BUY
                 </a>
               </li>
               <li class="productAction">
-                <a href="#" data-action="love" data-id="arYSo" class="ir icon action wantAction ">
+                <a href="#" data-action="love" data-id="arYSo" class="ir icon action wantAction">
                   Love it!
                 </a>
               </li>
@@ -869,7 +897,7 @@
           More similar items
       </a>
     </section>
-    <footer id="footer" class="contentBlock footerContentBlock ">
+    <footer id="footer" class="contentBlock footerContentBlock">
       <div class="footerIntro">
         <div class="searchBox">
           <form action="/" name="footerSearchForm" class="searchForm">
@@ -883,17 +911,17 @@
         <li class="footerGroup">
           <span class="footerGroupTitle">新手指南</span>
           <ul class="footerGroupNav">
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/clothing/cat-Shoes/" class="footerNavAction">
                 购物指南
               </a>
             </li>
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/clothing/cat-Dresses/" class="footerNavAction">
                 支付方式
               </a>
             </li>
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/clothing/cat-Tops/" class="footerNavAction">
                 运费明细
               </a>
@@ -903,12 +931,12 @@
         <li class="footerGroup">
           <span class="footerGroupTitle">海淘指南</span>
           <ul class="footerGroupNav">
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/clothing/brand-bebe/" class="footerNavAction">
                 尺码换算
               </a>
             </li>
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/clothing/brand-nasty+gal/" class="footerNavAction">
                 关税查询
               </a>
@@ -918,17 +946,17 @@
         <li class="footerGroup">
           <span class="footerGroupTitle">购物保障</span>
           <ul class="footerGroupNav">
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/clothing/store-yoox/" class="footerNavAction">
                 正品保障
               </a>
             </li>
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/clothing/store-asos/" class="footerNavAction">
               7天退货
             </a>
           </li>
-          <li class="footerNavItem ">
+          <li class="footerNavItem">
             <a href="#!/clothing/store-bebe/" class="footerNavAction">
               极速发货
             </a>
@@ -937,12 +965,12 @@
         <li class="footerGroup">
           <span class="footerGroupTitle">海淘助手</span>
           <ul class="footerGroupNav">
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/browse/style/" class="footerNavAction">
                 包裹查询
               </a>
             </li>
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/browse/celebrity/" class="footerNavAction">
                 服务协议
               </a>
@@ -952,12 +980,12 @@
         <li class="footerGroup">
           <span class="footerGroupTitle">关于我们</span>
           <ul class="footerGroupNav">
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/about/"  data-bypass class="footerNavAction">
                 自淘啦简介
               </a>
             </li>
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="http://blog.wantering.com/" target="_blank" class="footerNavAction">
                 联系我们
               </a>
@@ -967,12 +995,12 @@
         <li class="footerGroup footerGroupCompany">
           <span class="footerGroupTitle">常见问题</span>
           <ul class="footerGroupNav">
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="#!/about/"  data-bypass class="footerNavAction">
                 消费者告知书
               </a>
             </li>
-            <li class="footerNavItem ">
+            <li class="footerNavItem">
               <a href="http://blog.wantering.com/" target="_blank" class="footerNavAction">
                 常见Q&A问答
               </a>
@@ -982,33 +1010,33 @@
         <li class="footerGroup footerGroupJoin">
           <span class="footerGroupTitle">加入我们</span>
           <ul class="footerGroupNav">
-            <li class="footerNavItem ">
-              <a href="https://www.facebook.com/wantering" target="_blank" class="ir icon footerNavActionFacebook footerNavAction ">
+            <li class="footerNavItem">
+              <a href="https://www.facebook.com/wantering" target="_blank" class="ir icon footerNavActionFacebook footerNavAction">
                 Facebook
               </a>
             </li>
-            <li class="footerNavItem ">
-              <a href="https://twitter.com/wantering" target="_blank" class="ir icon footerNavActionTwitter footerNavAction ">
+            <li class="footerNavItem">
+              <a href="https://twitter.com/wantering" target="_blank" class="ir icon footerNavActionTwitter footerNavAction">
                 Twitter
               </a>
             </li>
-            <li class="footerNavItem ">
-              <a href="http://www.pinterest.com/wantering/" target="_blank" class="ir icon footerNavActionPinterest footerNavAction ">
+            <li class="footerNavItem">
+              <a href="http://www.pinterest.com/wantering/" target="_blank" class="ir icon footerNavActionPinterest footerNavAction">
                 Pinterest
               </a>
             </li>
-            <li class="footerNavItem ">
-              <a href="http://tumblr.wantering.com/" target="_blank" class="ir icon footerNavActionTumblr footerNavAction ">
+            <li class="footerNavItem">
+              <a href="http://tumblr.wantering.com/" target="_blank" class="ir icon footerNavActionTumblr footerNavAction">
                 Tumblr
               </a>
             </li>
-            <li class="footerNavItem ">
-              <a href="http://instagram.com/wantering" target="_blank" class="ir icon footerNavActionInstagram footerNavAction ">
+            <li class="footerNavItem">
+              <a href="http://instagram.com/wantering" target="_blank" class="ir icon footerNavActionInstagram footerNavAction">
                 Instagram
               </a>
             </li>
-            <li class="footerNavItem ">
-              <a href="https://plus.google.com/+Wantering/" target="_blank" class="ir icon footerNavActionGoogle+ footerNavAction ">
+            <li class="footerNavItem">
+              <a href="https://plus.google.com/+Wantering/" target="_blank" class="ir icon footerNavActionGoogle+ footerNavAction">
                 Google+
               </a>
             </li>
