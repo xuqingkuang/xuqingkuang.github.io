@@ -718,7 +718,10 @@ body {
 }
 @media only screen and (min-width: 881px) {
   .pageBody {
-    margin-top: 49px
+    margin-top: 70px
+  }
+  #indexBody .pageBody {
+    margin-top: 40px;
   }
   .pageBody.viewProductLanding {
     margin-top: 80px
@@ -2584,13 +2587,13 @@ button.inlineButton {
 }
 @media only screen and (min-width: 668px) {
   #productDetail {
-    top: 80px;
+    top: 50px;
     padding: 1.5% 2% 2%
   }
 }
 @media only screen and (min-width: 881px) {
   #productDetail {
-    top: 80px;
+    top: 40px;
     margin-right: 0;
     margin-left: 0;
     padding: 60px 60px 20px
@@ -2607,8 +2610,9 @@ button.inlineButton {
     -webkit-overflow-scrolling: touch
   }
 }
-@media only screen and (min-width: 1133px) {
+@media only screen and (min-width: 1150px) {
   #productDetail {
+    top: 100px;
     padding: 50px 23% 50px 10%
   }
   #productDetail.viewProductLanding {
@@ -4415,13 +4419,24 @@ button.inlineButton {
   top: 100%;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 40px;
   text-transform: none;
+  background-color: white;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(rgba(255, 255, 255, .9)));
   background-image: -webkit-linear-gradient(top, #f6f6f6, rgba(255, 255, 255, .9));
   background-image: -moz-linear-gradient(top, #f6f6f6, rgba(255, 255, 255, .9));
   background-image: linear-gradient(top, #f6f6f6, rgba(255, 255, 255, .9));
-  border-bottom: 1px solid #fff
+  border-bottom: 1px solid #fff;
+}
+.subNav .subNavAction {
+  font-size: 16px;
+}
+
+.subNav.thirdNav {
+  margin-top: 40px;
+}
+.subNav.thirdNav .subNavAction {
+  font-size: 14px;
 }
 .selected>.subNav {
   z-index: 10;
@@ -4438,7 +4453,7 @@ button.inlineButton {
   position: absolute;
   top: 0;
   width: 54px;
-  height: 50px;
+  height: 40px;
   background: inherit
 }
 .subNav:before {
@@ -4479,7 +4494,7 @@ button.inlineButton {
 }
 .subNavAction {
   padding: 0 12px;
-  line-height: 50px;
+  line-height: 40px;
   font-size: 1.1rem;
   color: #333
 }
