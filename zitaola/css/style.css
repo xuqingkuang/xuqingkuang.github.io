@@ -12877,3 +12877,26 @@ input.taggerShortKey {
     margin-top: 0px
   }
 }
+#news article {
+  padding: 20px 40px;
+  width: 100%;
+}
+@media only screen and (min-width: 881px) {
+  #news article {
+    width: 60%;
+  }
+}
+#news article header {
+  margin-top: 20px;
+}
+
+#news article a {
+  color: #555;
+}
+#news article a:hover {
+  color: #e8878b;
+}
+
+#news article footer {
+  color: #aaa;
+}
