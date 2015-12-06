@@ -6293,7 +6293,8 @@ input.searchField:focus:-ms-input-placeholder {
   line-height: 2rem;
 }
 #filters .filterNav.facet.fullcat ul > li.selected > a:not(.toggle) {
-  border: 1px solid black;
+  color: white;
+  background-color: black;
 }
 #filters .filterNav.facet.fullcat ul a:hover {
   color: #e8878b;
