@@ -106,6 +106,45 @@
         });
       };
     });
+  };
+  // Toggle Profile Menu
+  toggleFilterMenu = function() {
+    $('.menuToggle').click(function(e) {
+      e.stopPropagation();
+      $el = $(e.currentTarget);
+      $menu = $('#filters');
+      var stopMenuPropagation = function(e) {
+        e.stopPropagation();
+      }
+      if($menu.css('display') === 'block') {
+        $menu.hide();
+        $menu.off('click', stopMenuPropagation);
+      } else {
+        $menu.show();
+        $menu.on('click', stopMenuPropagation);
+        $(document).one('click', function() {
+          $menu.hide();
+          $menu.off('click', stopMenuPropagation);
+        });
+      };
+    });
+  };
+  // Toggle Filter tree
+  toggleFilterTree = function() {
+    $('#filters .filterNav.facet.fullcat a.toggle').click(function(e) {
+      e.stopPropagation();
+      $target = $(e.currentTarget).parent();
+      $toggler = $target.children().first();
+      if ($target.hasClass('collapsed')) {
+        $toggler.text('-');
+        $target.removeClass('collapsed');
+        $target.addClass('expanded');
+      } else {
+        $toggler.text('+');
+        $target.addClass('collapsed');
+        $target.removeClass('expanded');
+      }
+    });
   }
   changeFilterAndNavigate = function(type, t, n, i) {
     var a = $('#filters').find(".filterNav");
@@ -208,6 +247,8 @@
           searchFilters.brand = value;
           changeFilterAndNavigate();
         });
+        toggleFilterMenu();
+        toggleFilterTree();
         overlayBinddings();
         authBinddings();
         toggleProfileMenu();

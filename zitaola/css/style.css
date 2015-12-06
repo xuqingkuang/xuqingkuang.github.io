@@ -4076,18 +4076,27 @@ button.inlineButton {
   height: 100%;
   vertical-align: top
 }
-.col-1 {
+.col-0 {
   left: 0;
+  width: 44px;
+  padding: 0;
+}
+.col-1 {
+  left: 44px;
   width: 44px;
   padding: 0
 }
 @media only screen and (min-width: 668px) {
+  .col-0 {
+    display: none;
+  }
   .col-1 {
+    left: 0px;
     width: 50px
   }
 }
 .col-2 {
-  left: 44px;
+  left: 88px;
   right: 0;
   z-index: 10;
   display: inline-block
@@ -6256,19 +6265,76 @@ input.searchField:focus:-ms-input-placeholder {
 }
 #filters {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 60;
   left: 0;
-  top: 85px;
-  width: 150px;
-  padding: 0 5px 0 10px
+  top: 40px;
+  width: 300px;
+  padding: 10px 5px 50px 10px;
+  background-color: #e9e9eb;
+  box-shadow: 2px 2px 16px rgba(22, 22, 22, .18);
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#filters .filterNav.facet.cat {
+  display: none;
+}
+#filters .filterNav.facet.fullcat {
+  display: block;
+}
+#filters .filterNav.facet.fullcat ul a {
+  color: black;
+  line-height: 1.4rem;
+  margin: 4px;
+  padding: .2rem;
+}
+#filters .filterNav.facet.fullcat ul li {
+  line-height: 2rem;
+}
+#filters .filterNav.facet.fullcat ul > li.selected > a:not(.toggle) {
+  border: 1px solid black;
+}
+#filters .filterNav.facet.fullcat ul a:hover {
+  color: #e8878b;
+}
+#filters .filterNav.facet.fullcat ul a.toggle {
+  display: inline-block;
+  width: 0.5rem;
+  height: 1.4rem;
+}
+#filters .filterNav.facet.fullcat li > ul {
+  margin-left: 1rem;
+}
+#filters .filterNav.facet.fullcat li > ul.noToggle {
+  margin-left: 2rem;
+}
+#filters .filterNav.facet.fullcat li > ul > li:not(".toggle") {
+  margin-left: 1rem;
+}
+#filters .filterNav.facet.fullcat li.collapsed > ul {
+  display: none;
+}
+#filters .filterNav.facet.fullcat li.expanded > ul {
+  display: block;
 }
 @media only screen and (min-width: 668px) {
   #filters {
-    display: none
+    position: absolute;
+    top: 85px;
+    width: 150px;
+    padding: 0 5px 0 10px;
+    background-color: transparent;
+    box-shadow: none;
   }
   .hasFilters>#filters {
-    display: block
+    display: block !important;
+  }
+  .hasFilters>#filters .filterNav.facet.cat {
+    display: block;
+  }
+  .hasFilters>#filters .filterNav.facet.fullcat {
+    display: none;
   }
   .hasOverlay>#filters,
   .viewProductLanding #filters {
@@ -6428,10 +6494,15 @@ input.searchField:focus:-ms-input-placeholder {
   top: 0;
   left: 0;
   display: inline-block;
-  width: 33%;
+  width: 30%;
   height: 100%;
   box-shadow: 0 0 4px rgba(22, 22, 22, .2);
   background-color: #fff
+}
+@media only screen and (min-width: 668px) {
+  .radioSlider {
+    width: 33%;
+  }
 }
 .new .radioSlider {
   -webkit-transform: translate3d(100%, 0, 0);
@@ -6455,18 +6526,13 @@ input.searchField:focus:-ms-input-placeholder {
   font-size: 1rem
 }
 .filterNav .arrow {
-  display: none;
+  display: block;
   top: 25%;
-  right: 10%;
+  right: 15px;
   font-size: .8rem;
   margin: 0;
   cursor: pointer;
   text-shadow: -1px 0 rgba(22, 22, 22, .3)
-}
-@media only screen and (min-width: 668px) {
-  .filterNav .arrow {
-    display: block
-  }
 }
 .filterNav .selected .arrow {
   color: #fff
@@ -6855,12 +6921,7 @@ input.searchField:focus:-ms-input-placeholder {
   background: #000
 }
 .filterNav>.colorFilterItem {
-  display: none
-}
-@media only screen and (min-width: 480px) {
-  .filterNav>.colorFilterItem {
-    display: block;
-  }
+  display: block;
 }
 .subFilterNavSwatches {
   padding-top: 1px;
@@ -6920,9 +6981,6 @@ input.searchField:focus:-ms-input-placeholder {
 }
 .facetItem.current .arrow {
   display: none
-}
-.facetItem.any .navAction {
-  background: #f6f6f6
 }
 .facetItem.empty {
   opacity: .4
@@ -12800,6 +12858,16 @@ input.taggerShortKey {
   margin-left: 20px;
   color: #e8878b;
 }
+#header .menuToggle a {
+  text-indent: -9999px;
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-position: -17px -2664px;
+}
+#header .menuToggle a:hover {
+  background-position: -17px -2576px
+}
 #main .listHeader .welcome {
   position: absolute;
   font-size: 1.2rem;
@@ -12871,11 +12939,6 @@ input.taggerShortKey {
 }
 @media only screen and (max-width: 1220px) {
   #listbody #mainNav .hasNav { display: none !important; }
-}
-@media only screen and (max-width: 1220px) and (min-width: 880px) {
-  #listBody .pageBody {
-    margin-top: 0px
-  }
 }
 #news article {
   padding: 20px 40px;
