@@ -12883,7 +12883,12 @@ input.taggerShortKey {
 }
 @media only screen and (min-width: 881px) {
   #news article {
-    width: 60%;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1133px) {
+  #news article {
+    width: 70%;
   }
 }
 #news article header {
