@@ -119,13 +119,16 @@
       if($menu.css('display') === 'block') {
         $menu.hide();
         $menu.off('click', stopMenuPropagation);
+        $el.removeClass('expanded').addClass('collapsed');
       } else {
         $menu.show();
         $menu.on('click', stopMenuPropagation);
         $(document).one('click', function() {
           $menu.hide();
           $menu.off('click', stopMenuPropagation);
+          $el.removeClass('expanded').addClass('collapsed');
         });
+        $el.removeClass('collapsed').addClass('expanded');
       };
     });
   };
