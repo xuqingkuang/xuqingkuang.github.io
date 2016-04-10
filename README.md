@@ -1,2 +1,2 @@
 # xuqingkuang.github.io
-My personal page
+My personal page, based on react-reflux-boilerplate so far.
