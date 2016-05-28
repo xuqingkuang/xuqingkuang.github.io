@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router';
 import { openBlog } from '../../actions';
 import Message from '../message';
+import moment from 'moment';
+import config from '../../config'
 
 export class Blog extends Component {
 
@@ -22,7 +24,7 @@ export class Blog extends Component {
     return (
       <Message message={err} id="blog-container">
         <h2>{blog.get('title')}</h2>
-        <small>{blog.get('category')}</small>
+        <small>[{blog.get('category')}] {moment(blog.createdAt).format(config.dateFormat)}</small>
         <div dangerouslySetInnerHTML={createMarkup()} />
       </Message>
     )
