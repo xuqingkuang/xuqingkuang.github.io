@@ -1,17 +1,17 @@
 {
-  "name": "react-reflux-coffee-boilerplate",
-  "version": "0.0.1",
-  "description": "A template that makes react and reflux web app developmet easier.",
-  "homepage": "https://github.com/xuqingkuang/react-reflux-coffee-boilerplate",
+  "name": "react-redux-boilerplate",
+  "version": "0.1.0",
+  "description": "React Redux Boilerplate",
+  "homepage": "https://github.com/xuqingkuang/react-redux-boilerplate",
   "author": {
     "name": "XQ Kuang",
     "email": "xuqingkuang@qq.com"
   },
   "keywords": [
     "react",
-    "reflux",
-    "coffee",
-    "coffee-script",
+    "redux",
+    "es6",
+    "babel",
     "boilerplate",
     "gulp",
     "express"
@@ -19,28 +19,48 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xuqingkuang/react-reflux-coffee-boilerplate"
+    "url": "https://github.com/xuqingkuang/react-redux-boilerplate"
   },
   "dependencies": {
-    "avoscloud-sdk": "^0.6.1",
-    "moment": "^2.10.6",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0",
-    "react-router": "^1.0.0-rc3",
-    "reflux": "^0.2.13"
+    "avoscloud-sdk": "^0.6.10",
+    "immutable": "^3.8.1",
+    "less-loader": "^2.2.3",
+    "moment": "^2.13.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
+    "react-router-redux": "^4.0.4",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
-    "cjsx-loader": "^2.0.1",
-    "coffee-loader": "^0.7.2",
-    "coffee-script": "^1.10.0",
-    "del": "^2.0.2",
-    "express": "^4.13.3",
-    "file-loader": "^0.8.4",
-    "gulp": "^3.9.0",
-    "gulp-minify-html": "^1.0.4",
-    "react-transform-hmr": "^1.0.1",
-    "webpack": "^1.12.2",
-    "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.4.1"
+    "babel-core": "^6.9.0",
+    "babel-jest": "^12.1.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-antd": "^0.4.0",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-polyfill": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "codecov": "^1.0.1",
+    "del": "^2.2.0",
+    "exports-loader": "^0.6.3",
+    "express": "^4.13.4",
+    "file-loader": "^0.8.5",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^2.0.0",
+    "imports-loader": "^0.6.5",
+    "jest": "^12.1.1",
+    "jest-cli": "^12.1.0",
+    "react-addons-test-utils": "^15.1.0",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.4",
+    "redbox-react": "^1.2.6",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
   }
 }
