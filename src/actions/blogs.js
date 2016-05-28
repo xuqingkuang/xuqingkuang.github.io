@@ -52,6 +52,9 @@ export const openBlog = (slug) => {
     if (!blogQuery.results) {
       blogQuery.equalTo('slug', encodeURIComponent(slug));
       return blogQuery.find().then((blogs) => {
+        if (blogs.length === 0) {
+          return dispatch(callback('Not found'));
+        }
         return dispatch(callback(null, blogs[0]));
       }, (err) => {
         return dispatch(callback(err));
@@ -60,13 +63,11 @@ export const openBlog = (slug) => {
     const blogs = blogQuery.results.filter((blog) => {
       return blog.get('slug') === encodeURIComponent(slug);
     });
-    if (blogs.length !== 1) {
-      if (blogs.length === 0) {
-        return dispatch(callback('Not found'));
-      }
-      if (blogs.length > 1) {
-        return dispatch(callback('Got multiple blogs'));
-      }
+    if (blogs.length === 0) {
+      return dispatch(callback('Not found'));
+    }
+    if (blogs.length > 1) {
+      return dispatch(callback(`Got multiple contents - ${blogs.length}`));
     }
     return dispatch(callback(null, blogs[0]));
   }

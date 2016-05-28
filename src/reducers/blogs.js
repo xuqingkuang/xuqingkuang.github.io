@@ -23,7 +23,9 @@ export const blogsReducer = (state = blogsInitialState, action) => {
       }
 
     case BLOGS_FETCHED_FAILURE:
-      console.log('TODO');
+      return {
+        err: action.err
+      }
       break;
 
     default:
@@ -44,7 +46,9 @@ export const blogReducer = (state = blogInitialState, action) => {
       }
 
     case BLOG_OPENED_FAILURE:
-      console.log('TODO');
+      return {
+        err: action.err
+      }
       break;
 
     default:

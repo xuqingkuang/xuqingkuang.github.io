@@ -4,6 +4,7 @@ import config from '../../config'
 import { connect } from 'react-redux'
 import { Link } from 'react-router';
 import { fetchBlogs } from '../../actions';
+import Message from '../message';
 
 const styles = {
   link: {
@@ -20,9 +21,9 @@ export class Blogs extends Component {
   }
 
   render () {
-    const { blogs } = this.props;
+    const { err, blogs } = this.props;
     return (
-      <div id="blogs-container">
+      <Message message={err} id="blogs-container">
         <h1>我的博客</h1>
         {
           blogs.map((model) => {
@@ -36,7 +37,7 @@ export class Blogs extends Component {
             )
           })
         }
-      </div>
+      </Message>
     )
   }
 }
@@ -44,6 +45,7 @@ export class Blogs extends Component {
 // State to props for connect argument
 export const mapStateToProps = (state) => {
   return {
+    err: state.blogsReducer.err,
     blogs: state.blogsReducer.blogs
   };
 }
