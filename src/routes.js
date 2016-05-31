@@ -13,7 +13,6 @@ import config from './config';
 
 /* Components */
 import {Layout, NotFound} from './components';
-import {Home} from './components/home';
 import {BlogList, BlogItem} from './components/blogs';
 
 /* Routes */
