@@ -7,6 +7,10 @@ const config = {
    */
   // urlPrefix: '/public/',
   // historyBackend: 'browserHistory'
+  /* SiteMaster tracking */
+  siteMaster: {
+    siteId: '24b0e3b'
+  }
 }
 
 export default config;

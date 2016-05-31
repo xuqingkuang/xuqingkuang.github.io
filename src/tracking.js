@@ -12,6 +12,9 @@ const pageview = (pathname) => {
 }
 
 export default (siteId, history) => {
+  if (!siteId) {
+    return false
+  }
   setTimeout(() => {
     // 初始化 _smq
     const _smq = (() => {
