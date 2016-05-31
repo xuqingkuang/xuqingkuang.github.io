@@ -2,6 +2,7 @@
 import React from 'react';
 
 /* React Router */
+import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute } from 'react-router';
 
@@ -17,13 +18,15 @@ import {BlogList, BlogItem} from './components/blogs';
 
 /* Routes */
 export default (
-  <Provider store={store}>
-    <Router history={history}>
-      <Route path={config.urlPrefix} component={Layout}>
-        <IndexRoute component={BlogList} />
-        <Route path='blogs/:slug' component={BlogItem} />
-      </Route>
-      <Route path="*" component={NotFound} />
-    </Router>
-  </Provider>
+  <AppContainer>
+    <Provider store={store}>
+      <Router history={history}>
+        <Route path={config.urlPrefix} component={Layout}>
+          <IndexRoute component={BlogList} />
+          <Route path='blogs/:slug' component={BlogItem} />
+        </Route>
+        <Route path="*" component={NotFound} />
+      </Router>
+    </Provider>
+  </AppContainer>
 );

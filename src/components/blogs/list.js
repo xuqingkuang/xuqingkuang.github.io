@@ -24,7 +24,7 @@ export class Blogs extends Component {
     const { err, blogs } = this.props;
     return (
       <Message message={err} id="blogs-container">
-        <h1>我的博客</h1>
+        <h1>博客</h1>
         {
           blogs.map((model) => {
             const url = `/blogs/${model.get('slug')}`;
