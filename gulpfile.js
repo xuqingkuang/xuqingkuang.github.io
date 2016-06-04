@@ -2,6 +2,8 @@
 const gulp                    = require('gulp');
 const gulpMinifyHTML          = require('gulp-htmlmin');
 const eslint                  = require('gulp-eslint');
+const spritesmith             = require('gulp.spritesmith');
+const imagemin                = require('gulp-imagemin');
 
 // webpack modules
 const webpack                 = require('webpack');
@@ -14,6 +16,7 @@ const path                    = require('path');
 const express                 = require('express');
 const jest                    = require('jest-cli');
 const del                     = require('del');
+const buffer                  = require('vinyl-buffer');
 
 const devCompiler             = webpack(webpackConfig);
 
@@ -71,6 +74,29 @@ gulp.task('lint', function () {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+});
+
+// Create sprite image
+gulp.task('sprite', function () {
+  const output = './src/static/';
+  // Generate our spritesheet
+  const spriteData = gulp.src('./src/static/icons/*.png')
+    .pipe(spritesmith({ imgName: './icons.png', cssName: './icons.css' }));
+  const spritePrintData = gulp.src('./src/static/icons-print/*.png')
+    .pipe(spritesmith({ imgName: './icons-print.png', cssName: './icons-print.css' }));
+  // Pipe image stream through image optimizer and onto disk
+  const imgStream = spriteData.img
+    // DEV: We must buffer our stream into a Buffer for `imagemin`
+    .pipe(buffer())
+    .pipe(imagemin())
+    .pipe(gulp.dest(output));
+  const imgPrintStream = spritePrintData.img
+    // DEV: We must buffer our stream into a Buffer for `imagemin`
+    .pipe(buffer())
+    .pipe(imagemin())
+    .pipe(gulp.dest(output));
+  const cssStream = spriteData.css
+    .pipe(gulp.dest(output));
 });
 
 /*

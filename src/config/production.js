@@ -6,7 +6,8 @@ const config = {
    * comment these lines because they are not in using so far.
    */
   // urlPrefix: '/public/',
-  // historyBackend: 'browserHistory'
+  historyBackend: 'hashHistory',
+
   /* SiteMaster tracking */
   siteMaster: {
     siteId: '24b0e3b'

@@ -1,0 +1,192 @@
+@printLinkColor: #444;
+
+.ant-modal {
+  img {
+    width: 100%;
+  }
+}
+
+#resume {
+  width: 90%;
+  margin: 1rem auto;
+  line-height: 1.4rem;
+
+  h2 {
+    margin: 1rem 0;
+  }
+  
+  hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  article {
+    margin: 0.4rem 0;
+    section {
+      text-indent: 1.6rem;
+    }
+  }
+
+  #print-notice {
+    margin-bottom: 0.2rem;
+  }
+
+  #informations {
+    h1 {
+      margin: 0.4rem 0;
+    }
+    table {
+      tr {
+        line-height: 1.1rem;
+      }
+      td:first-child {
+        text-align: right;
+      }
+    }
+
+    .links {
+      margin: 0.6rem 0;
+      a {
+        margin: 0 0.2rem;
+      }
+      a:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+  #features {
+    .feature {
+      display: inline-block;
+      text-indent: -99999px;
+      border: none;
+      background-image: url(../../static/icons.png);
+      width: 80px;
+      height: 80px;
+      
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.9;
+      }
+    }
+  }
+  
+  #recommendations {
+    .ant-timeline-item {
+      padding: 0;
+    }
+    .ant-timeline-item-content {
+      padding: 0 0 0 24px;
+    }
+  }
+  
+  #experiences {
+    .products {
+      margin: 0.4rem 0;
+      .product {
+        table {
+          width: 100%;
+          td:first-child {
+            width: 4.5rem;
+          }
+        }
+        .ant-card-body {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen {
+  #resume {
+    .screen-only {
+      display: block;
+    }
+
+    .print-only {
+      display: none;
+    }
+    
+    
+    #experiences {
+      .products {
+        .product.gutter-box {
+          .ant-card-body {
+            min-height: 10rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  #resume {
+    width: 100%;
+    margin: 0 auto 2rem 0;
+
+    .screen-only {
+      display: none;
+    }
+
+    div.print-only {
+      display: block;
+    }
+
+    span.print-only {
+      display: inline;
+    }
+
+    a {
+      color: @printLinkColor;
+    }
+
+    .print-link {
+      text-decoration: underline;
+    }
+
+    .ant-timeline-item-head-blue {
+      color: @printLinkColor;
+      border-color: @printLinkColor;
+    }
+
+    #informations {
+      .col-xs-24 {
+        width: 50%;
+      }
+      .name {
+        float: right;
+        text-align: right;
+      }
+    }
+
+    #features {
+      .feature {
+        zoom: .5;
+        background-image: url(../../static/icons-print.png);
+        margin-right: 90px;
+        text-indent: 80px;
+        padding: 15px 4px;
+      }
+    }
+    
+    #experiences {
+      .products {
+        margin: 0 0;
+        .product {
+          width: 100%;
+          margin: 0.2rem 0;
+          .print-product-table {
+            td:first-child {
+              width: 4rem;
+              vertical-align: top;
+            }
+          }
+        }
+      }
+    }
+  }
+}

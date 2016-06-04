@@ -5,7 +5,9 @@ module.exports = Object.assign({}, config, {
   entry: [
     './src/app'
   ],
-  devtool: 'source-map',
+  devtool: "source-map",
+  minimize: true,
+  debug: false,
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {

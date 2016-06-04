@@ -41,7 +41,11 @@ module.exports = {
       },
       {
         test: /\.css?$/,
-        loader: 'style!css?sourceMap&modules&localIdentName=[path][name]---[local]---[hash:base64:5]'
+        loader: 'style!css'
+      },
+      {
+        test: /\.less$/,
+        loader: "style!css!less"
       }
     ]
   }
