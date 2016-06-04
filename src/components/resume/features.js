@@ -47,12 +47,12 @@ export default class Features extends Component {
         <div>
           <p>Babel 提供了将 ES6/7 的语法编译为 ES5 的能力，</p>
           <p>使新的语法可以在老旧浏览器上运行，</p>
-          <p>是目前前端应用开发的基石。</p>
+          <p>和 webpack、gulp 一起构建了现代前端应用开发的基石。</p>
         </div>
       ),
       react: (
         <div>
-          <p>数据视图双向绑定使前端开发脱离了还需要操作界面元素，</p>
+          <p>数据视图双向绑定使前端开发从更新数据还需要操作界面元素中解脱出来，</p>
           <p>使界面更新自动化。</p>
         </div>
       ),
@@ -63,12 +63,13 @@ export default class Features extends Component {
       ),
       echarts: (
         <div>
-          <p>功能很棒而且性能很好的图形库，百度出品。</p>
+          <p>功能很棒而且性能很好的图表库，百度出品。</p>
         </div>
       ),
       github: (
         <div>
-          <p>世界上最大的开发者交流社区，我之前参与过开源项目的研发，熟悉整个开发流程。</p>
+          <p>世界上最大的开发者交流社区，</p>
+          <p>我之前参与过开源项目的研发，熟悉整个开源项目开发流程。</p>
         </div>
       ),
       nginx: (
@@ -79,12 +80,12 @@ export default class Features extends Component {
       wireshark: (
         <div>
           <p>抓包工具，用于检测服务器和前端通讯是否正常，</p>
-          <p>也可以用开发爬虫时检查数据包。</p>
+          <p>也开发爬虫时勇于检查数据包。</p>
         </div>
       ),
       docker: (
         <div>
-          <p>服务器容器，对于开发而言适用于多个版本的服务器同时共存，单独启动。</p>
+          <p>服务器应用容器，对于开发而言适用于多个版本的服务器同时共存，单独启动。</p>
         </div>
       ),
       wechat: (
