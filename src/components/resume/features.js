@@ -252,7 +252,7 @@ export default class Features extends Component {
               className="feature icon-wechat"
               onClick={ (evt) => { this.handleLinkClick(evt) } }
             >
-              Wechat
+              WeChat
             </a>
           </Popover>
           <Popover
