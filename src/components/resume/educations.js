@@ -16,7 +16,7 @@ export default ({id}) => {
       <article>
         <h3>2001年9月－2004年1月 江西省永新县禾川中学 高中</h3>
         <section>
-          2014年寒假来北京，主要目的是想在西直门的银河网络教育中心里参加 RHCE 考试，
+          2004年寒假来北京，主要目的是想在西直门的银河网络教育中心里参加 RHCE 考试，
           之前已经担任了
           <a href="http://www.linuxfans.org">
             中国 Linux 公社
