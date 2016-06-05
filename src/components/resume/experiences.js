@@ -39,7 +39,10 @@ export default ({id}) => {
         </section>
         <section>
           三、数据银行粉丝趴项目中的
-          <a href="./imgs/products/fansparty.png">
+          <a
+            href="http://kuangxuqing.qiniudn.com/products/fansparty.png" 
+            target="_blank"
+          >
             关注用户画像
           </a>界面整体实现，粉丝趴是天猫中类似淘宝的微淘，但是转变为粉丝运营，
           天猫大客户有需求知道具体的用户情况，因此产生了粉丝趴项目，该页面由五个图表构成，
@@ -48,7 +51,12 @@ export default ({id}) => {
           图表展示使用了 ECharts，界面使用了蚂蚁金服的 Ant Design，
           前端到服务器的请求采用了新的 fetch，配合 ES7的 async 和 await
           封装出了一套符合业务的服务器请求 API。另外，我继续为它匹配了
-          <a href="./imgs/products/fansparty-mobile.png">手机的分辨率</a>。
+          <a 
+            href="http://kuangxuqing.qiniudn.com/products/fansparty-mobile.png"
+            target="_blank"
+          >
+          手机的分辨率
+          </a>。
         </section>
         <section>
           如果说在 AdMaster 还受到旧项目的牵绊的话，新的技术只能自己尝试，

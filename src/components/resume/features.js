@@ -276,7 +276,7 @@ export default class Features extends Component {
             trigger="hover"
           >
             <a
-              href="./imgs/certifications/rhce.png"
+              href="http://kuangxuqing.qiniudn.com/certifications/rhce.png"
               className="feature icon-rhce"
               onClick={ (evt) => { this.handleLinkClick(evt, "RHCE") } }
             >
@@ -290,7 +290,7 @@ export default class Features extends Component {
             trigger="hover"
           >
             <a
-              href="./imgs/certifications/scrum-master.png"
+              href="http://kuangxuqing.qiniudn.com/certifications/scrum-master.png"
               className="feature icon-scrum-master"
               onClick={ (evt) => { this.handleLinkClick(evt, "Scrum Master") } }
             >

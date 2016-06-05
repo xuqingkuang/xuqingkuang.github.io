@@ -40,7 +40,7 @@ export default class Recommendations extends Component {
             3、基于 docker 高效的分享和实战应用。”
             &nbsp;-&nbsp; 
             <a
-              href="./imgs/recommendations/3-4.png"
+              href="http://kuangxuqing.qiniudn.com/recommendations/3-4.png"
               onClick={(evt) => { this.handleLinkClick(evt); }}
             >
               @澄苍（2016年3月4日）
@@ -50,7 +50,7 @@ export default class Recommendations extends Component {
             “释我的主动性很好，ant.design 可以和大家一起分享讨论下。”
             &nbsp;-&nbsp;
             <a
-              href="./imgs/recommendations/3-18.png"
+              href="http://kuangxuqing.qiniudn.com/recommendations/3-18.png"
               onClick={(evt) => { this.handleLinkClick(evt); }}
             >
               @澄苍（2016年3月18日）
@@ -60,7 +60,7 @@ export default class Recommendations extends Component {
             “@释我(旷旭卿) 一图胜千言。”
             &nbsp;-&nbsp;
             <a
-              href="./imgs/recommendations/4-6.png"
+              href="http://kuangxuqing.qiniudn.com/recommendations/4-6.png"
               onClick={(evt) => { this.handleLinkClick(evt); }}
             >
               @澄苍（2016年4月6日）
@@ -70,7 +70,7 @@ export default class Recommendations extends Component {
             “释我的可视化感觉不错，两个 Show Case，虽然简单，但是贴近客户分析视角。”
             &nbsp;-&nbsp;
             <a
-              href="./imgs/recommendations/5-5.png"
+              href="http://kuangxuqing.qiniudn.com/recommendations/5-5.png"
               onClick={(evt) => { this.handleLinkClick(evt); }}
             >
               @澄苍（2016年5月5日）
@@ -84,7 +84,7 @@ export default class Recommendations extends Component {
             希望大家功夫花在平时，这样到关键的时候才是水到渠成摘果子的时候。”
             &nbsp;-&nbsp;
             <a
-              href="./imgs/recommendations/5-27.png"
+              href="http://kuangxuqing.qiniudn.com/recommendations/5-27.png"
               onClick={(evt) => { this.handleLinkClick(evt); }}
             >
               @澄苍 (2016年5月27日)
