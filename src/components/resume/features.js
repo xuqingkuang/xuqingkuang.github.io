@@ -22,7 +22,7 @@ export default class Features extends Component {
     evt.preventDefault();
     const target = evt.currentTarget;
     const url = target.getAttribute('href');
-    if (url.indexOf('http') === 0) {
+    if (url.indexOf('.png') !== url.length - 4) {
       return window.open(url);
     }
     this.setState({
