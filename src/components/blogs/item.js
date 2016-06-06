@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import { Affix, Button } from 'antd';
+import { Link } from 'react-router';
 import { connect } from 'react-redux'
 import { openBlog } from '../../actions';
 import Message from '../message';
@@ -24,8 +26,17 @@ export class Blog extends Component {
     return (
       <Message id="blog" message={err}>
         <h2>{blog.get('title')}</h2>
-        <small>[{blog.get('category')}] {moment(blog.createdAt).format(config.dateFormat)}</small>
-        <div dangerouslySetInnerHTML={createMarkup()} />
+        <small>{moment(blog.createdAt).format(config.dateFormat)}</small>
+        <div className="container">
+          <div className="affix">
+            <Affix offsetTop={10}>
+              <Link to="/">
+                <Button type="ghost" icon="caret-left"></Button>
+              </Link>
+            </Affix>
+          </div>
+          <div className="content" dangerouslySetInnerHTML={createMarkup()} />
+        </div>
       </Message>
     )
   }
