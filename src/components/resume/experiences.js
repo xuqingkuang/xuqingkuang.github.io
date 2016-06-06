@@ -92,7 +92,7 @@ export default ({id}) => {
           都是基于 Backbone 单页面应用，使用 CoffeeScript 开发，通过 grunt 进行编译。
           同时，做了大量前端组件的积累和各种新技术的调研，以下是部分产出。
         </section>
-        <Row gutter={16} className="products gutter-box">
+        <Row gutter={16} className="products">
           <Col xs={24} lg={8} className="product gutter-box">
             <ProjectCard
               title="simple-pinyin"
