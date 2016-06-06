@@ -1,0 +1,62 @@
+@contentPadding: 0 24px;
+@bigContentPadding: 0 70px;
+@largeContentPadding: 0 150px;
+
+#kxq-site {
+  .header {
+    width: 100%;
+    height: 64px;
+    padding: @contentPadding;
+    .logo {
+      float: left;
+      margin: 7px 0px;
+      font-size: 1.4rem;
+    }
+    
+    .ant-menu-horizontal {
+      float: right;
+      border: none;
+      line-height: 40px;
+    }
+  }
+  
+  .container {
+    padding: @contentPadding;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #kxq-site {
+    .header {
+      padding: @bigContentPadding;
+    }
+  
+    .container {
+      padding: @bigContentPadding;
+    }
+  }
+}
+
+@media screen and (min-width: 968px) {
+  #kxq-site {
+    .header {
+      padding: @largeContentPadding;
+    }
+  
+    .container {
+      padding: @largeContentPadding;
+    }
+  }
+}
+
+@media screen and (min-width: 968px) {
+  #kxq-site {
+    .header {
+      padding: @largeContentPadding;
+    }
+  
+    .container {
+      padding: @largeContentPadding;
+    }
+  }
+}

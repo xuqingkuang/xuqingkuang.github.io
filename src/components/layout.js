@@ -1,35 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Menu, Breadcrumb } from 'antd';
+import LayoutStyle from './layout.less';
 
-const styles = {
-  container: {
-    width           : '860px',
-    margin          : '0 auto'
-  },
-  header: {
-    width           : '270px',
-    float           : 'left',
-    position        : 'fixed'
-  },
-  content: {
-    width           : '500px',
-    float           : 'right',
-    paddingBottom   : '50px'
-  },
-  footer: {
-    width           : '270px',
-    float           : 'left',
-    position        : 'fixed',
-    bottom          : '50px'
-  },
-  link: {
-    color           : '#39c',
-    fontWeight      : '400',
-    textDecoration  : 'none'
-  }
+export default ({children}) => {
+  return (
+    <div id="kxq-site">
+      <div className="header">
+        <span className="logo">数据控</span>
+        <Menu
+          mode="horizontal"
+          defaultSelectedKeys={['1']}
+        >
+          <Menu.Item key="1">
+            <Link to="/">博客</Link>
+          </Menu.Item>
+          <Menu.Item key="2">
+            <a href="https://github.com/xuqingkuang" target="_blank">Github</a>
+          </Menu.Item>
+          <Menu.Item key="3">
+            <a href="https://www.zhihu.com/people/xuqingkuang" target="_blank">知乎</a>
+          </Menu.Item>
+        </Menu>
+      </div>
+      <div className="container">
+        {children}
+      </div>
+    </div>
+  )
 }
 
-
+/*
 export default ({ children }) => {
   return (
     <div style={styles.container}>
@@ -58,3 +59,4 @@ export default ({ children }) => {
     </div>
   )
 }
+*/

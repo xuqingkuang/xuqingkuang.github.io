@@ -4,6 +4,7 @@ import { openBlog } from '../../actions';
 import Message from '../message';
 import moment from 'moment';
 import config from '../../config'
+import blogsStyle from './blogs.less';
 
 export class Blog extends Component {
 
@@ -21,7 +22,7 @@ export class Blog extends Component {
       }
     }
     return (
-      <Message message={err} id="blog-container">
+      <Message id="blog" message={err}>
         <h2>{blog.get('title')}</h2>
         <small>[{blog.get('category')}] {moment(blog.createdAt).format(config.dateFormat)}</small>
         <div dangerouslySetInnerHTML={createMarkup()} />

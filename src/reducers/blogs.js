@@ -7,11 +7,7 @@ import {
 } from '../constants/blogs';
 
 const blogsInitialState = {
-  blogs: [
-    new Blog({
-      category: 'Loading'
-    })
-  ],
+  blogs: [],
   err: null
 }
 
