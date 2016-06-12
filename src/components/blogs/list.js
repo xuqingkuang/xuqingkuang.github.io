@@ -9,14 +9,6 @@ import { fetchBlogs } from '../../actions';
 import Message from '../message';
 import blogsStyle from './blogs.less';
 
-const styles = {
-  link: {
-    color           : '#39c',
-    fontWeight      : '400',
-    textDecoration  : 'none'
-  }
-}
-
 export class Blogs extends Component {
 
   componentDidMount() {
@@ -38,7 +30,7 @@ export class Blogs extends Component {
               const url = `/blogs/${model.get('slug')}`;
               return (
                 <p key={model.get('slug')} className="blog">
-                  <Link to={url} style={styles.link}>{model.get('title')}</Link>
+                  <Link to={url}>{model.get('title')}</Link>
                   <small> {model.createdAt && moment(model.createdAt).format(config.dateFormat)}</small>
                 </p>
               )
