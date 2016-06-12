@@ -2,7 +2,6 @@
 import React from 'react';
 
 /* React Router */
-import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute } from 'react-router';
 
@@ -18,8 +17,8 @@ import {BlogList, BlogItem} from './components/blogs';
 import Resume from './components/resume';
 
 /* Routes */
-export default (
-  <AppContainer>
+export default () => {
+  return (
     <Provider store={store}>
       <Router history={history}>
         <Route path={config.urlPrefix} component={Layout}>
@@ -30,5 +29,5 @@ export default (
         <Route path="*" component={NotFound} />
       </Router>
     </Provider>
-  </AppContainer>
-);
+  );
+}
