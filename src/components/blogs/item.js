@@ -1,9 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import { Affix, Button } from 'antd';
+import { Affix, Button, Spin } from 'antd';
 import { Link } from 'react-router';
 import { connect } from 'react-redux'
 import { openBlog } from '../../actions';
-import Message from '../message';
 import moment from 'moment';
 import config from '../../config'
 import blogsStyle from './blogs.less';
@@ -18,13 +17,20 @@ export class Blog extends Component {
 
   render () {
     const { err, blog } = this.props;
+    const loading = !err && !blog;
+    let message;
+    if (err && err.message) {
+      message = err.message;
+      console.error(message);
+    }
     const createMarkup = () => {
       return {
         __html: blog.get('content')
       }
     }
+
     return (
-      <Message id="blog" message={err}>
+      <Spin id="blog" tip={message} spinning={loading}>
         <h2>{blog.get('title')}</h2>
         <small>{moment(blog.createdAt).format(config.dateFormat)}</small>
         <div className="container">
@@ -37,7 +43,7 @@ export class Blog extends Component {
           </div>
           <div className="content" dangerouslySetInnerHTML={createMarkup()} />
         </div>
-      </Message>
+      </Spin>
     )
   }
 }

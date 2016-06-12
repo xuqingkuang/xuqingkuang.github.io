@@ -6,7 +6,6 @@ import config from '../../config'
 import { connect } from 'react-redux'
 import { Link } from 'react-router';
 import { fetchBlogs } from '../../actions';
-import Message from '../message';
 import blogsStyle from './blogs.less';
 
 export class Blogs extends Component {
@@ -17,13 +16,15 @@ export class Blogs extends Component {
 
   render () {
     const { err, blogs } = this.props;
-    if (blogs.length === 0) {
-      return (
-        <Spin />
-      )
+    const loading = !err && blogs.length === 0;
+    let message;
+    if (err && err.message) {
+      message = err.message;
+      console.error(message);
     }
+    
     return (
-      <Message message={err} id="blogs">
+      <Spin id="blogs" tip={message} spinning={loading}>
         <QueueAnim delay={10}>
           {
             blogs.map((model) => {
@@ -37,7 +38,7 @@ export class Blogs extends Component {
             })
           }
         </QueueAnim>
-      </Message>
+      </Spin>
     )
   }
 }
