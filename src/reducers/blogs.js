@@ -1,4 +1,3 @@
-import Blog from '../models/blog';
 import {
   BLOGS_FETCHED,
   BLOGS_FETCHED_FAILURE,
@@ -30,7 +29,7 @@ export const blogsReducer = (state = blogsInitialState, action) => {
 }
 
 const blogInitialState = {
-  blog: new Blog(),
+  blog: null,
   err: null
 }
 

@@ -7,7 +7,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import ReduxThunk from 'redux-thunk';
 
 /* LeanCloud */
-import AV from 'avoscloud-sdk';
+import AV from 'leancloud-storage';
 
 /* SiteMaster tracking */
 import tracking from './tracking';

@@ -25,6 +25,7 @@ export const fetchBlogs = () => {
       return dispatch(callback(null, blogQuery.results));
     }
     blogQuery._where = {};
+    blogQuery.limit(1000);
     blogQuery.find().then((blogs) => {
       blogQuery.results = blogs;
       return dispatch(callback(null, blogs));
