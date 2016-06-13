@@ -1,3 +1,5 @@
 import AV from 'leancloud-storage';
 
-export default new AV.Query('Blog');
+const blogQuery = new AV.Query('Blog');
+blogQuery.limit(1000);
+export default blogQuery;

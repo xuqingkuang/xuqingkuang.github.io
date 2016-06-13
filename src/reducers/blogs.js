@@ -29,7 +29,10 @@ export const blogsReducer = (state = blogsInitialState, action) => {
 }
 
 const blogInitialState = {
-  blog: null,
+  // Fake blog
+  blog: {
+    get: () => { return 'Loading' }
+  },
   err: null
 }
 
