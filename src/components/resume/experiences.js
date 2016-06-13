@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
 import ProjectCard from './project-card';
+import { staticUrl } from '../../utils';
 
 export default ({id}) => {
   return (
@@ -35,7 +36,7 @@ export default ({id}) => {
           但是根据用户所购买的版本拥有了有三套不同的界面，
           技术上最大的挑战在于要为原来应用里的路由表（每个 URL 所映射的方法）增加一个版本检查，
           确定当前的 URL 所属于哪个版本。管理上采取了将
-          <a href="./imgs/products/gannt.png">
+          <a href={staticUrl('/products/gannt.png')}>
           任务细分
           </a>，精确到每天的计划和跟踪，
           保证了项目的顺利完成。拆分版本后提升了用户细分能力，
@@ -44,7 +45,7 @@ export default ({id}) => {
         <section>
           三、数据银行粉丝趴项目中的
           <a
-            href="http://kuangxuqing.qiniudn.com/products/fansparty.png" 
+            href={staticUrl('/products/fansparty.png')} 
             target="_blank"
           >
             关注用户画像
@@ -56,7 +57,7 @@ export default ({id}) => {
           前端到服务器的请求采用了新的 fetch，配合 ES7的 async 和 await
           封装出了一套符合业务的服务器请求 API。另外，我继续为它匹配了
           <a 
-            href="http://kuangxuqing.qiniudn.com/products/fansparty-mobile.png"
+            href={staticUrl('/products/fansparty-mobile.png')}
             target="_blank"
           >
           手机的分辨率

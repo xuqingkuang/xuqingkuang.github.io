@@ -21,7 +21,10 @@ let config = {
   /* SiteMaster tracking */
   siteMaster: {
     siteId: null
-  }
+  },
+  
+  /* Static url prefix */
+  staticPrefix: 'http://f.kxq.io'
 }
 
 /* Construct configs from environment */

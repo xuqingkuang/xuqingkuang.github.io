@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Popover, Modal, Button, message } from 'antd';
+import { staticUrl } from '../../utils';
 import IconsStyle from '../../static/icons.css';
-
 
 export default class Features extends Component {
 
@@ -276,7 +276,7 @@ export default class Features extends Component {
             trigger="hover"
           >
             <a
-              href="http://kuangxuqing.qiniudn.com/certifications/rhce.png"
+              href={staticUrl('/certifications/rhce.png')}
               className="feature icon-rhce"
               onClick={ (evt) => { this.handleLinkClick(evt, "RHCE") } }
             >
@@ -290,7 +290,7 @@ export default class Features extends Component {
             trigger="hover"
           >
             <a
-              href="http://kuangxuqing.qiniudn.com/certifications/scrum-master.png"
+              href={staticUrl('/certifications/scrum-master.png')}
               className="feature icon-scrum-master"
               onClick={ (evt) => { this.handleLinkClick(evt, "Scrum Master") } }
             >
