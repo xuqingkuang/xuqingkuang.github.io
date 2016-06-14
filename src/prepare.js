@@ -22,7 +22,7 @@ import * as reducers from './reducers';
 import config from './config';
 
 /* Initial LeanCloud */
-AV.initialize(config.leanCloud.id, config.leanCloud.key);
+AV.init(config.leanCloud.id, config.leanCloud.key);
 
 /* Combine Reducers */
 const reducer = combineReducers({

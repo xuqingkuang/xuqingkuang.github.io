@@ -24,7 +24,7 @@ let config = {
   },
   
   /* Static url prefix */
-  staticPrefix: 'http://f.kxq.io'
+  staticPrefix: 'http://o8gb937mp.bkt.clouddn.com'
 }
 
 /* Construct configs from environment */
