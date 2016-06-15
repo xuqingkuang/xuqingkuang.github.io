@@ -11,61 +11,32 @@ export default ({id}) => {
         <h3>
           2015年12月－至今
           &nbsp;
-          <a href="http://www.yushanfang.com/">阿里巴巴集团</a>
-          &nbsp;
+          <a href="http://www.yushanfang.com/">阿里巴巴集团（BABA）</a>
           商家业务部网站工程/高级前端工程师
         </h3>
+        <h4>工作描述</h4>
         <section>
-          经人介绍，来到了阿里巴巴，该公司的第一感受确实和之前公司不太一样，
-          首先是每个人都特别聪明能干，关键是这帮比自己聪明的人，还都比自己努力。
+          商家业务部是为天猫大客户提供数据服务和营销指导的部门，
+          在司期间成为了智库产品的前端负责人，该产品为客户提供了多元化的数据报表为营销提供指导，
+          并且成为了 BI 项目组的成员，该项目从数据的视角，提供了更多维度来审视营销情况。
+        </section>
+        <h4>主要业绩</h4>
+        <section>
+          1、成为智库产品版本拆分任务的PM，带领3位前端、3位后端、2位测试和2位 UED 一起完成，
+          将智库产品根据不同的用户需求，拆分为电商版和营销版，前者为普通电商提供服务，
+          而后者提供了更佳多元化的营销预测和实施方案。该项目动用人力浩大、
+          但在两周之内便将产品完成了一期拆分上线，这得益于精确到天的计划和任务跟踪，
+          和及时的问题反馈、解决；
         </section>
         <section>
-          到目前为止，在这里主要完成了三件事情：
+          2、完成了智库产品粉丝趴项目，淘宝中有个微淘，而天猫打算类似的产品，但专注于粉丝营销，
+          因此推出了粉丝趴，由此产生了数据需求，该项目提供了粉丝趴用户的详细分层数据展示；
         </section>
         <section>
-          一、完成了 BI 工具的反向代理，将原来暴露在外网的 BI 集群封闭到防火墙之内，
-          所有 BI 工具通过反向代理与客户端通讯，提升了安全性，
-          因为反向代理具备缓存功能，也间接提升了服务性能。反向代理通过 Nginx 实现，
-          该项目主要是实现了一套 Nginx 配置自动更新机制，可以自动获取 Qlik 集群的机器列表，
-          并且生成配置文件。难点在于目前的 BI 工具使用了 WebSocket 长连接和 NTLM 用户认证，
-          当时为了解决这两个特殊的协议代理花费了不少的时间。
+          3、在团队内推广了 React、Redux、Docker 等新技术。
         </section>
         <section>
-          二、成为智库版本拆分项目 PM 和主程序员，带领3位前端、3位后端、2位测试一起，
-          将一个现存项目，从界面上拆分为两个版本，还是一个应用，
-          但是根据用户所购买的版本拥有了有三套不同的界面，
-          技术上最大的挑战在于要为原来应用里的路由表（每个 URL 所映射的方法）增加一个版本检查，
-          确定当前的 URL 所属于哪个版本。管理上采取了将
-          <a href={staticUrl('/products/gannt.png')}>
-          任务细分
-          </a>，精确到每天的计划和跟踪，
-          保证了项目的顺利完成。拆分版本后提升了用户细分能力，
-          为有不同需求的客户提供了更加专业化的服务。
-        </section>
-        <section>
-          三、数据银行粉丝趴项目中的
-          <a
-            href={staticUrl('/products/fansparty.png')} 
-            target="_blank"
-          >
-            关注用户画像
-          </a>界面整体实现，粉丝趴是天猫中类似淘宝的微淘，但是转变为粉丝运营，
-          天猫大客户有需求知道具体的用户情况，因此产生了粉丝趴项目，该页面由五个图表构成，
-          主要是为了了解一年内粉丝趴内的用户情况，分析出了新客、老客、潜客的总体、年龄、
-          地域分布。该项目使用了一系列的新技术，首先是之前 React + Redux 的积累在此得到应用，
-          图表展示使用了 ECharts，界面使用了蚂蚁金服的 Ant Design，
-          前端到服务器的请求采用了新的 fetch，配合 ES7的 async 和 await
-          封装出了一套符合业务的服务器请求 API。另外，我继续为它匹配了
-          <a 
-            href={staticUrl('/products/fansparty-mobile.png')}
-            target="_blank"
-          >
-          手机的分辨率
-          </a>。
-        </section>
-        <section>
-          如果说在 AdMaster 还受到旧项目的牵绊的话，新的技术只能自己尝试，
-          在阿里这个拥抱变化的环境，可以一次性把自己所知、所准备的东西全部用上。
+          4、实现了 BI 项目的安全性提升，通过两层反向代理监测、控制了 BI 项目的数据传输。
         </section>
       </article>
       <article>
@@ -76,27 +47,30 @@ export default ({id}) => {
           &nbsp;
           研发部/高级前端工程师
         </h3>
+        <h4>工作描述</h4>
         <section>
-          在此工作期间，负责了
-          <a href="http://www.trackmaster.com.cn/">
-            互联网广告分析工具 TrackMaster&nbsp;
-            <span className="print-link print-only">[www.trackmaster.com.cn]</span>
-          </a>
-          &nbsp;的主要研发工程师，负责了 V5 版本的数据银行、以及 V6 的项目、广告位管理功能开发，
-          参与了分析报告部分功能的开发，同时参与了视频广告监测 Snap 产品的前期研发工作，
-          因为出色的工作能力，职称从 T4 升职到 T5，同时成为了
-          <a href="https://site.admaster.com.cn">
-            站点监测工具 SiteMaster&nbsp;
-            <span className="print-link print-only">[site.admaster.com.cn]</span>
-          </a>
-          &nbsp;的前端负责人，接手后第一件工作，便是为现有系统增加权限控制功能，
-          颗粒度达到了单个页面某个功能的 CRUD 权限可控制，但是现存系统缺乏 session 共享模块，
-          View 和 Model 的启动方式也有问题，为此对整个前端工程进行了重构。
+          AdMaster 是业内知名的互联网广告投放监测公司，我在司期间主要负责了主力盈利产品
+          TrackMaster 的开发工作，并且成为了站点监测工具 SiteMaster 的前端负责人，
+          带领另外三位同事一起完成产品开发，并且对他们的绩效进行考核。
+        </section>
+        <h4>主要业绩</h4>
+        <section>
+          1、因为出色的工作能力，职称从 T4 升级到 T5。
         </section>
         <section>
-          期间，学习、研究、掌握了现代的前端开发方式，TrackMaster 和 SiteMaster
-          都是基于 Backbone 单页面应用，使用 CoffeeScript 开发，通过 grunt 进行编译。
-          同时，做了大量前端组件的积累和各种新技术的调研，以下是部分产出。
+          2、负责了广告分析工具 TrackMaster V5 数据银行和 V6 项目管理和部分分析报告的开发；
+        </section>
+        <section>
+          3、参与了视频广告监测 Snap 产品的前期研发工作；
+        </section>
+        <section>
+          4、成为了站点监测工具 SiteMaster  的前端负责人，接手后第一件工作，便是为现有系统增加权限控制功能，颗粒度达到了单个页面某个功能的 CRUD 权限可控制。
+        </section>
+        <section>
+          5、期间，学习、研究、掌握了现代的前端开发方式，TrackMaster 和 SiteMaster 都是基于 Backbone 单页面应用。
+        </section>
+        <section>
+          6、在项目中积累了部分公用组件，并且将其开源，以下是其中部分：
         </section>
         <Row gutter={16} className="products">
           <Col xs={24} lg={8} className="product gutter-box">
@@ -185,48 +159,55 @@ export default ({id}) => {
         <h3>
           2011年2月－2012年12月
           &nbsp;
-          <a href="http://www.thundersoft.com/">中科创达软件股份有限公司</a>
-          &nbsp;
-          战略产品部/产品经理
+          <a href="http://www.thundersoft.com/">中科创达（300496）</a>
+          战略产品部/全栈工程师
         </h3>
+        <h4>工作描述</h4>
         <section>
-          需要声明：当时入职的是战略产品部，该部门目标是进行移动领域的新技术调研，
-          依然是研发性质的工作。
+          创达是手机系统集成商，我在该公司主要参与 Web 的后端和前端服务相关开发工作。
+        </section>
+        <h4>主要业绩</h4>
+        <section>
+          1、期间掌握了移动端开发技巧和各种媒体适配；
         </section>
         <section>
-          在那里接触到了各种移动端开发技巧、媒体适配、尝试了 Hybrid 应用，
-          并且继续通过数据可视化方案，提供了公司内各类数据展示。
+          2、与 Intel 协作，完成了 Tizen 手机 Web App 的 IDE 工程 Rapid Interface
+          Builder，该项目可以算是最早的单页面应用，基于 jQuery Mobile，实现了拖拽控件、
+          编写 Javascript 实现了 Tizen Web App 的简单开发模式。
+        </section>
+        <section>
+          3、完成了创达云，为移动设备提供了包含基础的云存储、云定位、云备份等基础服务。
+        </section>
+        <section>
+          4、成为一位硕士生的副导师，协助完成了毕业论文。
         </section>
       </article>
       <article>
         <h3>
           2008年10月－2011年1月
           &nbsp;
-          <a href="https://www.redhat.com/en">红帽软件（北京）有限公司</a>
+          <a href="https://www.redhat.com/en">红帽软件（RHT）</a>
           &nbsp;
-          测试部/软件测试工程师
+          测试工具研发部/全栈工程师
         </h3>
+        <h4>工作描述</h4>
         <section>
-          需要声明：当时 Red Hat 在国内技术只有测试部门，所有人的 Title 都是测试工程师，
-          但是我属于一个特殊的工具开发组，为测试工程师开发工具，
-          在那里使用 Python/Django 进行工具开发，也是在那里，接触的网站开发内容，
-          接触到各种报表，接触到真正流程化的测试，外企在管理、流程和测试精细度上让我叹为观止。
+          为测试人员，开发手工和自动测试工具，为领导提供测试结果报表。
+        </section>
+        <h4>主要业绩</h4>
+        <section>
+          1、独立开发手工测试工具&nbsp;
+          <a href="https://github.com/Nitrate/Nitrate/">Nitrate</a>
+          &nbsp;前后端，该工具使 RH
+          的测试工作不再受到第三方测试工具的制约，完全根据自己的需求定制开发，
+          相对于第三方测试工具提供了更佳完善的测试状态记录和测试报告，
+          提供了更佳优秀的 UE/UI，使测试的同事效率得到提升。
         </section>
         <section>
-          在 Red Hat，从头开发了
-          <a href="https://github.com/Nitrate/Nitrate/">
-            手动测试工具 Nitrate&nbsp;
-            <span className="print-link print-only">
-              [github.com/Nitrate/Nitrate]
-            </span>
-          </a>
-          &nbsp;和自动化测试工具 virtLab，这两个项目从一开始就是由我一人独自开发，
-          前后端都包揽，在那个过程中一边学习一边开发，积累了大量开发经验，
-          熟悉了整个手工和自动化测试流程，并且通过测试结果报表，入门了数据可视化。
-        </section>
-        <section>
-          外企拥有良好的培训教育机制，在当时顺手再次拿下了 RHCE 和 Certificated Scrum
-          Master 认证。
+          2、开发了自动化测试工具 virtLab，该工具底层通过调用 IBM STAF 远程执行测试脚本，
+          通过 Puppet 进行测试集群部署，上层通过简单明了的界面，实现了测试集群机器状态的管理，
+          以及测试脚本参数填写、运行，并且将测试结果收集之后，以测试覆盖率图表的形式进行展示。
+          该项目解放了测试人员的工作量，把人从重复劳动中解脱了出来。
         </section>
       </article>
       <article>
@@ -237,13 +218,18 @@ export default ({id}) => {
           &nbsp;
           桌面产品研发部/软件工程师
         </h3>
+        <h4>工作描述</h4>
         <section>
-          主要负责红旗 Linux 桌面和服务器版的开发，和西藏大学合作完成了藏文版本，
-          在中科院计算所，和他们一起，完成了龙芯 MIPS 版本的红旗 Linux 系统。
+          红旗 Linux 是个操作系统集成商，基于 Red Hat Linux 进行本土化、个性化的开发，
+          我在该公司参与了多个系统关键组件的研发，以及系统集成工作。
+        </section>
+        <h4>主要业绩</h4>
+        <section>
+          1、和中科院软件所一起，完成了龙芯的 MIPS 版本的 Red Flag Linux 社区版研发。
         </section>
         <section>
-          在此的工作经历让我从代码层面重新审视了一下 Linux 系统，
-          和之前作为用户的视角是完全不一样的。
+          2、和西藏大学一起，完成了藏文版本的 Red Flag Linux 版本研发，该项目的主要实现了
+          GB18030 编码的藏文扩充。
         </section>
       </article>
     </div>
