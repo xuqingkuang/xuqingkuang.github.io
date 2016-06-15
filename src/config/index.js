@@ -6,7 +6,7 @@ let config = {
   urlPrefix: '/',
 
   /* React router history backend */
-  historyBackend: 'browserHistory',
+  historyBackend: 'hashHistory',
 
   /* Date format */
   dateFormat: 'MM/DD/YYYY',

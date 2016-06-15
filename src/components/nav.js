@@ -6,8 +6,12 @@ export default class Nav extends Component {
   
   constructor (props) {
     super(props);
+    let selectedKey = ["1"]
+    if (location.hash.indexOf('#/about') === 0) {
+      selectedKey = ["4"]
+    }
     this.state = {
-      selectedKeys: ["1"]
+      selectedKeys: selectedKey
     }
   }
 
