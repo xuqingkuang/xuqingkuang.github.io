@@ -7,12 +7,6 @@ import { Link } from 'react-router';
 import { fetchBlogs } from '../../actions';
 import blogsStyle from './blogs.less';
 
-const delay = (index) => {
-  return {
-    animationDelay: `${index/50}s`
-  }
-}
-
 export class Blogs extends Component {
 
   componentDidMount() {
@@ -34,7 +28,7 @@ export class Blogs extends Component {
           blogs.map((model, index) => {
             const url = `/blogs/${model.get('slug')}`;
             return (
-              <p key={model.get('slug')} className="blog" style={delay(index)}>
+              <p key={model.get('slug')} className="blog">
                 <Link to={url}>{model.get('title')}</Link>
                 <small> {model.createdAt && moment(model.createdAt).format(config.dateFormat)}</small>
               </p>
