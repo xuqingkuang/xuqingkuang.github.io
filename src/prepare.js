@@ -1,5 +1,6 @@
 /* Babel Polyfill */
 require('babel-polyfill');
+require('console-polyfill');
 
 /* Redux */
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
