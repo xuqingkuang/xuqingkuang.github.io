@@ -15,7 +15,7 @@ export default class Nav extends Component {
     return (
       <Menu
         mode="horizontal"
-        selectedKeys={this.state.selectedKeys}>
+        defaultSelectedKeys={this.state.selectedKeys}>
         <Menu.Item key="1">
           <Link to="/">博客</Link>
         </Menu.Item>
@@ -26,6 +26,9 @@ export default class Nav extends Component {
           <a href="https://www.zhihu.com/people/xuqingkuang" target="_blank">
             知乎
           </a>
+        </Menu.Item>
+        <Menu.Item key="4">
+          <Link to="/about">关于</Link>
         </Menu.Item>
       </Menu>
     )

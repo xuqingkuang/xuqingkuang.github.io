@@ -35,6 +35,10 @@ module.exports = {
         loader: "file"
       },
       {
+        test: /\.md$/,
+        loader: "html!markdown"
+      },
+      {
         test: /\.js$/, loader: 'babel',
         exclude: /node_modules/,
         include: __dirname

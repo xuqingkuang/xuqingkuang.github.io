@@ -15,6 +15,7 @@ import config from './config';
 import {Layout, NotFound} from './components';
 import {BlogList, BlogItem} from './components/blogs';
 import Resume from './components/resume';
+import About from './components/about';
 
 /* Routes */
 export default () => {
@@ -24,6 +25,7 @@ export default () => {
         <Route path={config.urlPrefix} component={Layout}>
           <IndexRoute component={BlogList} />
           <Route path='blogs/:slug' component={BlogItem} />
+          <Route path="about" component={About} />
         </Route>
         <Route path="me" component={Resume} />
         <Route path="*" component={NotFound} />
