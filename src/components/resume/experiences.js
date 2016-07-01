@@ -33,11 +33,43 @@ export default ({id}) => {
           因此推出了粉丝趴，由此产生了数据需求，该项目提供了粉丝趴用户的详细分层数据展示；
         </section>
         <section>
-          3、在团队内推广了 React、Redux、Docker 等新技术。
+          3、实现了 BI 项目的安全性提升，通过两层反向代理监测、控制了 BI 项目的数据传输。
         </section>
         <section>
-          4、实现了 BI 项目的安全性提升，通过两层反向代理监测、控制了 BI 项目的数据传输。
+          4、在团队内推广了 React、Redux、Docker 等新技术，并且积累出部分组件。
         </section>
+        <Row gutter={16} className="products">
+          <Col xs={24} lg={12} className="product gutter-box">
+            <ProjectCard
+              title="react-tour-guide"
+              project="https://github.com/xuqingkuang/rc-tour-guide"
+              example="http://kxq.io/rc-tour-guide/examples/position.html"
+            >
+              <section>
+                一个比 Intro.js 还棒的新手向导组件，为 React 设计的 Component，
+                不侵入原来的 Componet 设计，可以无缝对接各种 Component。
+              </section>
+              <section>
+                增加了更多参数和选项，更佳灵活，而且实际只用了1000出头的行数，只有
+                Intro.js 的一半大小。
+              </section>
+            </ProjectCard>
+          </Col>
+          <Col xs={24} lg={12} className="product gutter-box">
+            <ProjectCard
+              title="rc-wizard"
+              project="https://github.com/xuqingkuang/rc-wizard"
+              example="http://kxq.io/rc-wizard/examples/simple.html"
+            >
+              <section>
+                一个试用极其简单，功能极其强大的向导生成 Component。
+              </section>
+              <section>
+                特点是可以直接使用 JSX 的语法嵌入 Component，更佳优雅。
+              </section>
+            </ProjectCard>
+          </Col>
+        </Row>
       </article>
       <article>
         <h3>
