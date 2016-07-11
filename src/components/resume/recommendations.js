@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Timeline, Modal, Button } from 'antd';
 import { staticUrl } from '../../utils';
 
 export default class Recommendations extends Component {
-  constructor(props) {
+
+  static propTypes = {
+    id: PropTypes.string
+  }
+
+  constructor (props) {
     super(props);
     this.state = {
       visible: false,
@@ -12,7 +17,7 @@ export default class Recommendations extends Component {
     }
   }
 
-  handleCancel() {
+  handleCancel () {
     this.setState({ visible: false });
   }
 
@@ -39,7 +44,7 @@ export default class Recommendations extends Component {
             1、周报内容详实；
             2、对更新的方案有新的技术文档沉淀（统一整理到 redmine 或者 gitlab上 吧）；
             3、基于 docker 高效的分享和实战应用。”
-            &nbsp;-&nbsp; 
+            &nbsp;-&nbsp;
             <a
               href={staticUrl('/recommendations/3-4.png')}
               onClick={(evt) => { this.handleLinkClick(evt); }}

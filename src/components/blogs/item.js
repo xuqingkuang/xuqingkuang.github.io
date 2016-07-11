@@ -5,14 +5,21 @@ import { connect } from 'react-redux'
 import { openBlog } from '../../actions';
 import moment from 'moment';
 import config from '../../config'
-import blogsStyle from './blogs.less';
+import './blogs.less';
 
 export class Blog extends Component {
 
-  componentDidMount() {
+  static propTypes = {
+    openBlog: PropTypes.func.isRequired,
+    params: PropTypes.object.isRequired,
+    err: PropTypes.object,
+    blog: PropTypes.object
+  }
+
+  componentDidMount () {
     window.scrollTo(0, 0);
-    const { params } = this.props;
-    this.props.openBlog(params.slug);
+    const { openBlog, params } = this.props;
+    openBlog(params.slug);
   }
 
   render () {
@@ -21,7 +28,7 @@ export class Blog extends Component {
     let message;
     if (err && err.message) {
       message = err.message;
-      console.error(message);
+      window.console.error(message);
     }
     const createMarkup = () => {
       return {

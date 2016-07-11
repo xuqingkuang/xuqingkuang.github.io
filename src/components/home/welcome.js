@@ -6,14 +6,18 @@ import {getNextTitle} from '../../actions/titles';
 // Export the class for testing
 export class Welcome extends Component {
 
-  componentDidMount() {
+  static propTypes = {
+    title: PropTypes.string
+  }
+
+  componentDidMount () {
     this.interval = setInterval(() => {
       let {getNextTitle, title} = this.props;
       getNextTitle(title);
     }, 1000);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     clearInterval(this.interval);
   }
 

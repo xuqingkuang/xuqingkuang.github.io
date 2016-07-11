@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Nav from './nav';
-import LayoutStyle from './layout.less';
+import './layout.less';
 
-export default ({children}) => {
+const Layout = ({children}) => {
   return (
     <div id="kxq-site">
       <div className="header">
@@ -15,3 +15,9 @@ export default ({children}) => {
     </div>
   )
 }
+
+Layout.propTypes = {
+  children: PropTypes.element.isRequired
+}
+
+export default Layout;

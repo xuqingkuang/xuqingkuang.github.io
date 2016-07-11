@@ -1,6 +1,6 @@
 import React from 'react';
 import README from '../../../README.md';
-import AboutStyle from './about.less';
+import './about.less';
 
 const createMarkup = () => {
   return {
@@ -8,8 +8,10 @@ const createMarkup = () => {
   }
 }
 
-export default () => {
+const About = () => {
   return (
     <div id="about" dangerouslySetInnerHTML={createMarkup()} />
   )
 }
+
+export default About;

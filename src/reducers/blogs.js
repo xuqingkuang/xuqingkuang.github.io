@@ -16,13 +16,10 @@ export const blogsReducer = (state = blogsInitialState, action) => {
       return {
         blogs: action.blogs
       }
-
     case BLOGS_FETCHED_FAILURE:
       return {
         err: action.err
       }
-      break;
-
     default:
       return state
   }
@@ -47,8 +44,6 @@ export const blogReducer = (state = blogInitialState, action) => {
       return {
         err: action.err
       }
-      break;
-
     default:
       return state
   }

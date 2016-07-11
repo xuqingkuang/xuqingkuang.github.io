@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
 
-export default ({id}) => {
+const Infomations = ({id}) => {
   return (
-    <Row id="informations">
+    <Row id={id}>
       <Col xs={24} sm={4} className="name">
         <h1>旷旭卿</h1>
       </Col>
@@ -51,3 +51,9 @@ export default ({id}) => {
     </Row>
   );
 }
+
+Infomations.propTypes = {
+  id: PropTypes.string
+}
+
+export default Infomations;

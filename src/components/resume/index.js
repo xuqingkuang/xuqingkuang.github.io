@@ -6,20 +6,20 @@ import Introduction from './introduction';
 import Recommendations from './recommendations';
 import Experiences from './experiences';
 import Educations from './educations';
-import resumeStyles from './resume.less';
+import './resume.less';
 
 
 export default class Resume extends Component {
 
-  componentDidMount() {
+  componentDidMount () {
     document.title = '旷旭卿的简历';
     notification.open({
       message: '本页面已经为各种设备优化过',
-      description: '本页面已经为大到打印机，小到手机优化过，欢迎各种尝试。打印时记得选择“打印背景图”。',
+      description: '本页面已经为大到打印机，小到手机优化过，欢迎各种尝试。打印时记得选择“打印背景图”。'
     });
   }
 
-  render() {
+  render () {
     return (
       <div id="resume">
         <div id="print-notice" className="print-only">
@@ -35,7 +35,7 @@ export default class Resume extends Component {
         <Experiences id="experiences" />
         <Educations id="educations" />
       </div>
-    ); 
+    );
   }
 
 }

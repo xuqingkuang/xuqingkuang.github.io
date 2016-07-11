@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-export default ({id}) => {
+const Introduction = ({id}) => {
   return (
     <article id={id}>
       <h2>自我简介</h2>
@@ -16,3 +16,9 @@ export default ({id}) => {
     </article>
   );
 }
+
+Introduction.propTypes = {
+  id: PropTypes.string
+}
+
+export default Introduction;

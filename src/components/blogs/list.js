@@ -5,11 +5,17 @@ import config from '../../config'
 import { connect } from 'react-redux'
 import { Link } from 'react-router';
 import { fetchBlogs } from '../../actions';
-import blogsStyle from './blogs.less';
+import './blogs.less';
 
 export class Blogs extends Component {
 
-  componentDidMount() {
+  static propTypes = {
+    fetchBlogs: PropTypes.func.isRequired,
+    err: PropTypes.object,
+    blogs: PropTypes.array
+  }
+
+  componentDidMount () {
     this.props.fetchBlogs();
   }
 
@@ -19,13 +25,13 @@ export class Blogs extends Component {
     let message;
     if (err && err.message) {
       message = err.message;
-      console.error(message);
+      window.console.error(message);
     }
-    
+
     return (
       <Spin id="blogs" tip={message} spinning={loading}>
         {
-          blogs.map((model, index) => {
+          blogs.map((model) => {
             const url = `/blogs/${model.get('slug')}`;
             return (
               <p key={model.get('slug')} className="blog">

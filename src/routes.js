@@ -18,7 +18,7 @@ import Resume from './components/resume';
 import About from './components/about';
 
 /* Routes */
-export default () => {
+const Routes = () => {
   return (
     <Provider store={store}>
       <Router history={history}>
@@ -33,3 +33,5 @@ export default () => {
     </Provider>
   );
 }
+
+export default Routes;

@@ -1,9 +1,8 @@
-import React from 'react';
-import { Row, Col, Card } from 'antd';
+import React, { PropTypes } from 'react';
+import { Row, Col } from 'antd';
 import ProjectCard from './project-card';
-import { staticUrl } from '../../utils';
 
-export default ({id}) => {
+const Experiences = ({id}) => {
   return (
     <div id={id}>
       <h2>工作和项目经历</h2>
@@ -267,3 +266,9 @@ export default ({id}) => {
     </div>
   );
 }
+
+Experiences.propTypes = {
+  id: PropTypes.string
+}
+
+export default Experiences;

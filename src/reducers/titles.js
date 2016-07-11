@@ -4,7 +4,7 @@ const initialState = {
   title: TITLES.get(0)
 }
 
-export default function getNextTitle(state = initialState, action) {
+export default (state = initialState, action) => {
   if (action.type === GET_NEXT_TITLE) {
     let nextIndex = 0;
     if (action.title) {

@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
-import { Popover, Modal, Button, message } from 'antd';
+import React, { Component, PropTypes } from 'react';
+import { Popover, Modal, Button } from 'antd';
 import { staticUrl } from '../../utils';
-import IconsStyle from '../../static/icons.css';
+import '../../static/icons.css';
 
 export default class Features extends Component {
 
-  constructor(props) {
+  static propTypes = {
+    id: PropTypes.string
+  }
+
+  constructor (props) {
     super(props);
     this.state = {
       visible: false,
@@ -14,11 +18,11 @@ export default class Features extends Component {
     }
   }
 
-  handleCancel() {
+  handleCancel () {
     this.setState({ visible: false });
   }
 
-  handleLinkClick(evt, title) {
+  handleLinkClick (evt, title) {
     evt.preventDefault();
     const target = evt.currentTarget;
     const url = target.getAttribute('href');
@@ -28,7 +32,7 @@ export default class Features extends Component {
     this.setState({
       visible: true,
       title: title || 'Certification',
-      imageUrl: url,
+      imageUrl: url
     });
   }
 
@@ -75,7 +79,7 @@ export default class Features extends Component {
       nginx: (
         <div>
           <p>性能最好的 www 服务器，静态文件性能很强，也适用于建立反向代理。</p>
-        </div> 
+        </div>
       ),
       wireshark: (
         <div>
@@ -121,7 +125,7 @@ export default class Features extends Component {
             title="NodeJS"
             trigger="hover"
           >
-            <a 
+            <a
               href="http://nodejs.org"
               className="feature icon-nodejs"
               onClick={ (evt) => { this.handleLinkClick(evt) } }
