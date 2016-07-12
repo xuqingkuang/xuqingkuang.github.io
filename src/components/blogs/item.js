@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Markdown from 'react-markdown';
 import { Affix, Button, Spin } from 'antd';
 import { Link } from 'react-router';
 import { connect } from 'react-redux'
@@ -22,6 +23,26 @@ export class Blog extends Component {
     openBlog(params.slug);
   }
 
+  renderBlog (blog) {
+    switch (blog.get('format')) {
+      case "markdown":
+        return (
+          <div className="content">
+            <Markdown source={blog.get('content')} />
+          </div>
+        )
+      default:
+        const createMarkup = () => {
+          return {
+            __html: blog.get('content')
+          }
+        }
+        return (
+          <div className="content" dangerouslySetInnerHTML={createMarkup()} />
+        )
+    }
+  }
+
   render () {
     const { err, blog } = this.props;
     const loading = !err && !blog;
@@ -29,11 +50,6 @@ export class Blog extends Component {
     if (err && err.message) {
       message = err.message;
       window.console.error(message);
-    }
-    const createMarkup = () => {
-      return {
-        __html: blog.get('content')
-      }
     }
 
     return (
@@ -48,7 +64,9 @@ export class Blog extends Component {
               </Link>
             </Affix>
           </div>
-          <div className="content" dangerouslySetInnerHTML={createMarkup()} />
+          {
+            this.renderBlog(blog)
+          }
         </div>
       </Spin>
     )
