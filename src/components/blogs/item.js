@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Markdown from 'react-markdown';
-import { Affix, Button, Spin } from 'antd';
+import { Spin, Affix, Button } from 'antd';
 import { Link } from 'react-router';
 import { connect } from 'react-redux'
 import { openBlog } from '../../actions';

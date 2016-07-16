@@ -28,7 +28,10 @@ export const blogsReducer = (state = blogsInitialState, action) => {
 const blogInitialState = {
   // Fake blog
   blog: {
-    get: () => { return 'Loading' }
+    get: () => { return 'Loading' },
+    attributes: {
+      format: 'markdown'
+    }
   },
   err: null
 }
