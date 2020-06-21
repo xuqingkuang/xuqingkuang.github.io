@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { notification } from 'antd';
 import Infomations from './informations';
-import Features from './features';
+// import Features from './features';
 import Introduction from './introduction';
-import Recommendations from './recommendations';
+// import Recommendations from './recommendations';
 import Experiences from './experiences';
 import Educations from './educations';
 import './resume.less';
@@ -23,15 +23,19 @@ export default class Resume extends Component {
     return (
       <div id="resume">
         <div id="print-notice" className="print-only">
-          密密麻麻的字儿看着太累了，还是看在线版的吧：
+          打印版缺少交互，推荐使用在线版观看简历：
           <a href="http://kxq.io/#me">http://kxq.io/#me</a>
           <hr />
         </div>
         <Infomations id="informations" />
         <hr />
-        <Features id="features" />
+        {
+          // <Features id="features" />
+        }
         <Introduction id="introduction"/>
-        <Recommendations id="recommendations" />
+        {
+          // <Recommendations id="recommendations" />
+        }
         <Experiences id="experiences" />
         <Educations id="educations" />
       </div>

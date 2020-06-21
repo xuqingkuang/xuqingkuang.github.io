@@ -14,8 +14,9 @@ let config = {
 
   /* LeanCloud */
   leanCloud: {
-    id: 'M6aE66SXQDQozwy03VW1QqaL',
-    key: 'uankVhucrkGdmdWo9jNFDE8V'
+    id: 'VJTLTeDQmhB6DjTocJOafwCa-MdYXbMMI',
+    key: 'IkwXs9heg4Rekq8sVRTrbTDe',
+    serverURL: 'https://leancloud.kxq.io'
   },
 
   /* SiteMaster tracking */
@@ -24,7 +25,7 @@ let config = {
   },
   
   /* Static url prefix */
-  staticPrefix: 'http://o8gb937mp.bkt.clouddn.com'
+  staticPrefix: 'https://raw.githubusercontent.com/xuqingkuang/xuqingkuang.github.io/master/imgs/'
 }
 
 /* Construct configs from environment */

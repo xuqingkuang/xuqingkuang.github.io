@@ -14,6 +14,12 @@
   h2 {
     margin: 1rem 0;
   }
+
+  h3 {
+    span {
+      font-weight: normal;
+    }
+  }
   
   hr {
     border: none;
@@ -25,6 +31,13 @@
     section {
       text-indent: 1.6rem;
     }
+  }
+
+  .ant-timeline-item {
+    padding: 0;
+  }
+  .ant-timeline-item-content {
+    padding: 0 0 0 24px;
   }
 
   #print-notice {
@@ -70,15 +83,6 @@
       &:active {
         opacity: 0.9;
       }
-    }
-  }
-  
-  #recommendations {
-    .ant-timeline-item {
-      padding: 0;
-    }
-    .ant-timeline-item-content {
-      padding: 0 0 0 24px;
     }
   }
   
@@ -158,10 +162,6 @@
     #informations {
       .col-xs-24 {
         width: 50%;
-      }
-      .name {
-        float: right;
-        text-align: right;
       }
     }
 

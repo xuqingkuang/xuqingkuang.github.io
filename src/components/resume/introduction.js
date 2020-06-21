@@ -1,17 +1,26 @@
 import React, { PropTypes } from 'react';
+import { staticUrl } from '../../utils';
 
 const Introduction = ({id}) => {
   return (
     <article id={id}>
       <h2>自我简介</h2>
       <section>
-        本人从业12年，8年网站开发经验，前后端都有涉及，Javascript/CSS 基础扎实，对新技术敏感，
-        目前是阿里商家业务部智库产品的前端负责人，曾是 AdMaster 的站点监测工具 SiteMaster
-        前端负责人，曾经独立开发了 Nitrate 测试工具，拥有 Scrum 敏捷开发认证，
-        拥有良好的团队领导能力。
+        本人从业近16年，12年网站开发经验，10年的产品和组织协调工作，2010年拿下敏捷开发的             <a
+          href={staticUrl('/certifications/scrum-master.png')}
+          onClick={ (evt) => { this.handleLinkClick(evt, "Scrum Master") } }
+        >
+          Scrum Master 认证
+        </a> 和 <a
+          href={staticUrl('/certifications/rhce.png')}
+          onClick={ (evt) => { this.handleLinkClick(evt, "RHCE") } }
+        >
+          RHCE
+        </a> 认证，曾在红旗 Linux、Red Hat Linux、阿里巴巴、腾讯就职，在多个开源项目中都有参与，
+        目前是腾讯中台的跨端项目 <a href="//hippyjs.org">Hippy</a> 的前端负责人。在技术和管理上都有丰富的经验。
       </section>
       <section>
-        因原籍江西，所以决定回南方发展。
+        求职方向是数据可视化前端 Teah Lead，并依然希望能在开源软件方面作出贡献。
       </section>
     </article>
   );

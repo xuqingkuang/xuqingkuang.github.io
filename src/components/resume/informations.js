@@ -10,14 +10,13 @@ const Infomations = ({id}) => {
       <Col xs={24} sm={20} className="links screen-only">
         <Row>
           <Col xs={24} sm={6}>
-            电话：
-            <a href="tel:13811606726">13811606726</a>
+            电话/微信：
+            <a href="tel:13811606726">19924555181</a>
           </Col>
           <Col xs={24} sm={18}>
             链接：
-            <a href="mailto:x@kxq.io">邮箱</a>
             <a href="http://kxq.io">主页</a>
-            <a href="http://www.atatech.org/users/177348">ATA</a>
+            <a href="mailto:x@kxq.io">邮箱</a>
             <a href="https://github.com/xuqingkuang">Github</a>
           </Col>
         </Row>
@@ -36,10 +35,6 @@ const Infomations = ({id}) => {
             <tr>
               <td>主页：</td>
               <td><a href="http://kxq.io">kxq.io</a></td>
-            </tr>
-            <tr>
-              <td>ATA：</td>
-              <td><a href="http://www.atatech.org/users/177348">www.atatech.org/users/177348</a></td>
             </tr>
             <tr>
               <td>Github：</td>

@@ -37,7 +37,6 @@ export default class Recommendations extends Component {
 
     return (
       <div id={id}>
-        <h2>主管评价</h2>
         <Timeline>
           <Timeline.Item>
             “大赞一下释我本周的工作，大家一起共勉：

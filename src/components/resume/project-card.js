@@ -6,8 +6,9 @@ const ProjectCard = ({title, project, example, children}) => {
   const extra = (
     <div className="screen-only">
       <a href={project}>项目链接</a>
-      &nbsp;|&nbsp;
-      <a href={example}>演示页面</a>
+      { 
+        example && <span>&nbsp;|&nbsp; <a href={example}>演示页面</a></span> || null
+      }
     </div>
   );
 
@@ -20,10 +21,10 @@ const ProjectCard = ({title, project, example, children}) => {
               <td>项目链接：</td>
               <td><a href={project}>{project}</a></td>
             </tr>
-            <tr>
+            { example && <tr>
               <td>演示页面：</td>
               <td><a href={example}>{example}</a></td>
-            </tr>
+            </tr> || null}
           </tbody>
         </table>
       </div>

@@ -25,7 +25,8 @@ import config from './config';
 /* Initial LeanCloud */
 AV.init({
   appId: config.leanCloud.id,
-  appKey: config.leanCloud.key
+  appKey: config.leanCloud.key,
+  serverURL: 'https://leancloud.kxq.io'
 });
 
 /* Combine Reducers */
