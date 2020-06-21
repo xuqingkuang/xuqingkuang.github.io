@@ -12,7 +12,7 @@ const Experiences = ({id}) => {
         <h3>
           2016年8月8日-至今
           &nbsp;
-          <a href="//www.tencent.com">腾讯（HK.700）</a>
+          <a href="http://www.tencent.com">腾讯（HK.700）</a>
         </h3>
         <h4>工作描述</h4>
         <section>
@@ -57,13 +57,13 @@ const Experiences = ({id}) => {
                 并协调移动端功能开发和双端功能一致性的统一。
               </section>
               <section>
-                接手后首先是开发了 <a href="//hippyjs.org/#/hippy-vue/introduction">hippy-vue</a>，
+                接手后首先是开发了 <a href="http://hippyjs.org/#/hippy-vue/introduction">hippy-vue</a>，
                 该项目的难点在于底层完全是 RN 的设计，为此基于 Vue 的 node-ops DOM
                 操作接口重新实现了对实际节点的操作，
                 并重新实现了 CSS 解析器以提供对各种样式以及选择器的支持。
               </section>
               <section>
-                其次是重新开发了 <a href="//hippyjs.org/#/hippy-react/introduction">hippy-react</a>，
+                其次是重新开发了 <a href="http://hippyjs.org/#/hippy-react/introduction">hippy-react</a>，
                 早期 Hippy 使用的是基于 React-DOM 15 的源代码进行魔改，主要是无法扩展问题，
                 React Hooks 等新特性完全无法使用。而后基于 Facebook 官方的 react-reconciler 重新实现了渲染层以进行支持。
               </section>
@@ -306,8 +306,8 @@ const Experiences = ({id}) => {
           <Col xs={24} className="product">
             <ProjectCard
               title="RIB"
-              project="//github.com/intel/rib"
-              example="//01.org/rapid-interface-builder"
+              project="http://github.com/intel/rib"
+              example="http://01.org/rapid-interface-builder"
             >
               <section>
               与 Intel 协作，完成了 Tizen 手机 Web App 的 IDE 工程 Rapid Interface Builder，该项目可以算是最早的单页面应用，
@@ -350,7 +350,7 @@ const Experiences = ({id}) => {
           <Col xs={24} className="product">
             <ProjectCard
               title="Nitrate"
-              project="//github.com/Nitrate/Nitrate"
+              project="http://github.com/Nitrate/Nitrate"
             >
               <section>
                 基于 Python 上的 Django 框架实现了 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Bugzilla/Testopia">Testopia</a> 兼容的数据库结构和 XML-RPC 接口，
@@ -391,7 +391,7 @@ const Experiences = ({id}) => {
           <ul>
             <li>1、和中科院软件所一起，完成了龙芯的 MIPS 版本的 Red Flag Linux 社区版研发。</li>
             <li>2、和西藏大学一起，完成了藏文版本的 Red Flag Linux 版本研发，该项目的主要实现了 GB18030 编码的藏文扩充和输入法集成。</li>
-            <li>3、组织建立了红旗的开发者交流社区 <a href="//linux-ren.org">Linux 人</a>（已经下线）。</li>
+            <li>3、组织建立了红旗的开发者交流社区 <a href="http://linux-ren.org">Linux 人</a>（已经下线）。</li>
           </ul>
         </section>
       </article>
