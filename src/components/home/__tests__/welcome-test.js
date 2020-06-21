@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import {Welcome, mapStateToProps} from '../welcome';
 import {getNextTitle} from '../../../actions/titles';
