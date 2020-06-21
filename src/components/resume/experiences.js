@@ -40,9 +40,9 @@ const Experiences = ({id}) => {
         <Timeline>
           <Timeline.Item>2017、2018、2019三次绩效突出奖</Timeline.Item>
           <Timeline.Item>2017年年度腾讯微创新奖</Timeline.Item>
-          <Timeline.Item>2018年下半年腾讯新代码文华奖</Timeline.Item>
           <Timeline.Item>2018年下半年腾讯开源协作奖</Timeline.Item>
-          <Timeline.Item>2018年腾讯新代码文化奖</Timeline.Item>
+          <Timeline.Item>2018年下半年腾讯新代码文化奖</Timeline.Item>
+          <Timeline.Item>2018年腾讯年度新代码文化奖</Timeline.Item>
           <Timeline.Item>2019年腾讯代码委员会特别贡献奖</Timeline.Item>
         </Timeline>
         <Row className="products">
