@@ -8,7 +8,7 @@ const Experiences = ({id}) => {
   return (
     <div id={id}>
       <h2>工作和项目经历</h2>
-      <article>
+      <article id="tencent">
         <h3>
           2016年8月8日-至今
           &nbsp;
@@ -35,7 +35,7 @@ const Experiences = ({id}) => {
         </section>
         <h4>主要业绩</h4>
         <section>
-          在工作期间，因能力出色获得了<a href={staticUrl("/rewards/tencent-rewards.jpg")}>大量奖项</a>，主要有：
+          在工作期间，参加了两次业内级大会的讲座，取得了良好的反响，并因能力出色获得了<a href={staticUrl("/rewards/tencent-rewards.jpg")}>大量奖项</a>，主要有：
         </section>
         <Timeline>
           <Timeline.Item>2017、2018、2019三次绩效突出奖</Timeline.Item>
@@ -45,8 +45,8 @@ const Experiences = ({id}) => {
           <Timeline.Item>2018年腾讯年度新代码文化奖</Timeline.Item>
           <Timeline.Item>2019年腾讯代码委员会特别贡献奖</Timeline.Item>
         </Timeline>
-        <Row className="products">
-          <Col xs={24} className="product">
+        <Row gutter={16} className="products">
+          <Col xs={24} lg={8} className="product gutter-box">
             <ProjectCard
               title="Hippy"
               project="http://github.com/Tencent/Hippy"
@@ -74,6 +74,31 @@ const Experiences = ({id}) => {
                 经过不懈努力，推动了该项目在2019年12月对外开源，在开源之前重新整理了所有代码、文档、范例，并建立起了一整套自动化测试、代码审核和准入制度等等。
                 开源后积极进行宣传，通过于腾讯云社区合作的方式让该项目首周 Star 数破 2k，目前是 4.8k 的总 Star 数，截止目前用户 QQ 群用户 568 人。
               </section>
+            </ProjectCard>
+          </Col>
+          <Col xs={24} lg={8} className="product gutter-box">
+            <ProjectCard
+              title="Vue Conf 2018 杭州"
+              project="https://www.w3ctech.com/event/70"
+            >
+              <section>
+                2018年时，hippy-vue 已经开始在公司内得到广泛应用，为了让更多开发者能够了解 Vue 实现跨端框架的细节，
+                所以我进行了<a href="https://www.bilibili.com/video/av37464898/">《多端统一方案 Hippy-Vue 是如何设计实现的》</a>的主题演讲。
+              </section>
+              <br />
+              <img src={staticUrl('/conferences/vue-conf-2018.jpg')} alt="VueConf 2018" className="screen-only" />
+            </ProjectCard>
+          </Col>
+          <Col xs={24} lg={8} className="product gutter-box">
+            <ProjectCard
+              title="TLC 2019 深圳"
+              project="https://2019.tlc.ivweb.io/detail/?number=11"
+            >
+              <section>
+                2019年中，已经在积极准 Hippy 的对外开源，这场大会是一次预热，让广大开发者能够了解到腾讯也准备参与跨端框架上的竞争上了。
+                所以我进行了《多端一体方案 Hippy 的架构和实战》的主题演讲，从全局讲述了整个 Hippy 的架构设计和实战实操。
+              </section>
+              <img src={staticUrl('/conferences/tlc-2019.jpg')} alt="TLC 2019" className="screen-only" />
             </ProjectCard>
           </Col>
         </Row>

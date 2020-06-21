@@ -11,7 +11,10 @@ const config = {
   /* SiteMaster tracking */
   siteMaster: {
     siteId: '24b0e3b'
-  }
+  },
+
+  /* Static url prefix */
+  staticPrefix: 'https://raw.githubusercontent.com/xuqingkuang/xuqingkuang.github.io/master/imgs/'
 }
 
 export default config;

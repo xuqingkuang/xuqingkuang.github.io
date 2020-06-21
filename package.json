@@ -21,6 +21,10 @@
     "type": "git",
     "url": "https://github.com/xuqingkuang/react-redux-boilerplate"
   },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp production"
+  },
   "dependencies": {
     "antd": "^1.2.1",
     "console-polyfill": "^0.2.2",
