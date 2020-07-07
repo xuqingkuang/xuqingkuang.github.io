@@ -17,10 +17,10 @@ const Introduction = ({id}) => {
         >
           RHCE
         </a> 认证，曾在红旗 Linux、Red Hat Linux、阿里巴巴、腾讯就职，在多个开源项目中都有参与，
-        目前是腾讯中台的跨端项目 <a href="http://hippyjs.org">Hippy</a> 的前端负责人。在技术和管理上都有丰富的经验。
+        目前是腾讯的中台跨端项目 <a href="http://hippyjs.org">Hippy</a> 的前端负责人。
       </section>
       <section>
-        求职方向是数据可视化前端 Teah Lead，并依然希望能在开源软件方面作出贡献。
+        在技术和管理上都有丰富的经验，求职方向是前端 Teah Lead。
       </section>
     </article>
   );

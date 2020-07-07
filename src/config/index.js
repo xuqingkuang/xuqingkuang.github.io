@@ -25,7 +25,7 @@ let config = {
   },
   
   /* Static url prefix */
-  staticPrefix: 'http://localhost:8080'
+  staticPrefix: 'https://raw.githubusercontent.com/xuqingkuang/xuqingkuang.github.io/master/imgs/'
 }
 
 /* Construct configs from environment */

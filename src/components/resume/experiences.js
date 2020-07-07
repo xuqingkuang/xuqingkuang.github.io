@@ -19,23 +19,26 @@ const Experiences = ({id}) => {
           主职：
         </section>
         <section>
-          <b>PCG平台与内容事业群/腾讯看点/品类研发中心/基础架构组/高级前端开发</b> - 腾讯跨端中台项目 Hippy 前端负责人，对接各个业务，协调移动端进行功能开发，并保证双端功能一致性。
+          <b>PCG平台与内容事业群/腾讯看点/品类研发中心/基础架构组/高级前端开发</b> - 腾讯跨端中台项目 Hippy 前端负责人，负责前端框架项目的开发和维护，对接各个业务，协调移动端进行功能开发。
         </section>
         <section>
           兼职：
         </section>
         <section>
-          <b>总办/技术委员会/对外开源管理办公室/Hippy PMC/委员</b> - 协调公司内部中台项目的协作开发，目前 PMC 成员主要包含了 TME 全民 K 歌和 CDG 自选股部门等共 15 位成员。
+          <b>总办/技术委员会/对外开源管理办公室/Hippy PMC/委员</b> - 协调公司内部中台项目的协作开发，目前 PMC 成员主要 4 大 BG、5 个项目组共 15 位成员。
         </section>
         <section>
-          <b>PCG平台与内容事业群/PCG技术负责人联席会议/PCG代码委员会/理事</b> - 由 PCG 研发部经理 winton 指派的组织，主要进行制定、宣传、教育腾讯 JavaScript 代码规范，制定培训课程，组织晋升答辩时的代码评审工作。最终目标是为了提升整个公司的编码开发水平。
+          <b>PCG平台与内容事业群/PCG技术负责人联席会议/PCG代码委员会/理事</b> - 由 PCG 研发部经理 winton 启动的组织，主要负责制定、宣传、教育腾讯公司级代码规范，制定培训课程，组织晋升答辩时的代码评审工作。
         </section>
         <section>
           <b>S1职能系统－职能线/腾讯研究院/大数据中心/大数据中心研究员</b> - 腾讯大数据数据可视化方向、以及图形交互的研究。
         </section>
         <h4>主要业绩</h4>
         <section>
-          在工作期间，参加了两次业内级大会的讲座，取得了良好的反响，并因能力出色获得了<a href={staticUrl("/rewards/tencent-rewards.jpg")}>大量奖项</a>，主要有：
+          在工作期间表现出色，积累了内部文章 14 篇，其中 6 篇被内部网站推荐。
+          同时积极参加前端社区活动，参与了业内两次大会的讲座主讲，取得了良好的反响。
+          3 次拿下绩效突出奖，5 次拿下公司和项目奖项。
+          以下是<a href={staticUrl("/rewards/tencent-rewards.jpg")}>获奖列表</a>：
         </section>
         <Timeline>
           <Timeline.Item>2017、2018、2019三次绩效突出奖</Timeline.Item>
@@ -52,26 +55,25 @@ const Experiences = ({id}) => {
               project="http://github.com/Tencent/Hippy"
             >
               <section>
-                Hippy 本来是腾讯 QQ 浏览器基于 React Native 0.27 进行二次开发的跨端框架。
-                我于2018年3月全面负责前端框架部分。主要工作是负责前端部分框架、文档、范例的开发，新需求、bug 的分工，
+                Hippy 本是腾讯 QQ 浏览器基于 React Native 0.27 进行二次开发的跨端框架。
+                我于2018年3月全面管理前端框架，负责框架、文档、范例的开发；新需求、bug 的协商分工；
                 并协调移动端功能开发和双端功能一致性的统一。
               </section>
               <section>
                 接手后首先是开发了 <a href="http://hippyjs.org/#/hippy-vue/introduction">hippy-vue</a>，
                 该项目的难点在于底层完全是 RN 的设计，为此基于 Vue 的 node-ops DOM
-                操作接口重新实现了对实际节点的操作，
-                并重新实现了 CSS 解析器以提供对各种样式以及选择器的支持。
+                操作接口重新实现了对实际节点的操作，并重新实现了 CSS 解析器以提供对各种样式以及选择器的支持。
               </section>
               <section>
                 其次是重新开发了 <a href="http://hippyjs.org/#/hippy-react/introduction">hippy-react</a>，
-                早期 Hippy 使用的是基于 React-DOM 15 的源代码进行魔改，主要是无法扩展问题，
-                React Hooks 等新特性完全无法使用。而后基于 Facebook 官方的 react-reconciler 重新实现了渲染层以进行支持。
+                早期 Hippy 使用的是基于 React-DOM 15 的源代码进行魔改，问题主要是新的依赖无法支持，
+                React Hooks 等新特性无法使用。而后基于 Facebook 官方的 react-reconciler 重新实现，解决了这一问题，性能也有10%的提升。
               </section>
               <section>
-                目前在公司内部有20个业务都进行了接入，每日的 UV 过亿。在开发过程中对 React 和 Vue 两大 MVVM 的内部工作原理都进行了非常深入的了解。
+                目前在公司内部有20个业务都进行了接入，每日的 UV 过亿。在开发过程中对 React 和 Vue 两大 MVVM 的内部工作原理都进行了非常深入的研究。
               </section>
               <section>
-                经过不懈努力，推动了该项目在2019年12月对外开源，在开源之前重新整理了所有代码、文档、范例，并建立起了一整套自动化测试、代码审核和准入制度等等。
+                经过不懈努力，推动了该项目在2019年12月对外开源，在开源之前重新整理了所有代码、文档、范例，并建立起了一整套自动化测试、代码审核和准入制度。
                 开源后积极进行宣传，通过于腾讯云社区合作的方式让该项目首周 Star 数破 2k，目前是 4.8k 的总 Star 数，截止目前用户 QQ 群用户 568 人。
               </section>
             </ProjectCard>
@@ -83,7 +85,9 @@ const Experiences = ({id}) => {
             >
               <section>
                 2018年时，hippy-vue 已经开始在公司内得到广泛应用，为了让更多开发者能够了解 Vue 实现跨端框架的细节，
-                所以我进行了<a href="https://www.bilibili.com/video/av37464898/">《多端统一方案 Hippy-Vue 是如何设计实现的》</a>的主题演讲。
+                所以在 2018 年杭州举办的 VueConf 大会上进行了
+                <a href="https://www.bilibili.com/video/av37464898/">《多端统一方案 Hippy-Vue 是如何设计实现的》</a>
+                的主题演讲。
               </section>
               <br />
               <img src={staticUrl('/conferences/vue-conf-2018.jpg')} alt="VueConf 2018" className="screen-only" />
@@ -96,7 +100,7 @@ const Experiences = ({id}) => {
             >
               <section>
                 2019年中，已经在积极准 Hippy 的对外开源，这场大会是一次预热，让广大开发者能够了解到腾讯也准备参与跨端框架上的竞争上了。
-                所以我进行了《多端一体方案 Hippy 的架构和实战》的主题演讲，从全局讲述了整个 Hippy 的架构设计和实战实操。
+                所以我在深圳科兴举办的 TLC 2019 大会上进行了《多端一体方案 Hippy 的架构和实战》的主题演讲，从全局讲述了整个 Hippy 的架构设计和实战实操。
               </section>
               <img src={staticUrl('/conferences/tlc-2019.jpg')} alt="TLC 2019" className="screen-only" />
             </ProjectCard>
@@ -185,22 +189,19 @@ const Experiences = ({id}) => {
         </section>
         <h4>主要业绩</h4>
         <section>
-          1、因为出色的工作能力，职称从 T4 升级到 T5。
+          1、负责了广告分析工具 TrackMaster V5 数据银行和 V6 项目管理和部分分析报告的开发；
         </section>
         <section>
-          2、负责了广告分析工具 TrackMaster V5 数据银行和 V6 项目管理和部分分析报告的开发；
+          2、参与了视频广告监测 Snap 产品的前期研发工作；
         </section>
         <section>
-          3、参与了视频广告监测 Snap 产品的前期研发工作；
+          3、成为了站点监测工具 SiteMaster 的前端负责人，接手后第一件工作，便是为现有系统增加权限控制功能，颗粒度达到了单个页面某个功能的 CRUD 权限可控制。
         </section>
         <section>
-          4、成为了站点监测工具 SiteMaster  的前端负责人，接手后第一件工作，便是为现有系统增加权限控制功能，颗粒度达到了单个页面某个功能的 CRUD 权限可控制。
+          4、期间，学习、研究、掌握了现代的前端开发方式，TrackMaster 和 SiteMaster 都是基于 Backbone 单页面应用。
         </section>
         <section>
-          5、期间，学习、研究、掌握了现代的前端开发方式，TrackMaster 和 SiteMaster 都是基于 Backbone 单页面应用。
-        </section>
-        <section>
-          6、在项目中积累了部分公用组件，并且将其开源，以下是其中部分：
+          5、在项目中积累了部分公用组件，并且将其开源，以下是其中部分：
         </section>
         <Row gutter={16} className="products">
           <Col xs={24} lg={8} className="product gutter-box">
@@ -287,14 +288,14 @@ const Experiences = ({id}) => {
         </h3>
         <h4>工作描述</h4>
         <section>
-          创达是手机系统集成商，我在该公司主要参与 Web 的后端和前端服务相关开发工作。
+          创达是手机系统集成商，当时受到 CTO（前红帽研发经理）邀约加入进行移动互联网方面的的开发。
         </section>
         <h4>主要业绩</h4>
         <section>
           1、期间掌握了移动端开发技巧和各种媒体适配。
         </section>
         <section>
-          2、外派到 Intel 参与一些桌面和移动项目开发。
+          2、外派到 Intel 参与 Tizen 开发者工具的开发工作，其中的 Rapid Interface Builder 后在 Github 开源。
         </section>
         <section>
           3、完成了创达云，为移动设备提供了包含基础的云存储、云定位、云备份等基础服务。
@@ -305,12 +306,12 @@ const Experiences = ({id}) => {
         <Row className="products">
           <Col xs={24} className="product">
             <ProjectCard
-              title="RIB"
+              title="Rapid Interface Builder"
               project="http://github.com/intel/rib"
               example="http://01.org/rapid-interface-builder"
             >
               <section>
-              与 Intel 协作，完成了 Tizen 手机 Web App 的 IDE 工程 Rapid Interface Builder，该项目可以算是最早的单页面应用，
+              与 Intel 协作，完成了 Tizen 手机 Web App 的 IDE 工程 RIB，该项目可以算是最早的单页面应用，
               基于 jQuery Mobile，实现了拖拽控件、编写 Javascript，实现了 Tizen Web App 的简单开发模式。
               我在其中主要负责代码编辑器的开发，在实现之前 RIB 只有控件的拖拽和属性编辑功能，代码编辑器进一步扩充了 RIB 的实用性，
               通过它实现负责复杂业务逻辑成为了可能。
@@ -371,16 +372,6 @@ const Experiences = ({id}) => {
           &nbsp;
           桌面产品研发部/软件工程师
         </h3>
-        <h4>相关报道：</h4>
-        <section>
-          <a href="http://tech.sina.com.cn/it/2005-06-13/1827634538.shtml">
-            新浪 - 《18岁初中生入职中科红旗 Linux人才重视素质》
-          </a>
-          - 这篇报道并不属实，真实情况是我从 98 年开始接触 Linux，在 Linuxfans、Linux 伊甸园等社区中已经小有名气，
-          2003年2月，我高二时趁着寒假期间来北京的银河网络教育中心考取 RHCE 的认证，
-          但碰上非典爆发，考试暂停，全城戒严，无法回家，考试直到十月份才完成。
-          在入职红旗之前一直在考试中心协助老师进行一些助教工作，一年之后才被同学推荐进入红旗面试。
-        </section>
         <h4>工作描述</h4>
         <section>
           红旗 Linux 是个操作系统集成商，基于 Red Hat Linux 进行本土化、个性化的开发。
@@ -389,7 +380,7 @@ const Experiences = ({id}) => {
         <h4>主要业绩</h4>
         <section>
           <ul>
-            <li>1、和中科院软件所一起，完成了龙芯的 MIPS 版本的 Red Flag Linux 社区版研发。</li>
+            <li>1、和中科院软件所一起，完成了龙芯的 MIPS 版本的 Red Flag Linux 移植研发。</li>
             <li>2、和西藏大学一起，完成了藏文版本的 Red Flag Linux 版本研发，该项目的主要实现了 GB18030 编码的藏文扩充和输入法集成。</li>
             <li>3、组织建立了红旗的开发者交流社区 <a href="http://linux-ren.org">Linux 人</a>（已经下线）。</li>
           </ul>

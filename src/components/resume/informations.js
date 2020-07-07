@@ -11,7 +11,7 @@ const Infomations = ({id}) => {
         <Row>
           <Col xs={24} sm={6}>
             电话/微信：
-            <a href="tel:13811606726">19924555181</a>
+            <a href="tel:19924555181">19924555181</a>
           </Col>
           <Col xs={24} sm={18}>
             链接：
@@ -26,7 +26,7 @@ const Infomations = ({id}) => {
           <tbody>
             <tr>
               <td>电话：</td>
-              <td><a href="tel:13811606726">13811606726</a></td>
+              <td><a href="tel:19924555181">19924555181</a></td>
             </tr>
             <tr>
               <td>邮箱：</td>
